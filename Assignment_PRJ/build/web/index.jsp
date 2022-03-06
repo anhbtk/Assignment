@@ -26,7 +26,7 @@
             <div class="container">
                 <ul>
                     <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
-                    <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ĐĂng kí </a></li>
+                    <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
                     <li><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
                     <li><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
                 </ul>
@@ -142,14 +142,14 @@
                                             </div>
                                         </ul>
                                     </li>
-                                    <li class="menu__item dropdown">
+<!--                                    <li class="menu__item dropdown">
                                         <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
                                         <ul class="dropdown-menu agile_short_dropdown">
                                             <li><a href="icons.html">Web Icons</a></li>
                                             <li><a href="typography.html">Typography</a></li>
                                         </ul>
-                                    </li>
-                                    <li class=" menu__item"><a class="menu__link" href="contact.html">Contact</a></li>
+                                    </li>-->
+                                    <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -1831,12 +1831,12 @@
                         <div class="col-md-4 sign-gd">
                             <h4>Our <span>Information</span> </h4>
                             <ul>
-                                <li><a href="index.jsp">Home</a></li>
-                                <li><a href="mens.html">Men's Wear</a></li>
-                                <li><a href="womens.html">Women's wear</a></li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="index.jsp">Trang chủ</a></li>
+                                <li><a href="mens.html">Romand</a></li>
+                                <li><a href="womens.html">Gilaa</a></li>
+                                <li><a href="about.html">MAngosteen</a></li>
                                 <li><a href="typography.html">Short Codes</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.html">Liên hệ</a></li>
                             </ul>
                         </div>
 

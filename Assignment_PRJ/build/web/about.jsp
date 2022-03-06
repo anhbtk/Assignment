@@ -1,13 +1,11 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Elite Shoppy an Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | About :: w3layouts</title>
+        <title> About : Mangosteen</title>
         <!--/tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -32,7 +30,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng nhập </a></li>
                     <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
                     <li><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">kimkim01@gmail.com</a></li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</a></li>
                 </ul>
             </div>
         </div>
@@ -95,7 +93,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
                                     <li class="active menu__item"><a class="menu__link" href="index.jsp">Trang chủ <span class="sr-only">(current)</span></a></li>
-                                    <li class=" menu__item menu__item--current"><a class="menu__link" href="about.html">Mangosteen</a></li>
+                                    <li class=" menu__item menu__item--current"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
                                         <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand <span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
@@ -108,7 +106,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         <li><a href="mens.html">Son Glasting Water Tint</a></li><br/>
                                                         <li><a href="mens.html">Son WalletsZero Velvet Tint</a></li><br/>
                                                         <li><a href="mens.html">Son Glasting Water Gloss</a></li>
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
@@ -116,7 +114,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         <li><a href="mens.html">Son Seethrough Matte Tint</a></li><br/>
                                                         <li><a href="mens.html">Son Zero Matte Lipstick</a></li><br/>
                                                         <li><a href="mens.html">Son Juicy Lasting Tint</a></li>
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -147,15 +145,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             </div>
                                         </ul>
                                     </li>
-<!--                                    <li class="menu__item dropdown">
-                                        <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-                                        <ul class="dropdown-menu agile_short_dropdown">
-                                            <li><a href="icons.html">Web Icons</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                        </ul>
-                                    </li>-->
+                                    <!--                                    <li class="menu__item dropdown">
+                                                                            <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
+                                                                            <ul class="dropdown-menu agile_short_dropdown">
+                                                                                <li><a href="icons.html">Web Icons</a></li>
+                                                                                <li><a href="typography.html">Typography</a></li>
+                                                                            </ul>
+                                                                        </li>-->
                                     <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ </a></li>
-                                    
+
                                 </ul>
                             </div>
                         </div>
@@ -314,7 +312,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <img src="images/ab_pic.jpg" alt=" " class="img-responsive" />
                     </div>
                     <div class="col-md-6 ab_pic_w3ls_text_info">
-                        <h5>About Our Elite <span> Shoppy</span> </h5>
+                        <h5>Mangosteen <span> Shop</span> </h5>
                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elPellentesque vehicula augue eget nisl ullamcorper, molestie blandit ipsum auctor. Mauris volutpat augue dolor..</p>
                         <p>Consectetur adipisicing elit, sed do eiusmod tempor incididunt ut lab ore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco. labore et dolore magna aliqua.</p>
                     </div>
@@ -624,7 +622,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 <li><a href="index.jsp">Home</a></li>
                                 <li><a href="mens.html">Men's Wear</a></li>
                                 <li><a href="womens.html">Women's wear</a></li>
-                                <li><a href="about.html">About</a></li>
+                                <li><a href="about.jsp">About</a></li>
                                 <li><a href="typography.html">Short Codes</a></li>
                                 <li><a href="contact.html">Contact</a></li>
                             </ul>
@@ -719,21 +717,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="sign-up">
                                             <h4>Email :</h4>
                                             <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Type here';
-                                                                                                        }" required="">	
+                                                        this.value = 'Type here';
+                                                    }" required="">	
                                         </div>
                                         <div class="sign-up">
                                             <h4>Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
 
                                         </div>
                                         <div class="sign-up">
                                             <h4>Re-type Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
 
                                         </div>
                                         <div class="sign-up">
@@ -748,14 +746,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="sign-in">
                                             <h4>Email :</h4>
                                             <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Type here';
-                                                                                                        }" required="">	
+                                                        this.value = 'Type here';
+                                                    }" required="">	
                                         </div>
                                         <div class="sign-in">
                                             <h4>Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
                                             <a href="#">Forgot password?</a>
                                         </div>
                                         <div class="single-bottom">
@@ -783,14 +781,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- cart-js -->
         <script src="js/minicart.min.js"></script>
         <script>
-                                                                                                            // Mini Cart
-                                                                                                            paypal.minicart.render({
-                                                                                                                action: '#'
-                                                                                                            });
+                                                // Mini Cart
+                                                paypal.minicart.render({
+                                                    action: '#'
+                                                });
 
-                                                                                                            if (~window.location.search.indexOf('reset=true')) {
-                                                                                                                paypal.minicart.reset();
-                                                                                                            }
+                                                if (~window.location.search.indexOf('reset=true')) {
+                                                    paypal.minicart.reset();
+                                                }
         </script>
 
         <!-- //cart-js --> 
@@ -799,19 +797,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/jquery.countup.js"></script>
         <script>
-                                                                                                    $('.counter').countUp();
+                                                $('.counter').countUp();
         </script>
         <!-- //stats -->
         <!-- start-smoth-scrolling -->
         <script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script type="text/javascript">
-                                                                                                            jQuery(document).ready(function ($) {
-                                                                                                                $(".scroll").click(function (event) {
-                                                                                                                    event.preventDefault();
-                                                                                                                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-                                                                                                                });
-                                                                                                            });
+                                                jQuery(document).ready(function ($) {
+                                                    $(".scroll").click(function (event) {
+                                                        event.preventDefault();
+                                                        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+                                                    });
+                                                });
         </script>
         <!-- here stars scrolling icon -->
         <script type="text/javascript">
@@ -835,3 +833,4 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </body>
 </html>
+

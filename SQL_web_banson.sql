@@ -48,7 +48,7 @@ create table CartItem(
 	cart int,
 	item int,
 	quantity int,
-	primary key()
+	
 );
 create table Cart(
 	idCart int primary key,
@@ -57,5 +57,6 @@ create table Cart(
 	updated_at datetime
 );
 
+insert into Product 
 
 
