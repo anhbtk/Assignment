@@ -1,9 +1,5 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
     <head>
@@ -29,10 +25,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="header" id="home">
             <div class="container">
                 <ul>
-                    <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng nhập </a></li>
-                    <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> Call : 01234567898</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
+                    <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
+                    <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> ĐĂng kí </a></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
                 </ul>
             </div>
         </div>
@@ -42,14 +38,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             <div class="header-bot_inner_wthreeinfo_header_mid">
                 <div class="col-md-4 header-middle">
                     <form action="#" method="post">
-                        <input type="search" name="search" placeholder="Search here..." required="">
+                        <input type="search" name="search" placeholder="Tìm kiếm..." required="">
                         <input type="submit" value=" ">
                         <div class="clearfix"></div>
                     </form>
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 logo_agile">
-                    <h1><a href="index.html"><span>M</span>angosteen <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+                    <h1><a href="index.jsp"><span>M</span>angosteen <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
@@ -94,35 +90,29 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
-                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="index.html">Home <span class="sr-only">(current)</span></a></li>
-                                    <li class=" menu__item"><a class="menu__link" href="about.html">About</a></li>
+                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="index.jsp">Trang chủ <span class="sr-only">(current)</span></a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="about.html">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
                                         <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand<span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                    <a href="mens.html"><img src="images/top2.jpg" alt=" "/></a>
+                                                    <a href="mens.html"><img src="images/top1_1.png" alt=" "/></a>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="mens.html">Clothing</a></li>
-                                                        <li><a href="mens.html">Wallets</a></li>
-                                                        <li><a href="mens.html">Footwear</a></li>
-                                                        <li><a href="mens.html">Watches</a></li>
-                                                        <li><a href="mens.html">Accessories</a></li>
-                                                        <li><a href="mens.html">Bags</a></li>
-                                                        <li><a href="mens.html">Caps & Hats</a></li>
+                                                        <li><a href="mens.html">Son Glasting Water Tint</a></li><br/>
+                                                        <li><a href="mens.html">Son WalletsZero Velvet Tint</a></li><br/>
+                                                        <li><a href="mens.html">Son Glasting Water Gloss</a></li>
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="mens.html">Jewellery</a></li>
-                                                        <li><a href="mens.html">Sunglasses</a></li>
-                                                        <li><a href="mens.html">Perfumes</a></li>
-                                                        <li><a href="mens.html">Beauty</a></li>
-                                                        <li><a href="mens.html">Shirts</a></li>
-                                                        <li><a href="mens.html">Sunglasses</a></li>
-                                                        <li><a href="mens.html">Swimwear</a></li>
+                                                        <li><a href="mens.html">Son Seethrough Matte Tint</a></li><br/>
+                                                        <li><a href="mens.html">Son Zero Matte Lipstick</a></li><br/>
+                                                        <li><a href="mens.html">Son Juicy Lasting Tint</a></li>
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -130,33 +120,23 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         </ul>
                                     </li>
                                     <li class="dropdown menu__item">
-                                        <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Asian lipstick <span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gilaa<span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="womens.html">Romand</a></li>
-                                                        <li><a href="womens.html">Merzy</a></li>
-                                                        <li><a href="womens.html">3ce</a></li>
-                                                        <li><a href="womens.html">Watches</a></li>
-                                                        <li><a href="womens.html">Accessories</a></li>
-                                                        <li><a href="womens.html">Bags</a></li>
-                                                        <li><a href="womens.html">Caps & Hats</a></li>
+                                                        <li><a href="womens.html">Son Gilaa Plumping Lip Serum</a></li><br/>
+                                                        <li><a href="womens.html">Son Gilaa Long Wear Lip Cream </a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
-                                                    <ul class="multi-column-dropdown">
-                                                        <li><a href="womens.html">Jewellery</a></li>
-                                                        <li><a href="womens.html">Sunglasses</a></li>
-                                                        <li><a href="womens.html">Perfumes</a></li>
-                                                        <li><a href="womens.html">Beauty</a></li>
-                                                        <li><a href="womens.html">Shirts</a></li>
-                                                        <li><a href="womens.html">Sunglasses</a></li>
-                                                        <li><a href="womens.html">Swimwear</a></li>
+                                                    <ul class="multi-column-dropdown">                                        
+                                                        <li><a href="womens.html">Son Gilaa Long Wear Lip Cream Rich Rosie </a></li><br/>
+                                                        <li><a href="womens.html">Son Gilaa Long Wear Lip Cream Mini Size</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                    <a href="womens.html"><img src="images/top1.jpg" alt=" "/></a>
+                                                    <a href="womens.html"><img src="images/top2_2.png" alt=" "/></a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -1827,7 +1807,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="footer">
             <div class="footer_agile_inner_info_w3l">
                 <div class="col-md-3 footer-left">
-                    <h2><a href="index.html"><span>E</span>lite Shoppy </a></h2>
+                    <h2><a href="index.jsp"><span>M</span>angosteen </a></h2>
                     <p>Lorem ipsum quia dolor
                         sit amet, consectetur, adipisci velit, sed quia non 
                         numquam eius modi tempora.</p>
@@ -1851,7 +1831,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="col-md-4 sign-gd">
                             <h4>Our <span>Information</span> </h4>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="index.jsp">Home</a></li>
                                 <li><a href="mens.html">Men's Wear</a></li>
                                 <li><a href="womens.html">Women's wear</a></li>
                                 <li><a href="about.html">About</a></li>
@@ -2091,3 +2071,4 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </body>
 </html>
+
