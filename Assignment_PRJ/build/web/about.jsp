@@ -619,12 +619,12 @@
                         <div class="col-md-4 sign-gd">
                             <h4>Our <span>Information</span> </h4>
                             <ul>
-                                <li><a href="index.jsp">Home</a></li>
+                                <li><a href="index.jsp">Trang chủ</a></li>
                                 <li><a href="mens.html">Men's Wear</a></li>
                                 <li><a href="womens.html">Women's wear</a></li>
-                                <li><a href="about.jsp">About</a></li>
+                                <li><a href="about.jsp">Mangosteen</a></li>
                                 <li><a href="typography.html">Short Codes</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.html">Liên hệ</a></li>
                             </ul>
                         </div>
 
@@ -712,7 +712,7 @@
                         <div class="login-grids">
                             <div class="login">
                                 <div class="login-bottom">
-                                    <h3>Sign up for free</h3>
+                                    <h3>Đăng kí miễn phí</h3>
                                     <form>
                                         <div class="sign-up">
                                             <h4>Email :</h4>

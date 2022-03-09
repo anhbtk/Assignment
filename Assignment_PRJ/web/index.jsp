@@ -102,7 +102,7 @@
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <li><a href="mens.html">Son Glasting Water Tint</a></li><br/>
-                                                        <li><a href="mens.html">Son WalletsZero Velvet Tint</a></li><br/>
+                                                        <li><a href="mens.html">Son Zero Velvet Tint</a></li><br/>
                                                         <li><a href="mens.html">Son Glasting Water Gloss</a></li>
                                                         
                                                     </ul>
@@ -179,19 +179,19 @@
                     </div>
                     <div class="modal-body modal-body-sub_agile">
                         <div class="col-md-8 modal_body_left modal_body_left1">
-                            <h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
+                            <h3 class="agileinfo_sign">Đăng Nhập <span> Mangosteen</span></h3>
                             <form action="#" method="post">
                                 <div class="styled-input agile-styled-input-top">
                                     <input type="text" name="Name" required="">
-                                    <label>Name</label>
+                                    <label>Tên đăng nhập</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="email" name="Email" required=""> 
-                                    <label>Email</label>
+                                    <input type="text" name="Password" required=""> 
+                                    <label>Mật khẩu</label>
                                     <span></span>
                                 </div> 
-                                <input type="submit" value="Sign In">
+                                <input type="submit" value="Đăng nhập">
                             </form>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                                 <li><a href="#" class="facebook">
@@ -208,7 +208,7 @@
                                         <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                             </ul>
                             <div class="clearfix"></div>
-                            <p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
+                            <p><a href="#" data-toggle="modal" data-target="#myModal2" > Bạn không có tài khoản?</a></p>
 
                         </div>
                         <div class="col-md-4 modal_body_right modal_body_right1">
@@ -231,11 +231,11 @@
                     </div>
                     <div class="modal-body modal-body-sub_agile">
                         <div class="col-md-8 modal_body_left modal_body_left1">
-                            <h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
+                            <h3 class="agileinfo_sign">Đăng kí <span>Mangosteen</span></h3>
                             <form action="#" method="post">
                                 <div class="styled-input agile-styled-input-top">
                                     <input type="text" name="Name" required="">
-                                    <label>Name</label>
+                                    <label>Tên Đăng Nhập</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
@@ -245,12 +245,12 @@
                                 </div> 
                                 <div class="styled-input">
                                     <input type="password" name="password" required=""> 
-                                    <label>Password</label>
+                                    <label>Mật khẩu</label>
                                     <span></span>
                                 </div> 
                                 <div class="styled-input">
                                     <input type="password" name="Confirm Password" required=""> 
-                                    <label>Confirm Password</label>
+                                    <label>Xác nhận lại mật khẩu</label>
                                     <span></span>
                                 </div> 
                                 <input type="submit" value="Sign Up">
@@ -1835,7 +1835,7 @@
                                 <li><a href="mens.html">Romand</a></li>
                                 <li><a href="womens.html">Gilaa</a></li>
                                 <li><a href="about.html">MAngosteen</a></li>
-                                <li><a href="typography.html">Short Codes</a></li>
+<!--                                <li><a href="typography.html">Short Codes</a></li>-->
                                 <li><a href="contact.html">Liên hệ</a></li>
                             </ul>
                         </div>
@@ -1848,7 +1848,7 @@
                                         <i class="fa fa-phone" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Phone Number</h6>
+                                        <h6>Số điện thoại</h6>
                                         <p>+1 234 567 8901</p>
                                     </div>
                                     <div class="clearfix"> </div>
@@ -1858,8 +1858,8 @@
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Email Address</h6>
-                                        <p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
+                                        <h6>Địa chỉ Email </h6>
+                                        <p>Email :<a href="mailto:example@email.com"> kimkim01@gmail.com</a></p>
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
@@ -1868,8 +1868,8 @@
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Location</h6>
-                                        <p>Broome St, NY 10002,California, USA. 
+                                        <h6>Địa chỉ</h6>
+                                        <p>Số 32, Đường Hùng Vương, phường Nam Thành, tp Ninh Bình. 
 
                                         </p>
                                     </div>
