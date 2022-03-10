@@ -1,13 +1,11 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
+
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Elite Shoppy an Ecommerce Online Shopping Category Flat Bootstrap Responsive Website Template | Contact :: w3layouts</title>
+        <title>Contact : Mangosteen</title>
         <!--/tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -25,13 +23,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     </head>
     <body>
         <!-- header -->
-        <div class="header" id="home">
+        <<div class="header" id="home">
             <div class="container">
                 <ul>
-                    <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Sign In </a></li>
-                    <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Sign Up </a></li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> Call : 01234567898</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">info@example.com</a></li>
+                    <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
+                    <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
+                    <li><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
                 </ul>
             </div>
         </div>
@@ -48,7 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 logo_agile">
-                    <h1><a href="index.html"><span>E</span>lite Shoppy <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+                    <h1><a href="indext.jsp"><span>M</span>angosteen <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
@@ -76,7 +74,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         </div>
         <!-- //header-bot -->
         <!-- banner -->
-         <div class="ban-top">
+        <div class="ban-top">
             <div class="container">
                 <div class="top_nav_left">
                     <nav class="navbar navbar-default">
@@ -107,7 +105,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         <li><a href="romand.jsp">Son Glasting Water Tint</a></li><br/>
                                                         <li><a href="romand.jsp">Son Zero Velvet Tint</a></li><br/>
                                                         <li><a href="romand.jsp">Son Glasting Water Gloss</a></li>
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
@@ -115,7 +113,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                                         <li><a href="romand.jsp">Son Seethrough Matte Tint</a></li><br/>
                                                         <li><a href="romand.jsp">Son Zero Matte Lipstick</a></li><br/>
                                                         <li><a href="romand.jsp">Son Juicy Lasting Tint</a></li>
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -145,14 +143,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                             </div>
                                         </ul>
                                     </li>
-<!--                                    <li class="menu__item dropdown">
-                                        <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-                                        <ul class="dropdown-menu agile_short_dropdown">
-                                            <li><a href="icons.html">Web Icons</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                        </ul>
-                                    </li>-->
-                                    <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ</a></li>
+                                    <!--                                    <li class="menu__item dropdown">
+                                                                            <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
+                                                                            <ul class="dropdown-menu agile_short_dropdown">
+                                                                                <li><a href="icons.html">Web Icons</a></li>
+                                                                                <li><a href="typography.html">Typography</a></li>
+                                                                            </ul>
+                                                                        </li>-->
+                                    <li class=" menu__item"><a class="menu__link" href="contact.jsp">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -182,19 +180,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="modal-body modal-body-sub_agile">
                         <div class="col-md-8 modal_body_left modal_body_left1">
-                            <h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
+                            <h3 class="agileinfo_sign">Đăng Nhập <span> Mangosteen</span></h3>
                             <form action="#" method="post">
                                 <div class="styled-input agile-styled-input-top">
                                     <input type="text" name="Name" required="">
-                                    <label>Name</label>
+                                    <label>Tên đăng nhập</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="email" name="Email" required=""> 
-                                    <label>Email</label>
+                                    <input type="text" name="Password" required=""> 
+                                    <label>Mật khẩu</label>
                                     <span></span>
                                 </div> 
-                                <input type="submit" value="Sign In">
+                                <input type="submit" value="Đăng nhập">
                             </form>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                                 <li><a href="#" class="facebook">
@@ -211,7 +209,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                             </ul>
                             <div class="clearfix"></div>
-                            <p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
+                            <p><a href="#" data-toggle="modal" data-target="#myModal2" > Bạn không có tài khoản?</a></p>
 
                         </div>
                         <div class="col-md-4 modal_body_right modal_body_right1">
@@ -234,11 +232,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     </div>
                     <div class="modal-body modal-body-sub_agile">
                         <div class="col-md-8 modal_body_left modal_body_left1">
-                            <h3 class="agileinfo_sign">Sign Up <span>Now</span></h3>
+                            <h3 class="agileinfo_sign">Đăng kí <span>Mangosteen</span></h3>
                             <form action="#" method="post">
                                 <div class="styled-input agile-styled-input-top">
                                     <input type="text" name="Name" required="">
-                                    <label>Name</label>
+                                    <label>Tên Đăng Nhập</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
@@ -248,15 +246,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 </div> 
                                 <div class="styled-input">
                                     <input type="password" name="password" required=""> 
-                                    <label>Password</label>
+                                    <label>Mật khẩu</label>
                                     <span></span>
                                 </div> 
                                 <div class="styled-input">
                                     <input type="password" name="Confirm Password" required=""> 
-                                    <label>Confirm Password</label>
+                                    <label>Xác nhận lại mật khẩu</label>
                                     <span></span>
                                 </div> 
-                                <input type="submit" value="Sign Up">
+                                <input type="submit" value="Đăng kí">
                             </form>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                                 <li><a href="#" class="facebook">
@@ -289,14 +287,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3>C<span>ontact Us </span></h3>
+                <h3>L<span>iên hệ Mangosteen </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">
 
                         <ul class="w3_short">
-                            <li><a href="index.html">Home</a><i>|</i></li>
-                            <li>Contact</li>
+                            <li><a href="indext.jsp">Trang chủ</a><i>|</i></li>
+                            <li>Liên hệ</li>
                         </ul>
                     </div>
                 </div>
@@ -310,14 +308,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                     <div class="col-md-4 contact-grid-agile-w3">
                         <div class="contact-grid-agile-w31">
                             <i class="fa fa-map-marker" aria-hidden="true"></i>
-                            <h4>Address</h4>
+                            <h4>Đia chỉ</h4>
                             <p>12K Street, 45 Building Road <span>California, USA.</span></p>
                         </div>
                     </div>
                     <div class="col-md-4 contact-grid-agile-w3">
                         <div class="contact-grid-agile-w32">
                             <i class="fa fa-phone" aria-hidden="true"></i>
-                            <h4>Call Us</h4>
+                            <h4>Gọi tới</h4>
                             <p>+1234 758 839<span>+1273 748 730</span></p>
                         </div>
                     </div>
@@ -325,7 +323,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <div class="contact-grid-agile-w33">
                             <i class="fa fa-envelope-o" aria-hidden="true"></i>
                             <h4>Email</h4>
-                            <p><a href="mailto:info@example.com">info@example1.com</a><span><a href="mailto:info@example.com">info@example2.com</a></span></p>
+                            <p><a href="mailto:info@example.com">kimkim01@gmail.com</a><span><a href="mailto:info@example.com">kimkim02@gmail.com</a></span></p>
                         </div>
                     </div>
                     <div class="clearfix"> </div>
@@ -461,7 +459,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="footer">
             <div class="footer_agile_inner_info_w3l">
                 <div class="col-md-3 footer-left">
-                    <h2><a href="index.html"><span>E</span>lite Shoppy </a></h2>
+                    <h2><a href="indext.jsp"><span>E</span>lite Shoppy </a></h2>
                     <p>Lorem ipsum quia dolor
                         sit amet, consectetur, adipisci velit, sed quia non 
                         numquam eius modi tempora.</p>
@@ -483,26 +481,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="col-md-9 footer-right">
                     <div class="sign-grds">
                         <div class="col-md-4 sign-gd">
-                            <h4>Our <span>Information</span> </h4>
+                            <h4>Thông tin <span>Mangosteen</span> </h4>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
-                                <li><a href="mens.html">Men's Wear</a></li>
-                                <li><a href="womens.html">Women's wear</a></li>
-                                <li><a href="about.html">About</a></li>
-                                <li><a href="typography.html">Short Codes</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="indext.jsp">Trang Chủ</a></li>
+                                <li><a href="romand.jsp">Romand</a></li>
+                                <li><a href="gilaa.jsp">Gilaa</a></li>
+                                <li><a href="about.jsp">Mangosteen</a></li>
+<!--                                <li><a href="typography.html">Short Codes</a></li>-->
+                                <li><a href="contact.jsp">Liên hệ</a></li>
                             </ul>
                         </div>
 
                         <div class="col-md-5 sign-gd-two">
-                            <h4>Store <span>Information</span></h4>
+                            <h4>Liên Hệ <span>Mangosteen</span></h4>
                             <div class="w3-address">
                                 <div class="w3-address-grid">
                                     <div class="w3-address-left">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Phone Number</h6>
+                                        <h6>Số điện thoại</h6>
                                         <p>+1 234 567 8901</p>
                                     </div>
                                     <div class="clearfix"> </div>
@@ -512,8 +510,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Email Address</h6>
-                                        <p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
+                                        <h6>Địa chỉ Email </h6>
+                                        <p>Email :<a href="mailto:example@email.com"> kimkim01@gmail.com</a></p>
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
@@ -522,7 +520,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Location</h6>
+                                        <h6>Địa chỉ</h6>
                                         <p>Broome St, NY 10002,California, USA. 
 
                                         </p>
@@ -583,21 +581,21 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="sign-up">
                                             <h4>Email :</h4>
                                             <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Type here';
-                                                                                                        }" required="">	
+                                                        this.value = 'Type here';
+                                                    }" required="">	
                                         </div>
                                         <div class="sign-up">
                                             <h4>Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
 
                                         </div>
                                         <div class="sign-up">
                                             <h4>Re-type Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
 
                                         </div>
                                         <div class="sign-up">
@@ -612,14 +610,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                         <div class="sign-in">
                                             <h4>Email :</h4>
                                             <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Type here';
-                                                                                                        }" required="">	
+                                                        this.value = 'Type here';
+                                                    }" required="">	
                                         </div>
                                         <div class="sign-in">
                                             <h4>Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
                                             <a href="#">Forgot password?</a>
                                         </div>
                                         <div class="single-bottom">
@@ -647,14 +645,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <!-- cart-js -->
         <script src="js/minicart.min.js"></script>
         <script>
-                                                                                                            // Mini Cart
-                                                                                                            paypal.minicart.render({
-                                                                                                                action: '#'
-                                                                                                            });
+                                                // Mini Cart
+                                                paypal.minicart.render({
+                                                    action: '#'
+                                                });
 
-                                                                                                            if (~window.location.search.indexOf('reset=true')) {
-                                                                                                                paypal.minicart.reset();
-                                                                                                            }
+                                                if (~window.location.search.indexOf('reset=true')) {
+                                                    paypal.minicart.reset();
+                                                }
         </script>
 
         <!-- //cart-js --> 
@@ -663,19 +661,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script src="js/jquery.waypoints.min.js"></script>
         <script src="js/jquery.countup.js"></script>
         <script>
-                                                                                                    $('.counter').countUp();
+                                                $('.counter').countUp();
         </script>
         <!-- //stats -->
         <!-- start-smoth-scrolling -->
         <script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script type="text/javascript">
-                                                                                                            jQuery(document).ready(function ($) {
-                                                                                                                $(".scroll").click(function (event) {
-                                                                                                                    event.preventDefault();
-                                                                                                                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-                                                                                                                });
-                                                                                                            });
+                                                jQuery(document).ready(function ($) {
+                                                    $(".scroll").click(function (event) {
+                                                        event.preventDefault();
+                                                        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+                                                    });
+                                                });
         </script>
         <!-- here stars scrolling icon -->
         <script type="text/javascript">
@@ -699,3 +697,4 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </body>
 </html>
+

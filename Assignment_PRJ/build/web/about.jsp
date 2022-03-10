@@ -75,7 +75,7 @@
         </div>
         <!-- //header-bot -->
         <!-- banner -->
-        <div class="ban-top">
+         <div class="ban-top">
             <div class="container">
                 <div class="top_nav_left">
                     <nav class="navbar navbar-default">
@@ -92,29 +92,29 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
-                                    <li class="active menu__item"><a class="menu__link" href="index.jsp">Trang chủ <span class="sr-only">(current)</span></a></li>
-                                    <li class=" menu__item menu__item--current"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
+                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="index.jsp">Trang chủ <span class="sr-only">(current)</span></a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
-                                        <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand <span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand<span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                    <a href="mens.html"><img src="images/top1_1.png" alt=" "/></a>
+                                                    <a href="romand.jsp"><img src="images/top1_1.png" alt=" "/></a>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="mens.html">Son Glasting Water Tint</a></li><br/>
-                                                        <li><a href="mens.html">Son WalletsZero Velvet Tint</a></li><br/>
-                                                        <li><a href="mens.html">Son Glasting Water Gloss</a></li>
-
+                                                        <li><a href="romand.jsp">Son Glasting Water Tint</a></li><br/>
+                                                        <li><a href="romand.jsp">Son Zero Velvet Tint</a></li><br/>
+                                                        <li><a href="romand.jsp">Son Glasting Water Gloss</a></li>
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="mens.html">Son Seethrough Matte Tint</a></li><br/>
-                                                        <li><a href="mens.html">Son Zero Matte Lipstick</a></li><br/>
-                                                        <li><a href="mens.html">Son Juicy Lasting Tint</a></li>
-
+                                                        <li><a href="romand.jsp">Son Seethrough Matte Tint</a></li><br/>
+                                                        <li><a href="romand.jsp">Son Zero Matte Lipstick</a></li><br/>
+                                                        <li><a href="romand.jsp">Son Juicy Lasting Tint</a></li>
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -122,38 +122,36 @@
                                         </ul>
                                     </li>
                                     <li class="dropdown menu__item">
-                                        <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gilaa <span class="caret"></span></a>
+                                        <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Gilaa<span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="womens.html">Son Gilaa Plumping Lip Serum</a></li><br/>
-                                                        <li><a href="womens.html">Son Gilaa Long Wear Lip Cream </a></li>
+                                                        <li><a href="gilaa.jsp">Son Gilaa Plumping Lip Serum</a></li><br/>
+                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream </a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">                                        
-                                                        <li><a href="womens.html">Son Gilaa Long Wear Lip Cream Rich Rosie </a></li><br/>
-                                                        <li><a href="womens.html">Son Gilaa Long Wear Lip Cream Mini Size</a></li>
+                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream Rich Rosie </a></li><br/>
+                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream Mini Size</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                    <a href="womens.html"><img src="images/top2_2.png" alt=" "/></a>
+                                                    <a href="gilaa.jsp"><img src="images/top2_2.png" alt=" "/></a>
                                                 </div>
-
                                                 <div class="clearfix"></div>
                                             </div>
                                         </ul>
                                     </li>
-                                    <!--                                    <li class="menu__item dropdown">
-                                                                            <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-                                                                            <ul class="dropdown-menu agile_short_dropdown">
-                                                                                <li><a href="icons.html">Web Icons</a></li>
-                                                                                <li><a href="typography.html">Typography</a></li>
-                                                                            </ul>
-                                                                        </li>-->
-                                    <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ </a></li>
-
+<!--                                    <li class="menu__item dropdown">
+                                        <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
+                                        <ul class="dropdown-menu agile_short_dropdown">
+                                            <li><a href="icons.html">Web Icons</a></li>
+                                            <li><a href="typography.html">Typography</a></li>
+                                        </ul>
+                                    </li>-->
+                                    <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -183,19 +181,19 @@
                     </div>
                     <div class="modal-body modal-body-sub_agile">
                         <div class="col-md-8 modal_body_left modal_body_left1">
-                            <h3 class="agileinfo_sign">Sign In <span>Now</span></h3>
+                            <h3 class="agileinfo_sign">Đăng Nhập <span> Mangosteen</span></h3>
                             <form action="#" method="post">
                                 <div class="styled-input agile-styled-input-top">
                                     <input type="text" name="Name" required="">
-                                    <label>Name</label>
+                                    <label>Tên đăng nhập</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
-                                    <input type="email" name="Email" required=""> 
-                                    <label>Email</label>
+                                    <input type="text" name="Password" required=""> 
+                                    <label>Mật khẩu</label>
                                     <span></span>
                                 </div> 
-                                <input type="submit" value="Sign In">
+                                <input type="submit" value="Đăng nhập">
                             </form>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                                 <li><a href="#" class="facebook">
@@ -212,7 +210,7 @@
                                         <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                             </ul>
                             <div class="clearfix"></div>
-                            <p><a href="#" data-toggle="modal" data-target="#myModal2" > Don't have an account?</a></p>
+                            <p><a href="#" data-toggle="modal" data-target="#myModal2" > Bạn không có tài khoản?</a></p>
 
                         </div>
                         <div class="col-md-4 modal_body_right modal_body_right1">
@@ -235,11 +233,11 @@
                     </div>
                     <div class="modal-body modal-body-sub_agile">
                         <div class="col-md-8 modal_body_left modal_body_left1">
-                            <h3 class="agileinfo_sign">Đăng kí <span>Now</span></h3>
+                            <h3 class="agileinfo_sign">Đăng kí <span>Mangosteen</span></h3>
                             <form action="#" method="post">
                                 <div class="styled-input agile-styled-input-top">
                                     <input type="text" name="Name" required="">
-                                    <label>Name</label>
+                                    <label>Tên Đăng Nhập</label>
                                     <span></span>
                                 </div>
                                 <div class="styled-input">
@@ -249,15 +247,15 @@
                                 </div> 
                                 <div class="styled-input">
                                     <input type="password" name="password" required=""> 
-                                    <label>Password</label>
+                                    <label>Mật khẩu</label>
                                     <span></span>
                                 </div> 
                                 <div class="styled-input">
                                     <input type="password" name="Confirm Password" required=""> 
-                                    <label>Confirm Password</label>
+                                    <label>Xác nhận lại mật khẩu</label>
                                     <span></span>
                                 </div> 
-                                <input type="submit" value="Sign Up">
+                                <input type="submit" value="Đăng kí">
                             </form>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
                                 <li><a href="#" class="facebook">
@@ -527,11 +525,11 @@
         <!--/grids-->
         <div class="agile_last_double_sectionw3ls">
             <div class="col-md-6 multi-gd-img multi-gd-text ">
-                <a href="womens.html"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+                <a href="gilaa.jsp"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
 
             </div>
             <div class="col-md-6 multi-gd-img multi-gd-text ">
-                <a href="womens.html"><img src="images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+                <a href="gilaa.jsp"><img src="images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
             </div>
             <div class="clearfix"></div>
         </div>							
@@ -617,26 +615,26 @@
                 <div class="col-md-9 footer-right">
                     <div class="sign-grds">
                         <div class="col-md-4 sign-gd">
-                            <h4>Our <span>Information</span> </h4>
+                            <h4>Các trang <span></span> </h4>
                             <ul>
-                                <li><a href="index.jsp">Trang chủ</a></li>
-                                <li><a href="mens.html">Men's Wear</a></li>
-                                <li><a href="womens.html">Women's wear</a></li>
+                                li><a href="index.jsp">Trang Chủ</a></li>
+                                <li><a href="romand.jsp">Romand</a></li>
+                                <li><a href="gilaa.jsp">Gilaa</a></li>
                                 <li><a href="about.jsp">Mangosteen</a></li>
-                                <li><a href="typography.html">Short Codes</a></li>
-                                <li><a href="contact.html">Liên hệ</a></li>
+<!--                                <li><a href="typography.html">Short Codes</a></li>-->
+                                <li><a href="contact.jsp">Liên Hệ</a></li>
                             </ul>
                         </div>
 
                         <div class="col-md-5 sign-gd-two">
-                            <h4>Store <span>Information</span></h4>
+                            <h4>Liên Hệ <span>Mangosteen</span></h4>
                             <div class="w3-address">
                                 <div class="w3-address-grid">
                                     <div class="w3-address-left">
                                         <i class="fa fa-phone" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Phone Number</h6>
+                                        <h6>Số điện thoại</h6>
                                         <p>+1 234 567 8901</p>
                                     </div>
                                     <div class="clearfix"> </div>
@@ -646,8 +644,8 @@
                                         <i class="fa fa-envelope" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Email Address</h6>
-                                        <p>Email :<a href="mailto:example@email.com"> mail@example.com</a></p>
+                                        <h6>Địa chỉ Email </h6>
+                                        <p>Email :<a href="mailto:example@email.com"> kimkim01@gmail.com</a></p>
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
@@ -656,8 +654,8 @@
                                         <i class="fa fa-map-marker" aria-hidden="true"></i>
                                     </div>
                                     <div class="w3-address-right">
-                                        <h6>Location</h6>
-                                        <p>Broome St, NY 10002,California, USA. 
+                                        <h6>Địa chỉ</h6>
+                                        <p>Số 32, Đường Hùng Vương, phường Nam Thành, tp Ninh Bình. 
 
                                         </p>
                                     </div>
@@ -696,7 +694,7 @@
 
                     <div class="clearfix"></div>
                 </div>
-                <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>
+<!--                <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>-->
             </div>
         </div>
         <!-- //footer -->
