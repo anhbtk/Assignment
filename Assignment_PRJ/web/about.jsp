@@ -307,7 +307,7 @@
             <div class="container">
                 <div class="agile_ab_w3ls_info">
                     <div class="col-md-6 ab_pic_w3ls">
-                        <img src="images/ab_pic.jpg" alt=" " class="img-responsive" />
+                        <img src="images/moi.jpg" alt=" " class="img-responsive" />
                     </div>
                     <div class="col-md-6 ab_pic_w3ls_text_info">
                         <h5>Mangosteen <span> Shop</span> </h5>
@@ -319,19 +319,19 @@
                 <div class="banner_bottom_agile_info_inner_w3ls">
                     <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
                         <figure class="effect-roxy">
-                            <img src="images/bottom1.jpg" alt=" " class="img-responsive" />
+                            <img src="images/romand-bia.webp" alt=" " class="img-responsive" />
                             <figcaption>
-                                <h3><span>F</span>all Ahead</h3>
-                                <p>New Arrivals</p>
+                                <h3><span>L</span>ip</h3>
+                                <p>Romand</p>
                             </figcaption>			
                         </figure>
                     </div>
                     <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
                         <figure class="effect-roxy">
-                            <img src="images/bottom2.jpg" alt=" " class="img-responsive" />
+                            <img src="images/gilaa-bia.webp" alt=" " class="img-responsive" />
                             <figcaption>
-                                <h3><span>F</span>all Ahead</h3>
-                                <p>New Arrivals</p>
+                                <h3><span>L</span>ip</h3>
+                                <p>Gilaa</p>
                             </figcaption>			
                         </figure>
                     </div>
@@ -340,7 +340,7 @@
             </div> 
         </div>
         <!-- team -->
-        <div class="banner_bottom_agile_info team">
+<!--        <div class="banner_bottom_agile_info team">
             <div class="container">
                 <h3 class="wthree_text_info">Our Team <span>Members</span></h3>
                 <div class="inner_w3l_agile_grids">
@@ -447,11 +447,11 @@
                     <div class="clearfix"> </div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!-- //team -->
 
         <!-- schedule-bottom -->
-        <div class="schedule-bottom">
+<!--        <div class="schedule-bottom">
             <div class="col-md-6 agileinfo_schedule_bottom_left">
                 <img src="images/mid.jpg" alt=" " class="img-responsive" />
             </div>
@@ -479,10 +479,10 @@
                 </div>
             </div>
             <div class="clearfix"> </div>
-        </div>
+        </div>-->
         <!-- //schedule-bottom -->
         <!-- banner-bootom-w3-agileits -->
-        <div class="banner-bootom-w3-agileits">
+<!--        <div class="banner-bootom-w3-agileits">
             <div class="container">
                 <h3 class="wthree_text_info">What's <span>Trending</span></h3>
 
@@ -521,9 +521,9 @@
                     <div class="clearfix"></div>
                 </div>
             </div>
-        </div>
+        </div>-->
         <!--/grids-->
-        <div class="agile_last_double_sectionw3ls">
+<!--        <div class="agile_last_double_sectionw3ls">
             <div class="col-md-6 multi-gd-img multi-gd-text ">
                 <a href="gilaa.jsp"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
 
@@ -532,16 +532,16 @@
                 <a href="gilaa.jsp"><img src="images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
             </div>
             <div class="clearfix"></div>
-        </div>							
+        </div>							-->
         <!--/grids-->
         <!-- /we-offer -->
-        <div class="sale-w3ls">
+<!--        <div class="sale-w3ls">
             <div class="container">
                 <h6>We Offer Flat <span>40%</span> Discount</h6>
 
                 <a class="hvr-outline-out button2" href="single.html">Shop Now </a>
             </div>
-        </div>
+        </div>-->
         <!-- //we-offer -->
         <!--/grids-->
         <div class="coupons">
