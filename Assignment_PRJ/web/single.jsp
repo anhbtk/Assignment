@@ -108,7 +108,7 @@
                                                         <li><a href="romand.jsp">Son Glasting Water Tint</a></li><br/>
                                                         <li><a href="romand.jsp">Son Zero Velvet Tint</a></li><br/>
                                                         <li><a href="romand.jsp">Son Glasting Water Gloss</a></li>
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
@@ -116,7 +116,7 @@
                                                         <li><a href="romand.jsp">Son Seethrough Matte Tint</a></li><br/>
                                                         <li><a href="romand.jsp">Son Zero Matte Lipstick</a></li><br/>
                                                         <li><a href="romand.jsp">Son Juicy Lasting Tint</a></li>
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -146,13 +146,13 @@
                                             </div>
                                         </ul>
                                     </li>
-<!--                                    <li class="menu__item dropdown">
-                                        <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-                                        <ul class="dropdown-menu agile_short_dropdown">
-                                            <li><a href="icons.html">Web Icons</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                        </ul>
-                                    </li>-->
+                                    <!--                                    <li class="menu__item dropdown">
+                                                                            <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
+                                                                            <ul class="dropdown-menu agile_short_dropdown">
+                                                                                <li><a href="icons.html">Web Icons</a></li>
+                                                                                <li><a href="typography.html">Typography</a></li>
+                                                                            </ul>
+                                                                        </li>-->
                                     <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ</a></li>
                                 </ul>
                             </div>
@@ -349,8 +349,8 @@
                         <h5>Check delivery, payment options and charges at your location</h5>
                         <form action="#" method="post">
                             <input type="text" value="Enter pincode" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                            this.value = 'Enter pincode';
-                                                        }" required="">
+                                        this.value = 'Enter pincode';
+                                    }" required="">
                             <input type="submit" value="Check">
                         </form>
                     </div>
@@ -816,19 +816,21 @@
                                         <div class="sign-up">
                                             <h4>Email :</h4>
                                             <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Type here';}" required="">	
+                                                        this.value = 'Type here';
+                                                    }" required="">	
                                         </div>
                                         <div class="sign-up">
                                             <h4>Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';}" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
 
                                         </div>
                                         <div class="sign-up">
                                             <h4>Re-type Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
 
                                         </div>
                                         <div class="sign-up">
@@ -843,14 +845,14 @@
                                         <div class="sign-in">
                                             <h4>Email :</h4>
                                             <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Type here';
-                                                                                                        }" required="">	
+                                                        this.value = 'Type here';
+                                                    }" required="">	
                                         </div>
                                         <div class="sign-in">
                                             <h4>Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
                                             <a href="#">Forgot password?</a>
                                         </div>
                                         <div class="single-bottom">
@@ -880,14 +882,14 @@
         <!-- cart-js -->
         <script src="js/minicart.min.js"></script>
         <script>
-                                                                                                            // Mini Cart
-                                                                                                            paypal.minicart.render({
-                                                                                                                action: '#'
-                                                                                                            });
+                                                // Mini Cart
+                                                paypal.minicart.render({
+                                                    action: '#'
+                                                });
 
-                                                                                                            if (~window.location.search.indexOf('reset=true')) {
-                                                                                                                paypal.minicart.reset();
-                                                                                                            }
+                                                if (~window.location.search.indexOf('reset=true')) {
+                                                    paypal.minicart.reset();
+                                                }
         </script>
 
         <!-- //cart-js --> 
@@ -897,37 +899,37 @@
         <!-- script for responsive tabs -->						
         <script src="js/easy-responsive-tabs.js"></script>
         <script>
-                                                                                                            $(document).ready(function () {
-                                                                                                                $('#horizontalTab').easyResponsiveTabs({
-                                                                                                                    type: 'default', //Types: default, vertical, accordion           
-                                                                                                                    width: 'auto', //auto or any width like 600px
-                                                                                                                    fit: true, // 100% fit in a container
-                                                                                                                    closed: 'accordion', // Start closed if in accordion view
-                                                                                                                    activate: function (event) { // Callback function if tab is switched
-                                                                                                                        var $tab = $(this);
-                                                                                                                        var $info = $('#tabInfo');
-                                                                                                                        var $name = $('span', $info);
-                                                                                                                        $name.text($tab.text());
-                                                                                                                        $info.show();
-                                                                                                                    }
-                                                                                                                });
-                                                                                                                $('#verticalTab').easyResponsiveTabs({
-                                                                                                                    type: 'vertical',
-                                                                                                                    width: 'auto',
-                                                                                                                    fit: true
-                                                                                                                });
-                                                                                                            });
+                                                $(document).ready(function () {
+                                                    $('#horizontalTab').easyResponsiveTabs({
+                                                        type: 'default', //Types: default, vertical, accordion           
+                                                        width: 'auto', //auto or any width like 600px
+                                                        fit: true, // 100% fit in a container
+                                                        closed: 'accordion', // Start closed if in accordion view
+                                                        activate: function (event) { // Callback function if tab is switched
+                                                            var $tab = $(this);
+                                                            var $info = $('#tabInfo');
+                                                            var $name = $('span', $info);
+                                                            $name.text($tab.text());
+                                                            $info.show();
+                                                        }
+                                                    });
+                                                    $('#verticalTab').easyResponsiveTabs({
+                                                        type: 'vertical',
+                                                        width: 'auto',
+                                                        fit: true
+                                                    });
+                                                });
         </script>
         <!-- FlexSlider -->
         <script src="js/jquery.flexslider.js"></script>
         <script>
-                                                            // Can also be used with $(document).ready()
-                                                            $(window).load(function () {
-                                                                $('.flexslider').flexslider({
-                                                                    animation: "slide",
-                                                                    controlNav: "thumbnails"
-                                                                });
-                                                            });
+                                                // Can also be used with $(document).ready()
+                                                $(window).load(function () {
+                                                    $('.flexslider').flexslider({
+                                                        animation: "slide",
+                                                        controlNav: "thumbnails"
+                                                    });
+                                                });
         </script>
         <!-- //FlexSlider-->
         <!-- //script for responsive tabs -->		
@@ -935,12 +937,12 @@
         <script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script type="text/javascript">
-                                                                                                            jQuery(document).ready(function ($) {
-                                                                                                                $(".scroll").click(function (event) {
-                                                                                                                    event.preventDefault();
-                                                                                                                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-                                                                                                                });
-                                                                                                            });
+                                                jQuery(document).ready(function ($) {
+                                                    $(".scroll").click(function (event) {
+                                                        event.preventDefault();
+                                                        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+                                                    });
+                                                });
         </script>
         <!-- here stars scrolling icon -->
         <script type="text/javascript">

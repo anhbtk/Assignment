@@ -1,80 +1,135 @@
 ﻿create database Web_banson
 
-
-
-create table Categories(
-	idCategory int not null primary key,
-	title nvarchar(70)not null,
-	[description] nvarchar(500),
+create table Categogies (
+	id INT primary key,
+	name VARCHAR(50),
+	[description] NVARCHAR(600)
 );
+insert into Categogies (id, name,[description]) values (1, 'Son Romand - Glasting Water Tint', N'Sở dĩ son có tên gọi Glasting Water Tint vì son như được "phủ nước", khi bạn thoa son lên môi, sau khoảng 3 giây son sẽ xuất hiện hiệu ứng bóng và tạo một lớp nước trên môi. Độ bóng có thể điều chỉnh dễ dàng, tông màu được giữ bên dưới lớp bóng nên sẽ khó biến mất và có độ bám tốt. Đặc biệt sau lớp son bóng giúp môi căng mọng là lớp son lì hoàn hảo trên môi.');
+insert into Categogies (id, name,[description]) values (2, 'Son Romand - Zero Velvet Tint',N'Son kem lì Romand Zero Velvet Tint là son kem lì của thương hiệu Romand với kết cấu velvet xốp mềm cùng bảng màu đa dạng, dễ dùng cho đôi môi lên màu chuẩn, mịn mượt, nổi bật dù bạn ở bất cứ đâu. Romand Zero Velvet Tint có thân hình trụ tròn, vỏ nhám lì dễ dàng phân biệt màu son bên trong, kích thước cầm vừa tay. Chất son mềm mịn như bông, không hề bóng hay dễ bị lem khi lên môi. Độ bám nhiều giờ đồng hồ, son lên màu môi chuẩn chỉ với một lần tô.');
+insert into Categogies (id, name,[description]) values (3, 'Son Romand - Glasting Water Gloss',N'Với sự thành công của Romand Glasting Water Tint, Romand Glasting Water Gloss vừa ra mắt đã ngay lập tức được giới làm đẹp tích cực săn lùng. Thân son trong suốt, nhìn thấy màu son và rất nhiều những hạt nhũ lấp lánh vô cùng bắt mắt, mang lại cảm giác trong trẻo và lung linh, thật đúng như tên gọi Water Gloss. Chất son dạng gel cực mỏng, khi thoa lên môi cảm giác như thoa một lớp nước trên môi vậy, cảm giác nhẹ nhàng rất thích. Son không hề có cảm giác dính dính khi bặm môi.');
+insert into Categogies (id, name,[description]) values (4, 'Son Romand - Seethrough Matte Tint',N'Romand See-Through Matte Tint với phiên bản đặc biệt Hanbok Project với một diện mạo xinh xắn, trang nhã với chất son kem lì mịn mượt cùng với bảng màu trendy quyến rũ giúp da trở nên tươi sáng. Thiết kế lấy cảm hứng từ những tông màu pastel, nhẹ nhàng nhưng vẫn đầy sự cuốn hút, vì thế nhiều cô gái đã bị hạ gục ngay từ khi thấy bao bì xinh xắn này của dòng son Romand Se-Through Matte Tint. Kết cấu son có dạng mousse tint tạo cảm giác ẩm mịn, dễ tán đều, tệp ngay vào môi từ lần chạm đầu tiên tựa như không bôi gì.');
+insert into Categogies (id, name,[description]) values (5, 'Son Romand - Zero Matte Lipstick',N'Hạt phấn tạo màu nhỏ trong chất son của Zero Gram Lipstick khiến cho màu son lên chuẩn và tạo được độ mịn lì nhất có thể, chất son mỏng nhẹ và siêu nhẹ môi, mịn màng lướt trên môi không mang lại cảm giác bết dính khó chịu. thiết kế thân son dáng trụ vuông cầm siêu chắc tay, vỏ son xám đục và nude trong suốt bao bọc bên ngoài lõi son cực kì độc đáo và sang chảnh.');
+insert into Categogies (id, name,[description]) values (6, 'Son Romand - Juicy Lasting Tint',N'Son tint bóng - Hot trend mà nàng nào bỏ lỡ em này quả là một thiếu sót lớn. Em này đúng chuẩn son tint bóng nhẹ, tự nhiên lắm luôn các nàng nhé. Son apply lên môi tạo hiệu ứng đúng kiểu căng mọng tự nhiên ý, không bị dính dính môi đâu. Tuy là chất son tint nhiều dưỡng nhưng độ giữ màu của em ý vẫn đáng gờm lắm, ăn uống nhiều dầu mỡ thì lớp son vẫn giữ lại trên môi phớt hồng hồng nhẹ siêu tự nhiên.');
+insert into Categogies (id, name,[description]) values (7, 'Son Gilaa - Plumping Lip Serum',N'Điểm đặc biệt mới lạ trong BST Plumping Lip Serum chính là Serum dưỡng môi căng mọng không màu. Vừa có thể sử dụng là lớp dưỡng môi mềm mịn, vừa là lớp base hỗ trợ lớp son màu lên đều đẹp chuẩn sắc.');
+insert into Categogies (id, name,[description]) values (8, 'Son Gilaa - Long Wear Lip Cream',N'Thỏi Son Kem Li Cho Đôi Môi Nhiều Khuyết Điểm. Càng thoa sắc môi càng nét. Bảng màu siêu kinh điển phù hợp mọi tông da. Chứa nhiều thành phần dưỡng môi giải quyết đồng thời nhiều khuyết điểm(Shea Butter (Bơ Hạt Mỡ)Bảo vệ trước tác hại của tia UV từ ánh nắng mặt trời, hỗ trợ trị thâm môi; Macadamia (Hạt Mắc-ca)Duy trì độ ẩm mịn cho môi, chống khô và nứt nẻ môi.');
+insert into Categogies (id, name,[description]) values (9, 'Son Gilaa - Long Wear Lip Cream Rich Rosie',N'Đây là phiên bản nâng cấp của dòng son kem lì dành cho đôi môi nhiều khuyết điểm đình đám. Chất son được bổ sung thêm tinh chất Bisabolol làm sáng màu môi tự nhiên, kết hợp thành phần dưỡng ẩm cao giúp môi hạn chế được trình trạng khô, bong tróc.');
+insert into Categogies (id, name,[description]) values (10, 'Son Gilaa - Long Wear Lip Cream Mini Size',N'Thỏi Son Kem Li Cho Đôi Môi Nhiều Khuyết Điểm. Càng thoa sắc môi càng nét. Bảng màu siêu kinh điển phù hợp mọi tông da. Chứa nhiều thành phần dưỡng môi giải quyết đồng thời nhiều khuyết điểm(Shea Butter (Bơ Hạt Mỡ)Bảo vệ trước tác hại của tia UV từ ánh nắng mặt trời, hỗ trợ trị thâm môi; Macadamia (Hạt Mắc-ca)Duy trì độ ẩm mịn cho môi, chống khô và nứt nẻ môi.)');
 
-create table Product(
-	idProduct int not null identity(1,1) primary key,
-	title nvarchar(200)not null,
-	[description] nvarchar(50),
-	idCategory int,
-	price int,
-	imagin nvarchar(max),
-	foreign key (idCategory) references Categories(idCategory)
+drop table Product
+
+select*from Product
+
+create table Product (
+	id INT primary key,
+	name VARCHAR(50),
+	category_id INT,
+	quantity INT,
+	price INT,
+	description NVARCHAR(500),
+	imagine VARCHAR(100),
+	imagine2 VARCHAR(100),
+	imagine3 VARCHAR(100),
+	created_date DATE,
+	FOREIGN KEY (category_id) REFERENCES Categogies(id)
 );
-
-create table [User](
-	idUser int not null primary key,
-	username varchar(20),
-	[password] varchar(20),
-	email varchar(50),
-	phone_number int,
-	address nvarchar(100),
-);
-
--- not run
-
-create table [Order](
-	idOrder int not null primary key ,
-	[user] int,
-	cart_id int ,
-	shipping_address nvarchar(100),
-	order_description nvarchar(45),
-	order_total int,
-	is_complete bit,
-);
-
-create table Variation(
-	idVariation int not null primary key,
-	product int,
-	title nvarchar(50),
-	price int,
-	sale_price int,
-	inventory int,
-	active bit,
-	
-);
-create table CartItem(
-	idCartItem int not null primary key,
-	cart int,
-	item int,
-	quantity int,
-	
-);
-create table Cart(
-	idCart int not null primary key,
-	[user] int,
-	created_at datetime,
-	updated_at datetime,
-);
-
-insert into Categories
-values 
-(0001,N'Son Romand - Glasting Water Tint',N'Son tint lì Romand Glasting Water Tint là son tint lì của thương hiệu Romand có chất son tint bóng tự như một lớp màng nước lướt nhẹ trên môi, chứa nhiều dưỡng chất giúp nuôi dưỡng đôi môi, son lên môi nhẹ và mướt mịn, dễ tán đều cùng với bảng màu rực rỡ đa dạng mang đến cho bạn đôi môi căng mọng tràn đầy sức sống, tự tin cả ngày dài. on có thiết kế bên ngoài với nắp son trong suốt được trang trí bởi dòng chữ Romand. Thân son hình trụ tròn, cầm khá chắc tay và có màu trùng với màu son bên trong'),
-(0002,N'Son Romand - Zero Velvet Tint',N'Son kem lì Romand Zero Velvet Tint là son kem lì của thương hiệu Romand với kết cấu velvet xốp mềm cùng bảng màu đa dạng, dễ dùng cho đôi môi lên màu chuẩn, mịn mượt, nổi bật dù bạn ở bất cứ đâu. Romand Zero Velvet Tint có thân hình trụ tròn, vỏ nhám lì dễ dàng phân biệt màu son bên trong, kích thước cầm vừa tay. Chất son mềm mịn như bông, không hề bóng hay dễ bị lem khi lên môi. Độ bám nhiều giờ đồng hồ, son lên màu môi chuẩn chỉ với một lần tô.'),
-(0003,N'Son Romand - Glasting Water Gloss',N'Với sự thành công của Romand Glasting Water Tint, Romand Glasting Water Gloss vừa ra mắt đã ngay lập tức được giới làm đẹp tích cực săn lùng. Thân son trong suốt, nhìn thấy màu son và rất nhiều những hạt nhũ lấp lánh vô cùng bắt mắt, mang lại cảm giác trong trẻo và lung linh, thật đúng như tên gọi Water Gloss. Chất son dạng gel cực mỏng, khi thoa lên môi cảm giác như thoa một lớp nước trên môi vậy, cảm giác nhẹ nhàng rất thích. Son không hề có cảm giác dính dính khi bặm môi.'),
-(0004,N'Son Romand - Seethrough Matte Tint',N'Romand See-Through Matte Tint với phiên bản đặc biệt Hanbok Project với một diện mạo xinh xắn, trang nhã với chất son kem lì mịn mượt cùng với bảng màu trendy quyến rũ giúp da trở nên tươi sáng. Thiết kế lấy cảm hứng từ những tông màu pastel, nhẹ nhàng nhưng vẫn đầy sự cuốn hút, vì thế nhiều cô gái đã bị hạ gục ngay từ khi thấy bao bì xinh xắn này của dòng son Romand Se-Through Matte Tint. Kết cấu son có dạng mousse tint tạo cảm giác ẩm mịn, dễ tán đều, tệp ngay vào môi từ lần chạm đầu tiên tựa như không bôi gì.'),
-(0005,N'Son Romand - Zero Matte Lipstick',N'Hạt phấn tạo màu nhỏ trong chất son của Zero Gram Lipstick khiến cho màu son lên chuẩn và tạo được độ mịn lì nhất có thể, chất son mỏng nhẹ và siêu nhẹ môi, mịn màng lướt trên môi không mang lại cảm giác bết dính khó chịu. thiết kế thân son dáng trụ vuông cầm siêu chắc tay, vỏ son xám đục và nude trong suốt bao bọc bên ngoài lõi son cực kì độc đáo và sang chảnh.'),
-(0006,N'Son Romand - Juicy Lasting Tint',N'Son tint bóng - Hot trend mà nàng nào bỏ lỡ em này quả là một thiếu sót lớn. Em này đúng chuẩn son tint bóng nhẹ, tự nhiên lắm luôn các nàng nhé. Son apply lên môi tạo hiệu ứng đúng kiểu căng mọng tự nhiên ý, không bị dính dính môi đâu. Tuy là chất son tint nhiều dưỡng nhưng độ giữ màu của em ý vẫn đáng gờm lắm, ăn uống nhiều dầu mỡ thì lớp son vẫn giữ lại trên môi phớt hồng hồng nhẹ siêu tự nhiên.'),
-(0007,N'Son Gilaa - Plumping Lip Serum',N'Điểm đặc biệt mới lạ trong BST Plumping Lip Serum chính là Serum dưỡng môi căng mọng không màu. Vừa có thể sử dụng là lớp dưỡng môi mềm mịn, vừa là lớp base hỗ trợ lớp son màu lên đều đẹp chuẩn sắc.'),
-(0008,N'Son Gilaa - Long Wear Lip Cream',N'Thỏi Son Kem Li Cho Đôi Môi Nhiều Khuyết Điểm. Càng thoa sắc môi càng nét. Bảng màu siêu kinh điển phù hợp mọi tông da. Chứa nhiều thành phần dưỡng môi giải quyết đồng thời nhiều khuyết điểm(Shea Butter (Bơ Hạt Mỡ)Bảo vệ trước tác hại của tia UV từ ánh nắng mặt trời, hỗ trợ trị thâm môi; Macadamia (Hạt Mắc-ca)Duy trì độ ẩm mịn cho môi, chống khô và nứt nẻ môi.'),
-(0009,N'Son Gilaa - Long Wear Lip Cream Rich Rosie',N'Đây là phiên bản nâng cấp của dòng son kem lì dành cho đôi môi nhiều khuyết điểm đình đám. Chất son được bổ sung thêm tinh chất Bisabolol làm sáng màu môi tự nhiên, kết hợp thành phần dưỡng ẩm cao giúp môi hạn chế được trình trạng khô, bong tróc.'),
-(0010,N'Son Gilaa - Long Wear Lip Cream Mini Size',N'Thỏi Son Kem Li Cho Đôi Môi Nhiều Khuyết Điểm. Càng thoa sắc môi càng nét. Bảng màu siêu kinh điển phù hợp mọi tông da. Chứa nhiều thành phần dưỡng môi giải quyết đồng thời nhiều khuyết điểm(Shea Butter (Bơ Hạt Mỡ)Bảo vệ trước tác hại của tia UV từ ánh nắng mặt trời, hỗ trợ trị thâm môi; Macadamia (Hạt Mắc-ca)Duy trì độ ẩm mịn cho môi, chống khô và nứt nẻ môi.)');
-
-
-select*from Categories
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (1, '10 Chija Beige', 1, 10, 220000, N'Son Tint bóng Romand Glasting Water Tint 10 Chija Beige mang sắc màu cam đào tươi tắn sẽ giúp đôi môi của bạn trông quyến rũ như những đóa hoa. Son có kết cấu tint bóng với lớp bóng trong suốt tách biệt với lớp satin màu rất đặc biệt.', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\10.png', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\10.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\10m.jpg', '2022-09-29');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (2, '04 Vintage Ocean', 1, 5, 175000, N'Màu son đỏ nâu nhưng không quá trầm cũng không quá nổi là sự lựa chọn thích hợp cho các cô nàng yêu thích phong cách cổ điên, vintage. Chất son bóng nhưng không hề dính, tựa lớp nước trong trẻo bao bọc lấy đôi môi. Em này cần đánh nhiều lớp thì mới có thể lên rõ màu son và không sợ bị nặng môi', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\04.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\04b.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\04n.jpg', '2020-06-24');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (3, '02 Red Drop', 1, 20, 175000, N'Màu son như tên gọi trông như một quả táo đỏ, phù hợp với tất cả tông da và không làm xỉn vàng men răng. Kết hợp với chất son bóng, màu son sẽ khiến đôi môi bạn chúm chím như một quả táo căng mọng vậy', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\02.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\02m.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\02 (1).jpg', '2021-11-20');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (4, '06 Purple Shower', 1, 43, 175000, 'Sắc son hồng tím cho các nàng vẻ ngoài vừa quyến rũ vừa cổ điển. Màu son có thể làm xỉn tông da nên các nàng nhớ trang điểm để tổng thể khuông mặt trông hài hòa hơn nhé!', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\06.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\06m.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\06.png', '2020-10-13');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (5, '13 Berry Violet', 7, 8, 220000, N'13 Berry Violet đỏ đỏ hồng hồng tim tím tone lạnh 10 điểm cho đêm Noel.Tips là mix với bảng phấn mắt tone hồng của Romand nữa thì nguyên combo quẩy Noel xinh thiệt xinh luôn nha', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\13.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\13m.jpg', 'E:\PRJ301_ASSIGNMENT\Assignment\romand\Glasting Water Tint\13.png', '2020-01-08');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (6, 'Daltfresh', 1, 36, 175000, 'Zellweger-like syndrome', '', '', '', '2020-07-11');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (7, 'Voltsillam', 3, 17, 175000, 'Traumatic compartment syndrome of r low extrem, sequela', '', '', '', '2021-01-25');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (8, 'Transcof', 7, 42, 175000, 'Nondisp spiral fx shaft of ulna, l arm, 7thB', '', '', '', '2022-08-26');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (9, 'Ronstring', 8, 47, 175000, 'Osteitis deformans in neoplastic diseases, ankle and foot', '', '', '', '2020-01-01');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (10, 'Bytecard', 2, 24, 175000, 'Meningococcal encephalitis', '', '', '', '2022-10-16');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (11, 'Pannier', 8, 25, 175000, 'Pain in left leg', '', '', '', '2021-10-04');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (12, 'Solarbreeze', 10, 47, 175000, 'Underdosing of sulfonamides, initial encounter', '', '', '', '2022-02-13');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (13, 'Ronstring', 3, 9, 175000, 'Unqualified visual loss, one eye', '', '', '', '2022-01-05');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (14, 'Flexidy', 8, 39, 175000, 'Oth multiple gest, unsp num plcnta & amnio sacs, third tri', '', '', '', '2020-03-03');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (15, 'Solarbreeze', 7, 25, 175000, 'Glider (nonpowered) fire injuring occupant, sequela', '', '', '', '2021-07-22');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (16, 'Hatity', 4, 25, 175000, 'Milt op involving oth firearms discharge, civilian, sequela', '', '', '', '2020-04-25');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (17, 'Zoolab', 6, 13, 175000, 'Toxic effect of venom of N & S American snake, undet, init', '', '', '', '2020-02-15');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (18, 'Job', 9, 43, 175000, 'Puncture wound without foreign body, right foot, subs encntr', '', '', '', '2020-02-20');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (19, 'Home Ing', 8, 45, 175000, 'Unsp physl fx upper end unsp femur, subs for fx w nonunion', '', '', '', '2021-02-22');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (20, 'Tampflex', 2, 16, 175000, 'Corrosion of third degree of unspecified ear, subs encntr', '', '', '', '2021-03-18');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (21, 'Overhold', 8, 50, 175000, 'Drug-induced chronic gout, unspecified wrist, without tophus', '', '', '', '2020-06-05');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (22, 'Pannier', 1, 16, 175000, 'Other specified bursopathies, unspecified shoulder', '', '', '', '2020-12-05');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (23, 'Transcof', 10, 25, 175000, 'Traum hemor r cereb w LOC >24 hr w/o ret consc w surv, init', '', '', '', '2020-02-29');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (24, 'Redhold', 2, 31, 175000, 'Contusion of fallopian tube, unspecified, subs encntr', '', '', '', '2020-04-09');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (25, 'Zaam-Dox', 2, 44, 175000, 'Unsp occipital condyle fracture, init for clos fx', '', '', '', '2020-08-26');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (26, 'Ronstring', 2, 38, 175000, 'Nondisp commnt fx shaft of unsp fibula, 7thJ', '', '', '', '2020-01-22');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (27, 'Tres-Zap', 6, 36, 175000, 'Chronic nephritic syndrome with other morphologic changes', '', '', '', '2021-12-16');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (28, 'Mat Lam Tam', 10, 47, 175000, 'Sedative, hypnotic or anxiolytic abuse, uncomplicated', '', '', '', '2022-02-06');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (29, 'Vagram', 4, 50, 175000, 'Strain of musc/fasc/tend triceps, right arm, init', '', '', '', '2020-07-29');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (30, 'Pannier', 5, 11, 175000, 'Toxic effect of chewing tobacco, assault, sequela', '', '', '', '2020-03-11');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (31, 'Zoolab', 10, 40, 175000, 'Nondisp fx of low epiphy (separation) of l femr, 7thJ', '', '', '', '2020-10-25');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (32, 'Solarbreeze', 2, 24, 175000, 'Unspecified injury of unspecified ankle, subs encntr', '', '', '', '2020-03-09');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (33, 'Duobam', 6, 17, 175000, 'Laceration without foreign body, left ankle, sequela', '', '', '', '2022-05-23');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (34, 'Latlux', 8, 41, 175000, 'Filamentary keratitis', '', '', '', '2021-10-18');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (35, 'Hatity', 10, 44, 175000, 'Superficial foreign body of right thumb', '', '','', '2022-07-16');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (36, 'Regrant', 8, 43, 175000, 'Burn of 2nd deg mul sites of right ankle and foot, subs', '', '', '', '2021-10-08');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (37, 'Pannier', 7, 23, 175000, 'Passenger in hv veh injured in clsn w hv veh in traf, init', '', '', '', '2021-02-22');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (38, 'Bitwolf', 10, 11, 175000, 'Contusion of right eyelid and periocular area, sequela', '', '', '', '2021-05-21');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (39, 'Quo Lux', 9, 19, 175000, 'Defects of catalase and peroxidase', '', '', '', '2021-07-20');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (40, 'Bamity', 8, 11, 175000, 'Human herpesvirus 7 infection', '', '', '', '2020-08-15');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (41, 'Keylex', 7, 34, 175000, 'Disp fx of prox phalanx of r thm', '', '', '', '2021-11-07');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (42, 'Otcom', 10, 50, 175000, 'Myiasis of other sites', '', '', '', '2021-03-25');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (43, 'Hatity', 6, 47, 175000, 'Primary genital syphilis', '', '', '', '2022-04-10');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (44, 'Lotstring', 1, 34, 175000, 'Other contact with turtle, sequela', '', '', '', '2021-10-18');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (45, 'Hatity', 5, 29, 175000, 'Disp fx of lateral condyle of unsp femr, 7thN', '', '', '', '2021-11-28');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (46, 'Alpha', 2, 13, 175000, 'Pure sensory lacunar syndrome', '', '', '', '2022-07-21');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (47, 'Namfix', 5, 6, 175000, 'Oth sex chromosome abnormalities, male phenotype, NEC', '', '', '', '2020-06-01');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (48, 'Bitwolf', 2, 37, 175000, 'Tear of articular cartilage of unsp knee, current, init', '', '', '', '2022-11-23');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (49, 'Stim', 1, 38, 175000, 'Contact with sword or dagger, sequela', '', '', '', '2021-11-16');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (50, 'Viva', 10, 29, 175000, 'Laceration of adductor musc/fasc/tend right thigh, subs', '', '', '', '2020-10-15');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (51, 'Opela', 6, 43, 175000, 'Milt op involving unsp explosn and fragmt, civilian, sequela', '', '', '', '2021-05-22');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (52, 'Ventosanzap', 9, 36, 175000, 'Unspecified otosclerosis', '', '', '', '2021-10-22');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (53, 'Ventosanzap', 7, 50, 175000, 'Oth comp specific to multiple gestation, unsp trimester', '', '', '', '2021-07-19');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (54, 'Ventosanzap', 8, 37, 175000, 'Toxic effect of unsp snake venom, accidental, subs', '', '', '', '2021-07-16');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (55, 'Cookley', 6, 46, 175000, 'Toxic effect of unsp corrosive substance, accidental, subs', '', '', '', '2022-06-24');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (56, 'Daltfresh', 9, 17, 175000, 'Poisoning by amphetamines, assault', '', '', '', '2022-06-03');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (57, 'Andalax', 7, 11, 175000, 'Long term (current) use of systemic steroids', '', '', '', '2021-04-26');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (58, 'Zamit', 7, 37, 175000, 'Lateral dislocation of right ulnohumeral joint', '', '', '', '2021-06-19');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (59, 'Fintone', 1, 30, 175000, 'Other contact with cow', '', '', '', '2020-10-12');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (60, 'Kanlam', 2, 41, 175000, 'Inj oth blood vessels at shldr/up arm, right arm, sequela', '', '', '', '2022-02-16');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (61, 'Toughjoyfax', 1, 48, 175000, 'Burn of first degree of left forearm', '','', '', '2021-07-22');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (62, 'Quo Lux', 6, 46, 175000, 'Burn due to canoe or kayak on fire, subsequent encounter', '','', '', '2022-04-30');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (63, 'Sonsing', 2, 24, 175000, 'Partial traumatic amputation at hip joint', '', '', '', '2020-09-09');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (64, 'Duobam', 6, 9, 175000, 'Nondisp fx of base of second MC bone. left hand, sequela', '', '', '', '2021-12-05');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (65, 'Wrapsafe', 5, 8, 175000, 'Chronic osteomyelitis with draining sinus, shoulder', '', '', '', '2020-01-25');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (66, 'Zoolab', 6, 46, 175000, 'Pnctr w foreign body of finger w damage to nail, sequela', '', '', '', '2021-08-26');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (67, 'Matsoft', 9, 24, 175000, 'Oth athscl nonaut bio bypass of the extrm, unsp extremity', '', '', '', '2021-03-21');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (68, 'Gembucket', 6, 19, 175000, 'Unspecified physeal fracture of phalanx of left toe, 7thG', '', '', '', '2020-03-17');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (69, 'Zamit', 3, 10, 175000, 'Injury of muscle, fascia and tendon at wrist and hand level', '', '', '', '2022-07-31');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (70, 'Opela', 7, 20, 175000, 'Poisoning by iminostilbenes, accidental, sequela', '', '', '', '2020-09-09');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (71, 'Domainer', 9, 49, 175000, 'Underdosing of antiparkns drug/centr muscle-tone depr, subs', '', '', '', '2021-05-24');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (72, 'Keylex', 4, 5, 175000, 'Simple chronic conjunctivitis, left eye', '', '', '', '2020-07-21');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (73, 'Zaam-Dox', 3, 39, 175000, 'Corros third degree of unsp single finger except thumb, init', '', '', '', '2021-07-08');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (74, 'Y-find', 4, 50, 175000, 'Corrosion of second degree back of unsp hand, init encntr', '', '', '', '2021-05-18');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (75, 'Biodex', 2, 17, 175000, 'Bi femoral hernia, w obst, w/o gangrene, not spcf as recur', '', '', '', '2021-08-03');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (76, 'Bamity', 1, 12, 175000, 'Unsp open wound of left great toe w/o damage to nail, init', '', '', '', '2020-09-08');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (77, 'Veribet', 5, 28, 175000, 'Disloc of proximal interphaln joint of l mid finger, init', '', '', '', '2022-09-17');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (78, 'Zontrax', 2, 31, 175000, 'Partial traumatic amputation of right forearm, level unsp', '', '', '', '2020-08-01');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (79, 'Greenlam', 10, 27, 175000, 'Toxic effect of venom of caterpillars, undetermined', '', '', '', '2021-03-04');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (80, 'Zamit', 8, 9, 175000, 'Passenger on bus injured in clsn w ped/anml in traf, subs', '', '', '', '2022-02-14');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (81, 'Bamity', 9, 7, 175000, 'Traumatic rupture of left radiocarpal ligament, sequela', '', '', '', '2020-09-12');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (82, 'Vagram', 4, 11, 175000, 'Laceration with foreign body of right hand, init encntr', '', '', '', '2021-10-10');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (83, 'Voyatouch', 1, 17, 175000, 'Unsp inj flexor musc/fasc/tend l thm at forarm lv, sequela', '', '', '', '2022-01-17');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (84, 'Tresom', 10, 12, 175000, 'Oxytocic drugs', '', '', '', '2020-01-01');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (85, 'Overhold', 8, 29, 175000, 'Oth fracture of right femur, subs for clos fx w malunion', '', '', '', '2021-10-29');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (86, 'Lotlux', 9, 38, 175000, 'Unspecified injury of thoracic aorta', '', '', '', '2021-11-26');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (87, 'Toughjoyfax', 4, 9, 175000, 'Struck by sea lion', '', '', '', '2022-04-01');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (88, 'Job', 2, 48, 175000, 'Injury of right uterine artery, subsequent encounter', '', '', '', '2022-02-24');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (89, 'Namfix', 10, 47, 175000, 'Unspecified injury of deep palmar arch of right hand', '', '', '', '2021-12-23');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (90, 'Greenlam', 6, 41, 175000, 'Terrorism involving biolg weapons, publ sfty offcl injured', '', '', '', '2020-03-27');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (91, 'Viva', 9, 19, 175000, 'Other specified crystal arthropathies, right elbow','', '', '', '2022-01-13');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (92, 'Ventosanzap', 3, 33, 175000, 'Other reactive arthropathies, ankle and foot', '', '', '', '2022-08-09');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (93, 'Transcof', 5, 18, 175000, 'Poisoning by methylphenidate, accidental, init', '', '', '', '');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (94, 'Tin', 6, 25, 175000, 'Lac w fb of unsp external genital organs, female, init', '', '', '', '');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (95, 'Hatity', 8, 11, 175000, 'Contact with hot household appliance, undetermined intent', '', '', '', '2021-05-16');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (96, 'Treeflex', 7, 44, 175000, 'Nondisp oblique fx shaft of l ulna, 7thK', '', '', '', '2020-02-16');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (97, 'Treeflex', 5, 40, 175000, 'Displaced dome fx unsp acetabulum, subs for fx w routn heal', '', '', '', '2021-09-06');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (98, 'Matsoft', 4, 34, 175000, 'Poisoning by antiparkns drug/centr musc-tone depr, self-harm', '', '', '', '2020-10-17');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (99, 'Home Ing', 4, 50, 175000, 'Displ seg fx shaft of r femr, 7thJ', '', '', '', '2022-10-17');
+insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (100, 'Trippledex', 6, 23, 175000, 'Poisoning by heroin, intentional self-harm, subs encntr', '', '', '', '2020-11-02');

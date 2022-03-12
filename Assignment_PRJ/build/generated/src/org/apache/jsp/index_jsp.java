@@ -11,10 +11,20 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_forEach_var_items.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -41,6 +51,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       _jspx_out = out;
       _jspx_resourceInjector = (org.glassfish.jsp.api.ResourceInjector) application.getAttribute("com.sun.appserv.jsp.resource.injector");
 
+      out.write("\n");
       out.write("\n");
       out.write("\n");
       out.write("<!DOCTYPE html>\n");
@@ -357,7 +368,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    <div class=\"container\">\n");
       out.write("                        <div class=\"carousel-caption\">\n");
       out.write("                            <h3>ROM&ND <span></span></h3>\n");
-      out.write("                            <p>Tinh tế, dịu dàng</p>\n");
+      out.write("                            <p>Tinh tế, cuốn hút</p>\n");
       out.write("                            <a class=\"hvr-outline-out button2\" href=\"romand.jsp\">Shop Now </a>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");
@@ -513,92 +524,18 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                <h3 class=\"wthree_text_info\">New <span>Arrivals</span></h3>\t\t\n");
       out.write("                <div id=\"horizontalTab\">\n");
       out.write("                    <ul class=\"resp-tabs-list\">\n");
-      out.write("                        <li> Men's</li>\n");
-      out.write("                        <li> Women's</li>\n");
+      out.write("                        <li> Romand</li>\n");
+      out.write("                        <li> Gilaa</li>\n");
       out.write("                        <!--                        <li> Bags</li>\n");
       out.write("                                                <li> Footwear</li>-->\n");
       out.write("                    </ul>\n");
       out.write("                    <div class=\"resp-tabs-container\">\n");
       out.write("                        <!--/tab_one-->\n");
-      out.write("                        <div class=\"tab1\">\n");
-      out.write("                            <div class=\"col-md-3 product-men\">\n");
-      out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
-      out.write("                                    <div class=\"men-thumb-item\">\n");
-      out.write("                                        <img src=\"images/m1.jpg\" alt=\"\" class=\"pro-image-front\">\n");
-      out.write("                                        <img src=\"images/m1.jpg\" alt=\"\" class=\"pro-image-back\">\n");
-      out.write("                                        <div class=\"men-cart-pro\">\n");
-      out.write("                                            <div class=\"inner-men-cart-pro\">\n");
-      out.write("                                                <a href=\"single.jsp\" class=\"link-product-add-cart\">Chi tiết</a>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <span class=\"product-new-top\">New</span>\n");
+      out.write("                        <div class=\"tab1\">                          \n");
+      out.write("                            ");
+      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+        return;
       out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                    <div class=\"item-info-product \">\n");
-      out.write("                                        <h4><a href=\"single.jsp\">Formal Blue Shirt</a></h4>\n");
-      out.write("                                        <div class=\"info-product-price\">\n");
-      out.write("                                            <span class=\"item_price\">$45.99</span>\n");
-      out.write("                                            <del>$69.71</del>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2\">\n");
-      out.write("                                            <form action=\"#\" method=\"post\">\n");
-      out.write("                                                <fieldset>\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cmd\" value=\"_cart\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"add\" value=\"1\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"business\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"item_name\" value=\"Formal Blue Shirt\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"amount\" value=\"30.99\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"discount_amount\" value=\"1.00\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"currency_code\" value=\"USD\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cancel_return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"submit\" name=\"submit\" value=\"Add to cart\" class=\"button\" />\n");
-      out.write("                                                </fieldset>\n");
-      out.write("                                            </form>\n");
-      out.write("                                        </div>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"col-md-3 product-men\">\n");
-      out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
-      out.write("                                    <div class=\"men-thumb-item\">\n");
-      out.write("                                        <img src=\"images/m2.jpg\" alt=\"\" class=\"pro-image-front\">\n");
-      out.write("                                        <img src=\"images/m2.jpg\" alt=\"\" class=\"pro-image-back\">\n");
-      out.write("                                        <div class=\"men-cart-pro\">\n");
-      out.write("                                            <div class=\"inner-men-cart-pro\">\n");
-      out.write("                                                <a href=\"single.jsp\" class=\"link-product-add-cart\">Chi tiết</a>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <span class=\"product-new-top\">New</span>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                    <div class=\"item-info-product \">\n");
-      out.write("                                        <h4><a href=\"single.jsp\">Gabi Full Sleeve Sweatshirt</a></h4>\n");
-      out.write("                                        <div class=\"info-product-price\">\n");
-      out.write("                                            <span class=\"item_price\">$45.99</span>\n");
-      out.write("                                            <del>$69.71</del>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2\">\n");
-      out.write("                                            <form action=\"#\" method=\"post\">\n");
-      out.write("                                                <fieldset>\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cmd\" value=\"_cart\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"add\" value=\"1\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"business\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"item_name\" value=\"Sweatshirt\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"amount\" value=\"30.99\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"discount_amount\" value=\"1.00\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"currency_code\" value=\"USD\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cancel_return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"submit\" name=\"submit\" value=\"Add to cart\" class=\"button\" />\n");
-      out.write("                                                </fieldset>\n");
-      out.write("                                            </form>\n");
-      out.write("                                        </div>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
       out.write("                            <div class=\"col-md-3 product-men\">\n");
       out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
       out.write("                                    <div class=\"men-thumb-item\">\n");
@@ -638,201 +575,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    </div>\n");
       out.write("                                </div>\n");
       out.write("                            </div>\n");
-      out.write("                            <div class=\"col-md-3 product-men\">\n");
-      out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
-      out.write("                                    <div class=\"men-thumb-item\">\n");
-      out.write("                                        <img src=\"images/m4.jpg\" alt=\"\" class=\"pro-image-front\">\n");
-      out.write("                                        <img src=\"images/m4.jpg\" alt=\"\" class=\"pro-image-back\">\n");
-      out.write("                                        <div class=\"men-cart-pro\">\n");
-      out.write("                                            <div class=\"inner-men-cart-pro\">\n");
-      out.write("                                                <a href=\"single.jsp\" class=\"link-product-add-cart\">Chi tiết</a>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <span class=\"product-new-top\">New</span>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                    <div class=\"item-info-product \">\n");
-      out.write("                                        <h4><a href=\"single.jsp\">Round Neck Black T-Shirt</a></h4>\n");
-      out.write("                                        <div class=\"info-product-price\">\n");
-      out.write("                                            <span class=\"item_price\">$190.99</span>\n");
-      out.write("                                            <del>$159.71</del>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2\">\n");
-      out.write("                                            <form action=\"#\" method=\"post\">\n");
-      out.write("                                                <fieldset>\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cmd\" value=\"_cart\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"add\" value=\"1\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"business\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"item_name\" value=\"Black T-Shirt\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"amount\" value=\"30.99\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"discount_amount\" value=\"1.00\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"currency_code\" value=\"USD\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cancel_return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"submit\" name=\"submit\" value=\"Add to cart\" class=\"button\" />\n");
-      out.write("                                                </fieldset>\n");
-      out.write("                                            </form>\n");
-      out.write("                                        </div>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"col-md-3 product-men\">\n");
-      out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
-      out.write("                                    <div class=\"men-thumb-item\">\n");
-      out.write("                                        <img src=\"images/m5.jpg\" alt=\"\" class=\"pro-image-front\">\n");
-      out.write("                                        <img src=\"images/m5.jpg\" alt=\"\" class=\"pro-image-back\">\n");
-      out.write("                                        <div class=\"men-cart-pro\">\n");
-      out.write("                                            <div class=\"inner-men-cart-pro\">\n");
-      out.write("                                                <a href=\"single.jsp\" class=\"link-product-add-cart\">Chi tiết</a>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <span class=\"product-new-top\">New</span>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                    <div class=\"item-info-product \">\n");
-      out.write("                                        <h4><a href=\"single.jsp\">Men's Black Jeans</a></h4>\n");
-      out.write("                                        <div class=\"info-product-price\">\n");
-      out.write("                                            <span class=\"item_price\">$60.99</span>\n");
-      out.write("                                            <del>$90.71</del>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2\">\n");
-      out.write("                                            <form action=\"#\" method=\"post\">\n");
-      out.write("                                                <fieldset>\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cmd\" value=\"_cart\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"add\" value=\"1\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"business\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"item_name\" value=\"Men's Black Jeans\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"amount\" value=\"30.99\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"discount_amount\" value=\"1.00\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"currency_code\" value=\"USD\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cancel_return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"submit\" name=\"submit\" value=\"Add to cart\" class=\"button\" />\n");
-      out.write("                                                </fieldset>\n");
-      out.write("                                            </form>\n");
-      out.write("                                        </div>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"col-md-3 product-men\">\n");
-      out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
-      out.write("                                    <div class=\"men-thumb-item\">\n");
-      out.write("                                        <img src=\"images/m7.jpg\" alt=\"\" class=\"pro-image-front\">\n");
-      out.write("                                        <img src=\"images/m7.jpg\" alt=\"\" class=\"pro-image-back\">\n");
-      out.write("                                        <div class=\"men-cart-pro\">\n");
-      out.write("                                            <div class=\"inner-men-cart-pro\">\n");
-      out.write("                                                <a href=\"single.jsp\" class=\"link-product-add-cart\">Chi tiết</a>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <span class=\"product-new-top\">New</span>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                    <div class=\"item-info-product \">\n");
-      out.write("                                        <h4><a href=\"single.jsp\">Analog Watch</a></h4>\n");
-      out.write("                                        <div class=\"info-product-price\">\n");
-      out.write("                                            <span class=\"item_price\">$160.99</span>\n");
-      out.write("                                            <del>$290.71</del>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2\">\n");
-      out.write("                                            <form action=\"#\" method=\"post\">\n");
-      out.write("                                                <fieldset>\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cmd\" value=\"_cart\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"add\" value=\"1\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"business\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"item_name\" value=\"Analog Watch\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"amount\" value=\"30.99\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"discount_amount\" value=\"1.00\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"currency_code\" value=\"USD\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cancel_return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"submit\" name=\"submit\" value=\"Add to cart\" class=\"button\" />\n");
-      out.write("                                                </fieldset>\n");
-      out.write("                                            </form>\n");
-      out.write("                                        </div>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"col-md-3 product-men\">\n");
-      out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
-      out.write("                                    <div class=\"men-thumb-item\">\n");
-      out.write("                                        <img src=\"images/m6.jpg\" alt=\"\" class=\"pro-image-front\">\n");
-      out.write("                                        <img src=\"images/m6.jpg\" alt=\"\" class=\"pro-image-back\">\n");
-      out.write("                                        <div class=\"men-cart-pro\">\n");
-      out.write("                                            <div class=\"inner-men-cart-pro\">\n");
-      out.write("                                                <a href=\"single.jsp\" class=\"link-product-add-cart\">Chi tiết</a>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <span class=\"product-new-top\">New</span>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                    <div class=\"item-info-product \">\n");
-      out.write("                                        <h4><a href=\"single.jsp\">Reversible Belt</a></h4>\n");
-      out.write("                                        <div class=\"info-product-price\">\n");
-      out.write("                                            <span class=\"item_price\">$30.99</span>\n");
-      out.write("                                            <del>$50.71</del>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2\">\n");
-      out.write("                                            <form action=\"#\" method=\"post\">\n");
-      out.write("                                                <fieldset>\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cmd\" value=\"_cart\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"add\" value=\"1\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"business\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"item_name\" value=\"Reversible Belt\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"amount\" value=\"30.99\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"discount_amount\" value=\"1.00\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"currency_code\" value=\"USD\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cancel_return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"submit\" name=\"submit\" value=\"Add to cart\" class=\"button\" />\n");
-      out.write("                                                </fieldset>\n");
-      out.write("                                            </form>\n");
-      out.write("                                        </div>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"col-md-3 product-men\">\n");
-      out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
-      out.write("                                    <div class=\"men-thumb-item\">\n");
-      out.write("                                        <img src=\"images/m8.jpg\" alt=\"\" class=\"pro-image-front\">\n");
-      out.write("                                        <img src=\"images/m8.jpg\" alt=\"\" class=\"pro-image-back\">\n");
-      out.write("                                        <div class=\"men-cart-pro\">\n");
-      out.write("                                            <div class=\"inner-men-cart-pro\">\n");
-      out.write("                                                <a href=\"single.jsp\" class=\"link-product-add-cart\">Chi tiết</a>\n");
-      out.write("                                            </div>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <span class=\"product-new-top\">New</span>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                    <div class=\"item-info-product \">\n");
-      out.write("                                        <h4><a href=\"single.jsp\">Party Men's Blazer</a></h4>\n");
-      out.write("                                        <div class=\"info-product-price\">\n");
-      out.write("                                            <span class=\"item_price\">$260.99</span>\n");
-      out.write("                                            <del>$390.71</del>\n");
-      out.write("                                        </div>\n");
-      out.write("                                        <div class=\"snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2\">\n");
-      out.write("                                            <form action=\"#\" method=\"post\">\n");
-      out.write("                                                <fieldset>\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cmd\" value=\"_cart\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"add\" value=\"1\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"business\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"item_name\" value=\"Party Men's Blazer\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"amount\" value=\"30.99\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"discount_amount\" value=\"1.00\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"currency_code\" value=\"USD\" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"hidden\" name=\"cancel_return\" value=\" \" />\n");
-      out.write("                                                    <input type=\"submit\" name=\"submit\" value=\"Add to cart\" class=\"button\" />\n");
-      out.write("                                                </fieldset>\n");
-      out.write("                                            </form>\n");
-      out.write("                                        </div>\n");
-      out.write("\n");
-      out.write("                                    </div>\n");
-      out.write("                                </div>\n");
-      out.write("                            </div>\n");
+      out.write("                            \n");
       out.write("                            <div class=\"clearfix\"></div>\n");
       out.write("                        </div>\n");
       out.write("                        <!--//tab_one-->\n");
@@ -2127,5 +1870,88 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_0.setParent(null);
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listProduct}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setVar("product");
+    int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
+      if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("                            <div class=\"col-md-3 product-men\">\n");
+          out.write("                                <div class=\"men-pro-item simpleCart_shelfItem\">\n");
+          out.write("                                    <div class=\"men-thumb-item\">\n");
+          out.write("                                        <img src=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.imagine}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" alt=\"\" class=\"pro-image-front\">\n");
+          out.write("                                        <img src=\"");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.imagine}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("\" alt=\"\" class=\"pro-image-back\">\n");
+          out.write("                                        <div class=\"men-cart-pro\">\n");
+          out.write("                                            <div class=\"inner-men-cart-pro\">\n");
+          out.write("                                                <a href=\"single.jsp\" class=\"link-product-add-cart\">Chi tiết</a>\n");
+          out.write("                                            </div>\n");
+          out.write("                                        </div>\n");
+          out.write("                                        <span class=\"product-new-top\">New</span>\n");
+          out.write("\n");
+          out.write("                                    </div>\n");
+          out.write("                                    <div class=\"item-info-product \">\n");
+          out.write("                                        <h4><a href=\"single.jsp\">");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.name}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></h4>\n");
+          out.write("                                        <div class=\"info-product-price\">\n");
+          out.write("                                            <span class=\"item_price\">");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${product.price}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</span>\n");
+          out.write("                                            <del></del>\n");
+          out.write("                                        </div>\n");
+          out.write("                                        <div class=\"snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2\">\n");
+          out.write("                                            <form action=\"#\" method=\"post\">\n");
+          out.write("                                                <fieldset>\n");
+          out.write("                                                    <input type=\"hidden\" name=\"cmd\" value=\"_cart\" />\n");
+          out.write("                                                    <input type=\"hidden\" name=\"add\" value=\"1\" />\n");
+          out.write("                                                    <input type=\"hidden\" name=\"business\" value=\" \" />\n");
+          out.write("                                                    <input type=\"hidden\" name=\"item_name\" value=\"Sweatshirt\" />\n");
+          out.write("                                                    <input type=\"hidden\" name=\"amount\" value=\"30.99\" />\n");
+          out.write("                                                    <input type=\"hidden\" name=\"discount_amount\" value=\"1.00\" />\n");
+          out.write("                                                    <input type=\"hidden\" name=\"currency_code\" value=\"USD\" />\n");
+          out.write("                                                    <input type=\"hidden\" name=\"return\" value=\" \" />\n");
+          out.write("                                                    <input type=\"hidden\" name=\"cancel_return\" value=\" \" />\n");
+          out.write("                                                    <input type=\"submit\" name=\"submit\" value=\"Add to cart\" class=\"button\" />\n");
+          out.write("                                                </fieldset>\n");
+          out.write("                                            </form>\n");
+          out.write("                                        </div>\n");
+          out.write("\n");
+          out.write("                                    </div>\n");
+          out.write("                                </div>\n");
+          out.write("                            </div>\n");
+          out.write("                            ");
+          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_0.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
+    }
+    return false;
   }
 }
