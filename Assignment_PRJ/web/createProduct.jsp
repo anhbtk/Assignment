@@ -1,0 +1,56 @@
+
+<%@page contentType="text/html" pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>JSP Page</title>
+    </head>
+    <body>
+        <form action="create-product" method="post">
+            <table>
+                    <tr>
+                        <td>Name Product:</td>
+                        <td><input type="text" name="name" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Category_id:</td>
+                        <td><input type="text" name="category_id" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Quantity:</td>
+                        <td><input type="text" name="quantity" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Price:</td>
+                        <td><input type="text" name="price" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Description</td>
+                        <td><input type="text" name="description" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Imagine:</td>
+                        <td><input type="text" name="imagine" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Imagine2:</td>
+                        <td><input type="text" name="imagine2" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Imagine3:</td>
+                        <td><input type="text" name="imagine3" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td>Created_date</td>
+                        <td><input type="date" name="created-date" value="" /></td>
+                    </tr>
+                    <tr>
+                        <td></td>
+                        <td><input type="submit" value="save"/></td>
+                    </tr>
+            </table>
+
+        </form>
+    </body>
+</html>

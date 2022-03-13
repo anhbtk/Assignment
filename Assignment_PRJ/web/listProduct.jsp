@@ -14,13 +14,13 @@
     </head>
     <body>
         <h3>List Product</h3>
-        <a>Create New<a/>
+        <a href ="create-product">Create New<a/><br/><br/>
             <table border="1">
                 <thead>
                     <tr>
                         <th>ID</th>
                         <th>Name</th>
-                        <th>Category_id</th>
+                        <th>Category</th>
                         <th>Quantity</th>
                         <th>Price</th>
                         <th>Description</th>
@@ -36,13 +36,15 @@
                     <tr>
                         <td>${product.id}</td>
                         <td>${product.name}</td>
-                        <td>${product.category_id}</td>
+                        <td>${product.category_name}</td>
                         <td>${product.quantity}</td>
                         <td>${product.price}</td>
                         <td>${product.description}</td>
-                        <td>${product.imagine}</td>
-                        <td>${product.imagine2}</td>
-                        <td>${product.imagine3}</td>
+                        <td><img src="${product.imagine}" style="height: 100px; width: 100px"></td>
+                        <td><img src="${product.imagine2}" style="height: 100px; width: 100px"></td>
+                        <td><img src="${product.imagine3}" style="height: 100px; width: 100px"></td>
+                        <td>${product.created_date}</td>
+                        <td><a href ="update-product?id=${product.id}">Update<a/>|<a href ="delete-product?id=${product.id}">Delete<a/> </tr></td>           
                     </tr>      
                     </c:forEach>
                 </tbody>

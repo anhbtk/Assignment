@@ -9,6 +9,6 @@ package DAO;
  *
  * @author USER
  */
-public class UserDAO {
+public class AccountDAO {
     
 }

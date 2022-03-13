@@ -8,15 +8,16 @@ public class Product {
     int quantity;
     int price;
     String description;
-    byte[] imagine;
-    byte[] imagine2;
-    byte[] imagine3;
+    String imagine;
+    String imagine2;
+    String imagine3;
     String created_date;
+    String category_name;
 
     public Product() {
     }
 
-    public Product(int id, String name, int category_id, int quantity, int price, String description, byte[] imagine, byte[] imagine2, byte[] imagine3, String created_date) {
+    public Product(int id, String name, int category_id, int quantity, int price, String description, String imagine, String imagine2, String imagine3, String created_date, String category_name) {
         this.id = id;
         this.name = name;
         this.category_id = category_id;
@@ -27,6 +28,7 @@ public class Product {
         this.imagine2 = imagine2;
         this.imagine3 = imagine3;
         this.created_date = created_date;
+        this.category_name = category_name;
     }
 
     public int getId() {
@@ -77,27 +79,27 @@ public class Product {
         this.description = description;
     }
 
-    public byte[] getImagine() {
+    public String getImagine() {
         return imagine;
     }
 
-    public void setImagine(byte[] imagine) {
+    public void setImagine(String imagine) {
         this.imagine = imagine;
     }
 
-    public byte[] getImagine2() {
+    public String getImagine2() {
         return imagine2;
     }
 
-    public void setImagine2(byte[] imagine2) {
+    public void setImagine2(String imagine2) {
         this.imagine2 = imagine2;
     }
 
-    public byte[] getImagine3() {
+    public String getImagine3() {
         return imagine3;
     }
 
-    public void setImagine3(byte[] imagine3) {
+    public void setImagine3(String imagine3) {
         this.imagine3 = imagine3;
     }
 
@@ -109,10 +111,19 @@ public class Product {
         this.created_date = created_date;
     }
 
-    @Override
-    public String toString() {
-        return "Product{" + "id=" + id + ", name=" + name + ", category_id=" + category_id + ", quantity=" + quantity + ", price=" + price + ", description=" + description + ", imagine=" + imagine + ", imagine2=" + imagine2 + ", imagine3=" + imagine3 + ", created_date=" + created_date + '}';
+    public String getCategory_name() {
+        return category_name;
     }
 
+    public void setCategory_name(String category_name) {
+        this.category_name = category_name;
+    }
+
+    @Override
+    public String toString() {
+        return "Product{" + "id=" + id + ", name=" + name + ", category_id=" + category_id + ", quantity=" + quantity + ", price=" + price + ", description=" + description + ", imagine=" + imagine + ", imagine2=" + imagine2 + ", imagine3=" + imagine3 + ", created_date=" + created_date + ", category_name=" + category_name + '}';
+    }
+
+    
    
 }
