@@ -41,8 +41,8 @@
         <div class="header-bot">
             <div class="header-bot_inner_wthreeinfo_header_mid">
                 <div class="col-md-4 header-middle">
-                    <form action="#" method="post">
-                        <input type="search" name="search" placeholder="Search here..." required="">
+                    <form action="search" method="post">
+                        <input type="search" name="keyword" placeholder="Tìm kiếm..." required="">
                         <input type="submit" value=" ">
                         <div class="clearfix"></div>
                     </form>
@@ -105,7 +105,7 @@
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <c:forEach items="${listCategoryRomand}" var="R">
+                                                        <c:forEach items="${sessionScope.listCategoryRomand}" var="R">
                                                         <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
                                                         </c:forEach>
                                                     </ul>
@@ -124,7 +124,7 @@
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <c:forEach items="${listCategoryGilaa}" var="G">
+                                                        <c:forEach items="${sessionScope.listCategoryGilaa}" var="G">
                                                         <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
                                                         </c:forEach>
                                                     </ul>
@@ -285,14 +285,14 @@
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3>Rom&nd <span>  </span></h3>
+                <h3>Sản Phẩm <span>  </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">
 
                         <ul class="w3_short">
                             <li><a href="home">Trang chủ</a><i>|</i></li>
-                            <li>Romand</li>
+                            <li>Sản Phẩm</li>
                         </ul>
                     </div>
                 </div>
@@ -391,7 +391,7 @@
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>-->
-                    <c:forEach  items="${listProductByCategoryId}" var="product">
+                    <c:forEach  items="${listProduct}" var="product">
                         <div class="col-md-4 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
@@ -430,7 +430,9 @@
                             </div>
                         </div>
                     </c:forEach>
+                    
                     <div class="clearfix"></div>
+                    
                 </div>
                 <div class="clearfix"></div>
             </div>

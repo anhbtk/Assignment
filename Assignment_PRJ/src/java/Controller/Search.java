@@ -5,23 +5,22 @@
  */
 package Controller;
 
-import DAO.CategoryDAO;
 import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import static java.util.Collections.list;
 import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import model.Category;
 import model.Product;
 
 /**
  *
  * @author USER
  */
-public class CategoryController extends HttpServlet {
+public class Search extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,10 +36,12 @@ public class CategoryController extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            int categoryId = Integer.parseInt(request.getParameter("categoryId"));
-            List<Product> listProductByCategoryId = new ProductDAO().getAllProductbyCategory(categoryId);
-            request.setAttribute("listProduct", listProductByCategoryId);
+            /* TODO output your page here. You may use following sample code. */
+            String keyword = request.getParameter("keyword");
+            List<Product> listProductByKeyword = new ProductDAO().Search(keyword);
+            request.setAttribute("listProduct", listProductByKeyword);
             request.getRequestDispatcher("category.jsp").forward(request, response);
+
         }
     }
 

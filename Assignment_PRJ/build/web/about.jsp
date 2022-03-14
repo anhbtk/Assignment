@@ -1,5 +1,6 @@
 
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -39,8 +40,8 @@
         <div class="header-bot">
             <div class="header-bot_inner_wthreeinfo_header_mid">
                 <div class="col-md-4 header-middle">
-                    <form action="#" method="post">
-                        <input type="search" name="search" placeholder="Search here..." required="">
+                    <form action="search" method="post">
+                        <input type="search" name="keyword" placeholder="Tìm kiếm..." required="">
                         <input type="submit" value=" ">
                         <div class="clearfix"></div>
                     </form>
@@ -103,18 +104,14 @@
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="romand.jsp">Son Glasting Water Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Zero Velvet Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Glasting Water Gloss</a></li>
+                                                        <c:forEach items="${sessionScope.listCategoryRomand}" var="R">
+                                                        <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
+                                                        </c:forEach>
                                                         
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="romand.jsp">Son Seethrough Matte Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Zero Matte Lipstick</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Juicy Lasting Tint</a></li>
-                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -127,14 +124,14 @@
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="gilaa.jsp">Son Gilaa Plumping Lip Serum</a></li><br/>
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream </a></li>
+                                                        <c:forEach items="${sessionScope.listCategoryGilaa}" var="G">
+                                                        <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
+                                                        </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">                                        
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream Rich Rosie </a></li><br/>
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream Mini Size</a></li>
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
@@ -539,7 +536,7 @@
             <div class="container">
                 <h6>We Offer Flat <span>40%</span> Discount</h6>
 
-                <a class="hvr-outline-out button2" href="single.html">Shop Now </a>
+                <a class="hvr-outline-out button2" href="single.jsp">Shop Now </a>
             </div>
         </div>-->
         <!-- //we-offer -->
@@ -666,15 +663,15 @@
                         <div class="col-md-3 sign-gd flickr-post">
                             <h4>Flickr <span>Posts</span></h4>
                             <ul>
-                                <li><a href="single.html"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.html"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
+                                <li><a href="single.jsp"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
                             </ul>
                         </div>
                         <div class="clearfix"></div>

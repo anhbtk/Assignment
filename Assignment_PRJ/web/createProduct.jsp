@@ -1,4 +1,5 @@
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <html>
@@ -15,7 +16,13 @@
                     </tr>
                     <tr>
                         <td>Category_id:</td>
-                        <td><input type="text" name="category_id" value="" /></td>
+                        <td><select name="category_id">
+                                <c:forEach items="${listC}" var="C">
+                                <option value="${C.categoryId}">
+                                    ${C.categoryName}
+                                </option>
+                            </c:forEach>
+                        </select></td>
                     </tr>
                     <tr>
                         <td>Quantity:</td>

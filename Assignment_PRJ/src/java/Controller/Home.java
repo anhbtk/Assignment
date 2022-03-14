@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Category;
 import model.Product;
 
@@ -39,10 +40,12 @@ public class Home extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             List<Product> listAllNewRomandProduct = new ProductDAO().getAllNewRomandProduct();
+ //           List<Product> listAllNewGilaaProduct = new ProductDAO().getAllNewGilaaProduct();
             List<Category> listCategoryRomand = new CategoryDAO().getAllCategoryRomand();
             List<Category> listCategoryGilaa = new CategoryDAO().getAllCategoryGilaa();
-            request.setAttribute("listCategoryRomand", listCategoryRomand);
-            request.setAttribute("listCategoryGilaa", listCategoryGilaa);
+            HttpSession session = request.getSession();
+            session.setAttribute("listCategoryRomand", listCategoryRomand);
+            session.setAttribute("listCategoryGilaa", listCategoryGilaa);
             request.setAttribute("listAllNewRomandProduct", listAllNewRomandProduct);
             request.getRequestDispatcher("index.jsp").forward(request, response);
         }

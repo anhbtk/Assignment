@@ -38,8 +38,8 @@
         <div class="header-bot">
             <div class="header-bot_inner_wthreeinfo_header_mid">
                 <div class="col-md-4 header-middle">
-                    <form action="#" method="post">
-                        <input type="search" name="search" placeholder="Tìm kiếm..." required="">
+                    <form action="search" method="post">
+                        <input type="search" name="keyword" placeholder="Tìm kiếm..." required="">
                         <input type="submit" value=" ">
                         <div class="clearfix"></div>
                     </form>
@@ -99,7 +99,7 @@
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <c:forEach items="${listCategoryRomand}" var="R">
+                                                        <c:forEach items="${sessionScope.listCategoryRomand}" var="R">
                                                         <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
                                                         </c:forEach>
                                                     </ul>
@@ -118,7 +118,7 @@
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <c:forEach items="${listCategoryGilaa}" var="G">
+                                                        <c:forEach items="${sessionScope.listCategoryGilaa}" var="G">
                                                         <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
                                                         </c:forEach>
                                                     </ul>
@@ -154,6 +154,7 @@
                             <input type="hidden" name="cmd" value="_cart">
                             <input type="hidden" name="display" value="1">
                             <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                            
                         </form>  
 
                     </div>
@@ -520,11 +521,12 @@
                         <!--//tab_one-->
                         <!--/tab_two-->
                         <div class="tab2">
+                            <c:forEach  items="${listAllNewGilaaProduct}" var="product">
                             <div class="col-md-3 product-men">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item">
-                                        <img src="images/w1.jpg" alt="" class="pro-image-front">
-                                        <img src="images/w1.jpg" alt="" class="pro-image-back">
+                                        <img src="${product.imagine}" alt="" class="pro-image-front">
+                                        <img src="${product.imagine}" alt="" class="pro-image-back">
                                         <div class="men-cart-pro">
                                             <div class="inner-men-cart-pro">
                                                 <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
@@ -534,10 +536,10 @@
 
                                     </div>
                                     <div class="item-info-product ">
-                                        <h4><a href="single.jsp">A-line Black Skirt</a></h4>
+                                        <h4><a href="single.jsp">${product.name}</a></h4>
                                         <div class="info-product-price">
-                                            <span class="item_price">$130.99</span>
-                                            <del>$189.71</del>
+                                            <span class="item_price">${product.price}</span>
+<!--                                            <del>$189.71</del>-->
                                         </div>
                                         <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                                             <form action="#" method="post">
@@ -558,7 +560,8 @@
 
                                     </div>
                                 </div>
-                            </div>                           
+                            </div>  
+                            </c:forEach>
                             <div class="clearfix"></div>
                         </div>
                         <!--//tab_two-->
