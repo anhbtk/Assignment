@@ -48,7 +48,7 @@
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 logo_agile">
-                    <h1><a href="index.jsp"><span>M</span>angosteen <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+                    <h1><a href="home"><span>M</span>angosteen <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
@@ -93,7 +93,7 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
-                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="index.jsp">Trang chủ <span class="sr-only">(current)</span></a></li>
+                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="home">Trang chủ <span class="sr-only">(current)</span></a></li>
                                     <li class=" menu__item"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
                                         <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand<span class="caret"></span></a>
@@ -289,13 +289,13 @@
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3>Men's <span>Wear  </span></h3>
+                <h3>Rom&nd <span>  </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">
 
                         <ul class="w3_short">
-                            <li><a href="index.jsp">Trang chủ</a><i>|</i></li>
+                            <li><a href="home">Trang chủ</a><i>|</i></li>
                             <li>Romand</li>
                         </ul>
                     </div>
@@ -321,93 +321,12 @@
                     <div class="css-treeview">
                         <h4>Categories</h4>
                         <ul class="tree-list-pad">
-                            <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Men's Wear</label>
-                                <ul>
-                                    <li><input type="checkbox" id="item-0-0" /><label for="item-0-0"><i class="fa fa-long-arrow-right" aria-hidden="true"></i>Ethnic Wear</label>
-                                        <ul>
-                                            <li><a href="romand.jsp">Shirts</a></li>
-                                            <li><a href="romand.jsp">Caps</a></li>
-                                            <li><a href="romand.jsp">Shoes</a></li>
-                                            <li><a href="romand.jsp">Pants</a></li>
-                                            <li><a href="romand.jsp">SunGlasses</a></li>
-                                            <li><a href="romand.jsp">Trousers</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><input type="checkbox"  id="item-0-1" /><label for="item-0-1"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Party Wear</label>
-                                        <ul>
-                                            <li><a href="romand.jsp">Shirts</a></li>
-                                            <li><a href="romand.jsp">Caps</a></li>
-                                            <li><a href="romand.jsp">Shoes</a></li>
-                                            <li><a href="romand.jsp">Pants</a></li>
-                                            <li><a href="romand.jsp">SunGlasses</a></li>
-                                            <li><a href="romand.jsp">Trousers</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><input type="checkbox"  id="item-0-2" /><label for="item-0-2"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Casual Wear</label>
-                                        <ul>
-                                            <li><a href="romand.jsp">Shirts</a></li>
-                                            <li><a href="romand.jsp">Caps</a></li>
-                                            <li><a href="romand.jsp">Shoes</a></li>
-                                            <li><a href="romand.jsp">Pants</a></li>
-                                            <li><a href="romand.jsp">SunGlasses</a></li>
-                                            <li><a href="romand.jsp">Trousers</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                            <li><input type="checkbox" id="item-1" checked="checked" /><label for="item-1"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Best Collections</label>
-                                <ul>
-                                    <li><input type="checkbox" checked="checked" id="item-1-0" /><label for="item-1-0"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> New Arrivals</label>
-                                        <ul>
-                                            <li><a href="romand.jsp">Shirts</a></li>
-                                            <li><a href="romand.jsp">Shoes</a></li>
-                                            <li><a href="romand.jsp">Pants</a></li>
-                                            <li><a href="romand.jsp">SunGlasses</a></li>
-                                        </ul>
-                                    </li>
-
-                                </ul>
-                            </li>
-                            <li><input type="checkbox" checked="checked" id="item-2" /><label for="item-2"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Best Offers</label>
-                                <ul>
-                                    <li><input type="checkbox"  id="item-2-0" /><label for="item-2-0"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Summer Discount Sales</label>
-                                        <ul>
-                                            <li><a href="romand.jsp">Shirts</a></li>
-                                            <li><a href="romand.jsp">Shoes</a></li>
-                                            <li><a href="romand.jsp">Pants</a></li>
-                                            <li><a href="romand.jsp">SunGlasses</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><input type="checkbox" id="item-2-1" /><label for="item-2-1"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Exciting Offers</label>
-                                        <ul>
-                                            <li><a href="romand.jsp">Shirts</a></li>
-                                            <li><a href="romand.jsp">Shoes</a></li>
-                                            <li><a href="romand.jsp">Pants</a></li>
-                                            <li><a href="romand.jsp">SunGlasses</a></li>
-                                        </ul>
-                                    </li>
-                                    <li><input type="checkbox" id="item-2-2" /><label for="item-2-2"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Flat Discounts</label>
-                                        <ul>
-                                            <li><a href="romand.jsp">Shirts</a></li>
-                                            <li><a href="romand.jsp">Shoes</a></li>
-                                            <li><a href="romand.jsp">Pants</a></li>
-                                            <li><a href="romand.jsp">SunGlasses</a></li>
-                                        </ul>
-                                    </li>
-                                </ul>
-                            </li>
-                        </ul>
+                            <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><a href="romand.jsp"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Men's Wear</a></label> </li>
                     </div>
                     <div class="community-poll">
                         <h4>Community Poll</h4>
                         <div class="swit form">	
                             <form>
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio" checked=""><i></i>More convenient for shipping and delivery</label> </div></div>
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Lower Price</label> </div></div>
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Track your item</label> </div></div>
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Bigger Choice</label> </div></div>
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>More colors to choose</label> </div></div>	
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Secured Payment</label> </div></div>
                                 <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Money back guaranteed</label> </div></div>	
                                 <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Others</label> </div></div>		
                                 <input type="submit" value="SEND">
@@ -444,7 +363,7 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
-                    <div class="men-wear-top">
+<!--                    <div class="men-wear-top">
 
                         <div  id="top" class="callbacks_container">
                             <ul class="rslides" id="slider3">
@@ -461,8 +380,8 @@
                             </ul>
                         </div>
                         <div class="clearfix"></div>
-                    </div>
-                    <div class="men-wear-bottom">
+                    </div>-->
+<!--                    <div class="men-wear-bottom">
                         <div class="col-sm-4 men-wear-left">
                             <img class="img-responsive" src="images/bb2.jpg" alt=" " />
                         </div>
@@ -475,7 +394,7 @@
                                 odit aut fugit. </p>
                         </div>
                         <div class="clearfix"></div>
-                    </div>
+                    </div>-->
                     <div class="col-md-4 product-men">
                         <div class="men-pro-item simpleCart_shelfItem">
                             <div class="men-thumb-item">
@@ -966,7 +885,7 @@
         <div class="footer">
             <div class="footer_agile_inner_info_w3l">
                 <div class="col-md-3 footer-left">
-                    <h2><a href="index.jsp"><span>M</span>angosteen</a></h2>
+                    <h2><a href="home"><span>M</span>angosteen</a></h2>
                     <p>Lorem ipsum quia dolor
                         sit amet, consectetur, adipisci velit, sed quia non 
                         numquam eius modi tempora.</p>
@@ -990,7 +909,7 @@
                         <div class="col-md-4 sign-gd">
                             <h4>Các trang <span></span> </h4>
                             <ul>
-                                <li><a href="index.jsp">Trang Chủ</a></li>
+                                <li><a href="home">Trang Chủ</a></li>
                                 <li><a href="romand.jsp">Romand</a></li>
                                 <li><a href="gilaa.jsp">Gilaa</a></li>
                                 <li><a href="about.jsp">Mangosteen</a></li>

@@ -6,7 +6,6 @@
 package Controller;
 
 import DAO.CategoryDAO;
-import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import java.util.List;
@@ -15,13 +14,12 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import model.Category;
-import model.Product;
 
 /**
  *
  * @author USER
  */
-public class Home extends HttpServlet {
+public class ListCategory extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -38,13 +36,9 @@ public class Home extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            List<Product> listAllNewRomandProduct = new ProductDAO().getAllNewRomandProduct();
-            List<Category> listCategoryRomand = new CategoryDAO().getAllCategoryRomand();
-            List<Category> listCategoryGilaa = new CategoryDAO().getAllCategoryGilaa();
-            request.setAttribute("listCategoryRomand", listCategoryRomand);
-            request.setAttribute("listCategoryGilaa", listCategoryGilaa);
-            request.setAttribute("listAllNewRomandProduct", listAllNewRomandProduct);
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            List<Category> listCategory = new CategoryDAO().getAllCategory();
+            request.setAttribute("listCategory", listCategory);
+            request.getRequestDispatcher("listCategory.jsp").forward(request, response);
         }
     }
 

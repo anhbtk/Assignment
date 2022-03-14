@@ -99,18 +99,14 @@
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="romand.jsp">Son Glasting Water Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Zero Velvet Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Glasting Water Gloss</a></li>
-
+                                                        <c:forEach items="${listCategoryRomand}" var="R">
+                                                        <li><a href="romand.jsp">${R.categoryName}</a></li><br/>
+                                                        </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="romand.jsp">Son Seethrough Matte Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Zero Matte Lipstick</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Juicy Lasting Tint</a></li>
-
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -123,14 +119,14 @@
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="gilaa.jsp">Son Gilaa Plumping Lip Serum</a></li><br/>
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream </a></li>
+                                                        <c:forEach items="${listCategoryGilaa}" var="G">
+                                                        <li><a href="gilaa.jsp">${G.categoryName}</a></li><br/>
+                                                        </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
-                                                    <ul class="multi-column-dropdown">                                        
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream Rich Rosie </a></li><br/>
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream Mini Size</a></li>
+                                                    <ul class="multi-column-dropdown">
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
@@ -479,7 +475,7 @@
                     <div class="resp-tabs-container">
                         <!--/tab_one-->
                         <div class="tab1">                          
-                            <c:forEach  items="${listProduct}" var="product">
+                            <c:forEach  items="${listAllNewRomandProduct}" var="product">
                                 <div class="col-md-3 product-men">
                                     <div class="men-pro-item simpleCart_shelfItem">
                                         <div class="men-thumb-item">

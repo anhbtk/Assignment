@@ -34,7 +34,6 @@ public class ListProduct extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
-
         try (PrintWriter out = response.getWriter()) {
             List<Product> listProduct = new ProductDAO().getAllProduct();
             request.setAttribute("listProduct", listProduct);

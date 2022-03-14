@@ -99,7 +99,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                </div>\n");
       out.write("                <!-- header-bot -->\n");
       out.write("                <div class=\"col-md-4 logo_agile\">\n");
-      out.write("                    <h1><a href=\"index.jsp\"><span>M</span>angosteen <i class=\"fa fa-shopping-bag top_logo_agile_bag\" aria-hidden=\"true\"></i></a></h1>\n");
+      out.write("                    <h1><a href=\"home\"><span>M</span>angosteen <i class=\"fa fa-shopping-bag top_logo_agile_bag\" aria-hidden=\"true\"></i></a></h1>\n");
       out.write("                </div>\n");
       out.write("                <!-- header-bot -->\n");
       out.write("                <div class=\"col-md-4 agileits-social top_content\">\n");
@@ -141,7 +141,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <!-- Collect the nav links, forms, and other content for toggling -->\n");
       out.write("                            <div class=\"collapse navbar-collapse menu--shylock\" id=\"bs-example-navbar-collapse-1\">\n");
       out.write("                                <ul class=\"nav navbar-nav menu__list\">\n");
-      out.write("                                    <li class=\"active menu__item menu__item--current\"><a class=\"menu__link\" href=\"index.jsp\">Trang chủ <span class=\"sr-only\">(current)</span></a></li>\n");
+      out.write("                                    <li class=\"active menu__item menu__item--current\"><a class=\"menu__link\" href=\"home\">Trang chủ <span class=\"sr-only\">(current)</span></a></li>\n");
       out.write("                                    <li class=\" menu__item\"><a class=\"menu__link\" href=\"about.jsp\">Mangosteen</a></li>\n");
       out.write("                                    <li class=\"dropdown menu__item\">\n");
       out.write("                                        <a href=\"#\" class=\"dropdown-toggle menu__link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Romand<span class=\"caret\"></span></a>\n");
@@ -152,17 +152,9 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                                </div>\n");
       out.write("                                                <div class=\"col-sm-3 multi-gd-img\">\n");
       out.write("                                                    <ul class=\"multi-column-dropdown\">\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Glasting Water Tint</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Zero Velvet Tint</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Glasting Water Gloss</a></li>\n");
-      out.write("\n");
-      out.write("                                                    </ul>\n");
-      out.write("                                                </div>\n");
-      out.write("                                                <div class=\"col-sm-3 multi-gd-img\">\n");
-      out.write("                                                    <ul class=\"multi-column-dropdown\">\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Seethrough Matte Tint</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Zero Matte Lipstick</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Juicy Lasting Tint</a></li>\n");
+      out.write("                                                        ");
+      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+        return;
       out.write("\n");
       out.write("                                                    </ul>\n");
       out.write("                                                </div>\n");
@@ -176,14 +168,10 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <div class=\"agile_inner_drop_nav_info\">\n");
       out.write("                                                <div class=\"col-sm-3 multi-gd-img\">\n");
       out.write("                                                    <ul class=\"multi-column-dropdown\">\n");
-      out.write("                                                        <li><a href=\"gilaa.jsp\">Son Gilaa Plumping Lip Serum</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"gilaa.jsp\">Son Gilaa Long Wear Lip Cream </a></li>\n");
-      out.write("                                                    </ul>\n");
-      out.write("                                                </div>\n");
-      out.write("                                                <div class=\"col-sm-3 multi-gd-img\">\n");
-      out.write("                                                    <ul class=\"multi-column-dropdown\">                                        \n");
-      out.write("                                                        <li><a href=\"gilaa.jsp\">Son Gilaa Long Wear Lip Cream Rich Rosie </a></li><br/>\n");
-      out.write("                                                        <li><a href=\"gilaa.jsp\">Son Gilaa Long Wear Lip Cream Mini Size</a></li>\n");
+      out.write("                                                        ");
+      if (_jspx_meth_c_forEach_1(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("                                                    </ul>\n");
       out.write("                                                </div>\n");
       out.write("                                                <div class=\"col-sm-6 multi-gd-img multi-gd-text \">\n");
@@ -533,7 +521,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <!--/tab_one-->\n");
       out.write("                        <div class=\"tab1\">                          \n");
       out.write("                            ");
-      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+      if (_jspx_meth_c_forEach_2(_jspx_page_context))
         return;
       out.write("\n");
       out.write("                            <div class=\"clearfix\"></div>\n");
@@ -1279,7 +1267,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"footer\">\n");
       out.write("            <div class=\"footer_agile_inner_info_w3l\">\n");
       out.write("                <div class=\"col-md-3 footer-left\">\n");
-      out.write("                    <h2><a href=\"index.jsp\"><span>M</span>angosteen </a></h2>\n");
+      out.write("                    <h2><a href=\"home\"><span>M</span>angosteen </a></h2>\n");
       out.write("                    <p>Lorem ipsum quia dolor\n");
       out.write("                        sit amet, consectetur, adipisci velit, sed quia non \n");
       out.write("                        numquam eius modi tempora.</p>\n");
@@ -1303,7 +1291,7 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <div class=\"col-md-4 sign-gd\">\n");
       out.write("                            <h4>Các trang <span></span> </h4>\n");
       out.write("                            <ul>\n");
-      out.write("                                <li><a href=\"index.jsp\">Trang chủ</a></li>\n");
+      out.write("                                <li><a href=\"home\">Trang chủ</a></li>\n");
       out.write("                                <li><a href=\"romand.jsp\">Romand</a></li>\n");
       out.write("                                <li><a href=\"gilaa.jsp\">Gilaa</a></li>\n");
       out.write("                                <li><a href=\"about.jsp\">Mangosteen</a></li>\n");
@@ -1567,12 +1555,90 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
     _jspx_th_c_forEach_0.setParent(null);
-    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listProduct}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
-    _jspx_th_c_forEach_0.setVar("product");
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listCategoryRomand}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setVar("R");
     int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
     try {
       int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
       if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("                                                        <li><a href=\"romand.jsp\">");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${R.categoryName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></li><br/>\n");
+          out.write("                                                        ");
+          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_0.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_1.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_1.setParent(null);
+    _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listCategoryGilaa}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_1.setVar("G");
+    int[] _jspx_push_body_count_c_forEach_1 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_1 = _jspx_th_c_forEach_1.doStartTag();
+      if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("                                                        <li><a href=\"gilaa.jsp\">");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${G.categoryName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></li><br/>\n");
+          out.write("                                                        ");
+          int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_1[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_1.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_1.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_1);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_2(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_2.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_2.setParent(null);
+    _jspx_th_c_forEach_2.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${listProduct}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_2.setVar("product");
+    int[] _jspx_push_body_count_c_forEach_2 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_2 = _jspx_th_c_forEach_2.doStartTag();
+      if (_jspx_eval_c_forEach_2 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
         do {
           out.write("\n");
           out.write("                                <div class=\"col-md-3 product-men\">\n");
@@ -1623,21 +1689,21 @@ public final class index_jsp extends org.apache.jasper.runtime.HttpJspBase
           out.write("                                    </div>\n");
           out.write("                                </div>\n");
           out.write("                            ");
-          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
+          int evalDoAfterBody = _jspx_th_c_forEach_2.doAfterBody();
           if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
             break;
         } while (true);
       }
-      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+      if (_jspx_th_c_forEach_2.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
         return true;
       }
     } catch (Throwable _jspx_exception) {
-      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
+      while (_jspx_push_body_count_c_forEach_2[0]-- > 0)
         out = _jspx_page_context.popBody();
-      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
+      _jspx_th_c_forEach_2.doCatch(_jspx_exception);
     } finally {
-      _jspx_th_c_forEach_0.doFinally();
-      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
+      _jspx_th_c_forEach_2.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_2);
     }
     return false;
   }

@@ -47,7 +47,7 @@
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 logo_agile">
-                    <h1><a href="index.jsp"><span>M</span>angosteen <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+                    <h1><a href="home"><span>M</span>angosteen <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
@@ -92,7 +92,7 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
-                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="index.jsp">Trang chủ <span class="sr-only">(current)</span></a></li>
+                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="home">Trang chủ <span class="sr-only">(current)</span></a></li>
                                     <li class=" menu__item"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
                                         <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand<span class="caret"></span></a>
@@ -294,7 +294,7 @@
                     <div class="agile_inner_breadcrumb">
 
                         <ul class="w3_short">
-                            <li><a href="index.jsp">Trang chủ</a><i>|</i></li>
+                            <li><a href="home">Trang chủ</a><i>|</i></li>
                             <li>Mangosteen shop</li>
                         </ul>
                     </div>
@@ -593,7 +593,7 @@
         <div class="footer">
             <div class="footer_agile_inner_info_w3l">
                 <div class="col-md-3 footer-left">
-                    <h2><a href="index.jsp"><span>M</span>angosteen </a></h2>
+                    <h2><a href="home"><span>M</span>angosteen </a></h2>
                     <p>Lorem ipsum quia dolor
                         sit amet, consectetur, adipisci velit, sed quia non 
                         numquam eius modi tempora.</p>
@@ -617,7 +617,7 @@
                         <div class="col-md-4 sign-gd">
                             <h4>Các trang <span></span> </h4>
                             <ul>
-                                li><a href="index.jsp">Trang Chủ</a></li>
+                                li><a href="home">Trang Chủ</a></li>
                                 <li><a href="romand.jsp">Romand</a></li>
                                 <li><a href="gilaa.jsp">Gilaa</a></li>
                                 <li><a href="about.jsp">Mangosteen</a></li>
