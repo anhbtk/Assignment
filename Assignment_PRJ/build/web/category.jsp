@@ -1,12 +1,13 @@
 
 
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mangosteen: Romand</title>
+        <title>Mangosteen: Category</title>
         <!--/tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -76,7 +77,7 @@
         </div>
         <!-- //header-bot -->
         <!-- banner -->
-         <div class="ban-top">
+        <div class="ban-top">
             <div class="container">
                 <div class="top_nav_left">
                     <nav class="navbar navbar-default">
@@ -100,22 +101,17 @@
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                    <a href="romand.jsp"><img src="images/top1_1.png" alt=" "/></a>
+                                                    <a href="category.jsp"><img src="images/top1_1.png" alt=" "/></a>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="romand.jsp">Son Glasting Water Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Zero Velvet Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Glasting Water Gloss</a></li>
-                                                        
+                                                        <c:forEach items="${listCategoryRomand}" var="R">
+                                                        <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
+                                                        </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="romand.jsp">Son Seethrough Matte Tint</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Zero Matte Lipstick</a></li><br/>
-                                                        <li><a href="romand.jsp">Son Juicy Lasting Tint</a></li>
-                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -128,30 +124,30 @@
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        <li><a href="gilaa.jsp">Son Gilaa Plumping Lip Serum</a></li><br/>
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream </a></li>
+                                                        <c:forEach items="${listCategoryGilaa}" var="G">
+                                                        <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
+                                                        </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
-                                                    <ul class="multi-column-dropdown">                                        
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream Rich Rosie </a></li><br/>
-                                                        <li><a href="gilaa.jsp">Son Gilaa Long Wear Lip Cream Mini Size</a></li>
+                                                    <ul class="multi-column-dropdown">
+                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                    <a href="gilaa.jsp"><img src="images/top2_2.png" alt=" "/></a>
+                                                    <a href="category.jsp"><img src="images/top2_2.png" alt=" "/></a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
                                         </ul>
                                     </li>
-<!--                                    <li class="menu__item dropdown">
-                                        <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-                                        <ul class="dropdown-menu agile_short_dropdown">
-                                            <li><a href="icons.html">Web Icons</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                        </ul>
-                                    </li>-->
+                                    <!--                                    <li class="menu__item dropdown">
+                                                                            <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
+                                                                            <ul class="dropdown-menu agile_short_dropdown">
+                                                                                <li><a href="icons.html">Web Icons</a></li>
+                                                                                <li><a href="typography.html">Typography</a></li>
+                                                                            </ul>
+                                                                        </li>-->
                                     <li class=" menu__item"><a class="menu__link" href="contact.jsp">Liên hệ</a></li>
                                 </ul>
                             </div>
@@ -336,7 +332,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-md-8 products-right">
-                    <h5>Product <span>Compare(0)</span></h5>
+<!--                    <h5>Product <span>Compare(0)</span></h5>-->
                     <div class="sort-grid">
                         <div class="sorting">
                             <h6>Sort By</h6>
@@ -363,475 +359,80 @@
                         </div>
                         <div class="clearfix"></div>
                     </div>
-<!--                    <div class="men-wear-top">
-
-                        <div  id="top" class="callbacks_container">
-                            <ul class="rslides" id="slider3">
-                                <li>
-                                    <img class="img-responsive" src="images/banner2.jpg" alt=" "/>
-                                </li>
-                                <li>
-                                    <img class="img-responsive" src="images/banner5.jpg" alt=" "/>
-                                </li>
-                                <li>
-                                    <img class="img-responsive" src="images/banner2.jpg" alt=" "/>
-                                </li>
-
-                            </ul>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>-->
-<!--                    <div class="men-wear-bottom">
-                        <div class="col-sm-4 men-wear-left">
-                            <img class="img-responsive" src="images/bb2.jpg" alt=" " />
-                        </div>
-                        <div class="col-sm-8 men-wear-right">
-                            <h4>Exclusive Men's <span>Collections</span></h4>
-                            <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-                                accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
-                                ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                odit aut fugit. </p>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>-->
-                    <div class="col-md-4 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m8.jpg" alt="" class="pro-image-front">
-                                <img src="images/m8.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
+                    <!--                    <div class="men-wear-top">
+                    
+                                            <div  id="top" class="callbacks_container">
+                                                <ul class="rslides" id="slider3">
+                                                    <li>
+                                                        <img class="img-responsive" src="images/banner2.jpg" alt=" "/>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive" src="images/banner5.jpg" alt=" "/>
+                                                    </li>
+                                                    <li>
+                                                        <img class="img-responsive" src="images/banner2.jpg" alt=" "/>
+                                                    </li>
+                    
+                                                </ul>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>-->
+                    <!--                    <div class="men-wear-bottom">
+                                            <div class="col-sm-4 men-wear-left">
+                                                <img class="img-responsive" src="images/bb2.jpg" alt=" " />
+                                            </div>
+                                            <div class="col-sm-8 men-wear-right">
+                                                <h4>Exclusive Men's <span>Collections</span></h4>
+                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
+                                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
+                                                    ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
+                                                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                                                    odit aut fugit. </p>
+                                            </div>
+                                            <div class="clearfix"></div>
+                                        </div>-->
+                    <c:forEach  items="${listProductByCategoryId}" var="product">
+                        <div class="col-md-4 product-men">
+                            <div class="men-pro-item simpleCart_shelfItem">
+                                <div class="men-thumb-item">
+                                    <img src="${product.imagine}" alt="" class="pro-image-front">
+                                    <img src="${product.imagine}" alt="" class="pro-image-back">
+                                    <div class="men-cart-pro">
+                                        <div class="inner-men-cart-pro">
+                                            <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
+                                        </div>
                                     </div>
                                 </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Party Men's Blazer</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$260.99</span>
-                                    <del>$390.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="business" value=" ">
-                                            <input type="hidden" name="item_name" value="Party Men's Blazer">
-                                            <input type="hidden" name="amount" value="30.99">
-                                            <input type="hidden" name="discount_amount" value="1.00">
-                                            <input type="hidden" name="currency_code" value="USD">
-                                            <input type="hidden" name="return" value=" ">
-                                            <input type="hidden" name="cancel_return" value=" ">
-                                            <input type="submit" name="submit" value="Add to cart" class="button">
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m7.jpg" alt="" class="pro-image-front">
-                                <img src="images/m7.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
+                                <div class="item-info-product ">
+                                    <h4><a href="single.jsp">${product.name}</a></h4>
+                                    <div class="info-product-price">
+                                        <span class="item_price">${product.price}</span>
+<!--                                        <del>$390.71</del>-->
                                     </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Analog Watch</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$160.99</span>
-                                    <del>$290.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="business" value=" ">
-                                            <input type="hidden" name="item_name" value="Analog Watch">
-                                            <input type="hidden" name="amount" value="30.99">
-                                            <input type="hidden" name="discount_amount" value="1.00">
-                                            <input type="hidden" name="currency_code" value="USD">
-                                            <input type="hidden" name="return" value=" ">
-                                            <input type="hidden" name="cancel_return" value=" ">
-                                            <input type="submit" name="submit" value="Add to cart" class="button">
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-4 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/s1.jpg" alt="" class="pro-image-front">
-                                <img src="images/s1.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
+                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                        <form action="#" method="post">
+                                            <fieldset>
+                                                <input type="hidden" name="cmd" value="_cart">
+                                                <input type="hidden" name="add" value="1">
+                                                <input type="hidden" name="business" value=" ">
+                                                <input type="hidden" name="item_name" value="Party Men's Blazer">
+                                                <input type="hidden" name="amount" value="30.99">
+                                                <input type="hidden" name="discount_amount" value="1.00">
+                                                <input type="hidden" name="currency_code" value="USD">
+                                                <input type="hidden" name="return" value=" ">
+                                                <input type="hidden" name="cancel_return" value=" ">
+                                                <input type="submit" name="submit" value="Add to cart" class="button">
+                                            </fieldset>
+                                        </form>
                                     </div>
-                                </div>
-                                <span class="product-new-top">New</span>
 
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Running Shoes</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$80.99</span>
-                                    <del>$89.71</del>
                                 </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart">
-                                            <input type="hidden" name="add" value="1">
-                                            <input type="hidden" name="business" value=" ">
-                                            <input type="hidden" name="item_name" value="Running Shoes">
-                                            <input type="hidden" name="amount" value="30.99">
-                                            <input type="hidden" name="discount_amount" value="1.00">
-                                            <input type="hidden" name="currency_code" value="USD">
-                                            <input type="hidden" name="return" value=" ">
-                                            <input type="hidden" name="cancel_return" value=" ">
-                                            <input type="submit" name="submit" value="Add to cart" class="button">
-                                        </fieldset>
-                                    </form>
-                                </div>
-
                             </div>
                         </div>
-                    </div>
-
+                    </c:forEach>
                     <div class="clearfix"></div>
                 </div>
                 <div class="clearfix"></div>
-
-                <div class="single-pro">
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m1.jpg" alt="" class="pro-image-front">
-                                <img src="images/m1.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Formal Blue Shirt</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$45.99</span>
-                                    <del>$69.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Formal Blue Shirt" />
-                                            <input type="hidden" name="amount" value="30.99" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m2.jpg" alt="" class="pro-image-front">
-                                <img src="images/m2.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Gabi Full Sleeve Sweatshirt</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$45.99</span>
-                                    <del>$69.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Sweatshirt" />
-                                            <input type="hidden" name="amount" value="30.99" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m3.jpg" alt="" class="pro-image-front">
-                                <img src="images/m3.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Dark Blue Track Pants</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$80.99</span>
-                                    <del>$89.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Dark Blue Track Pants" />
-                                            <input type="hidden" name="amount" value="30.99" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m4.jpg" alt="" class="pro-image-front">
-                                <img src="images/m4.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Round Neck Black T-Shirt</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$190.99</span>
-                                    <del>$159.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Black T-Shirt" />
-                                            <input type="hidden" name="amount" value="30.99" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m5.jpg" alt="" class="pro-image-front">
-                                <img src="images/m5.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Men's Black Jeans</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$60.99</span>
-                                    <del>$90.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Men's Black Jeans" />
-                                            <input type="hidden" name="amount" value="30.99" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m7.jpg" alt="" class="pro-image-front">
-                                <img src="images/m7.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Analog Watch</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$160.99</span>
-                                    <del>$290.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Analog Watch" />
-                                            <input type="hidden" name="amount" value="30.99" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m6.jpg" alt="" class="pro-image-front">
-                                <img src="images/m6.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Reversible Belt</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$30.99</span>
-                                    <del>$50.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Reversible Belt" />
-                                            <input type="hidden" name="amount" value="30.99" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 product-men">
-                        <div class="men-pro-item simpleCart_shelfItem">
-                            <div class="men-thumb-item">
-                                <img src="images/m8.jpg" alt="" class="pro-image-front">
-                                <img src="images/m8.jpg" alt="" class="pro-image-back">
-                                <div class="men-cart-pro">
-                                    <div class="inner-men-cart-pro">
-                                        <a href="single.jsp" class="link-product-add-cart">Quick View</a>
-                                    </div>
-                                </div>
-                                <span class="product-new-top">New</span>
-
-                            </div>
-                            <div class="item-info-product ">
-                                <h4><a href="single.jsp">Party Men's Blazer</a></h4>
-                                <div class="info-product-price">
-                                    <span class="item_price">$260.99</span>
-                                    <del>$390.71</del>
-                                </div>
-                                <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                    <form action="#" method="post">
-                                        <fieldset>
-                                            <input type="hidden" name="cmd" value="_cart" />
-                                            <input type="hidden" name="add" value="1" />
-                                            <input type="hidden" name="business" value=" " />
-                                            <input type="hidden" name="item_name" value="Party Men's Blazer" />
-                                            <input type="hidden" name="amount" value="30.99" />
-                                            <input type="hidden" name="discount_amount" value="1.00" />
-                                            <input type="hidden" name="currency_code" value="USD" />
-                                            <input type="hidden" name="return" value=" " />
-                                            <input type="hidden" name="cancel_return" value=" " />
-                                            <input type="submit" name="submit" value="Add to cart" class="button" />
-                                        </fieldset>
-                                    </form>
-                                </div>
-
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
             </div>
         </div>	
         <!-- //mens -->
@@ -913,7 +514,7 @@
                                 <li><a href="romand.jsp">Romand</a></li>
                                 <li><a href="gilaa.jsp">Gilaa</a></li>
                                 <li><a href="about.jsp">Mangosteen</a></li>
-<!--                                <li><a href="typography.html">Short Codes</a></li>-->
+                                <!--                                <li><a href="typography.html">Short Codes</a></li>-->
                                 <li><a href="contact.jsp">Liên Hệ</a></li>
                             </ul>
                         </div>
@@ -986,7 +587,7 @@
 
                     <div class="clearfix"></div>
                 </div>
-<!--                <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>-->
+                <!--                <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>-->
             </div>
         </div>
         <!-- //footer -->
@@ -1007,21 +608,21 @@
                                         <div class="sign-up">
                                             <h4>Email :</h4>
                                             <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Type here';
-                                                                                                        }" required="">	
+                                                        this.value = 'Type here';
+                                                    }" required="">	
                                         </div>
                                         <div class="sign-up">
                                             <h4>Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
 
                                         </div>
                                         <div class="sign-up">
                                             <h4>Re-type Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
 
                                         </div>
                                         <div class="sign-up">
@@ -1036,14 +637,14 @@
                                         <div class="sign-in">
                                             <h4>Email :</h4>
                                             <input type="text" value="Type here" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Type here';
-                                                                                                        }" required="">	
+                                                        this.value = 'Type here';
+                                                    }" required="">	
                                         </div>
                                         <div class="sign-in">
                                             <h4>Password :</h4>
                                             <input type="password" value="Password" onfocus="this.value = '';" onblur="if (this.value == '') {
-                                                                                                            this.value = 'Password';
-                                                                                                        }" required="">
+                                                        this.value = 'Password';
+                                                    }" required="">
                                             <a href="#">Forgot password?</a>
                                         </div>
                                         <div class="single-bottom">
@@ -1070,37 +671,37 @@
         <!-- //js -->
         <script src="js/responsiveslides.min.js"></script>
         <script>
-                                                                            // You can also use "$(window).load(function() {"
-                                                                            $(function () {
-                                                                                // Slideshow 4
-                                                                                $("#slider3").responsiveSlides({
-                                                                                    auto: true,
-                                                                                    pager: true,
-                                                                                    nav: false,
-                                                                                    speed: 500,
-                                                                                    namespace: "callbacks",
-                                                                                    before: function () {
-                                                                                        $('.events').append("<li>before event fired.</li>");
-                                                                                    },
-                                                                                    after: function () {
-                                                                                        $('.events').append("<li>after event fired.</li>");
-                                                                                    }
-                                                                                });
-                                                                            });
+                                                // You can also use "$(window).load(function() {"
+                                                $(function () {
+                                                    // Slideshow 4
+                                                    $("#slider3").responsiveSlides({
+                                                        auto: true,
+                                                        pager: true,
+                                                        nav: false,
+                                                        speed: 500,
+                                                        namespace: "callbacks",
+                                                        before: function () {
+                                                            $('.events').append("<li>before event fired.</li>");
+                                                        },
+                                                        after: function () {
+                                                            $('.events').append("<li>after event fired.</li>");
+                                                        }
+                                                    });
+                                                });
         </script>
         <script src="js/modernizr.custom.js"></script>
         <!-- Custom-JavaScript-File-Links --> 
         <!-- cart-js -->
         <script src="js/minicart.min.js"></script>
         <script>
-                                                                                                            // Mini Cart
-                                                                                                            paypal.minicart.render({
-                                                                                                                action: '#'
-                                                                                                            });
+                                                // Mini Cart
+                                                paypal.minicart.render({
+                                                    action: '#'
+                                                });
 
-                                                                                                            if (~window.location.search.indexOf('reset=true')) {
-                                                                                                                paypal.minicart.reset();
-                                                                                                            }
+                                                if (~window.location.search.indexOf('reset=true')) {
+                                                    paypal.minicart.reset();
+                                                }
         </script>
 
         <!-- //cart-js --> 
@@ -1127,12 +728,12 @@
         <script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script type="text/javascript">
-                                                                    jQuery(document).ready(function ($) {
-                                                                        $(".scroll").click(function (event) {
-                                                                            event.preventDefault();
-                                                                            $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-                                                                        });
-                                                                    });
+            jQuery(document).ready(function ($) {
+                $(".scroll").click(function (event) {
+                    event.preventDefault();
+                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+                });
+            });
         </script>
         <!-- here stars scrolling icon -->
         <script type="text/javascript">

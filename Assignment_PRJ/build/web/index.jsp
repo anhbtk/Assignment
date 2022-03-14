@@ -95,18 +95,17 @@
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                    <a href="romand.jsp"><img src="images/top1_1.png" alt=" "/></a>
+                                                    <a href="category.jsp"><img src="images/top1_1.png" alt=" "/></a>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${listCategoryRomand}" var="R">
-                                                        <li><a href="romand.jsp">${R.categoryName}</a></li><br/>
+                                                        <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
                                                         </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        
                                                     </ul>
                                                 </div>
                                                 <div class="clearfix"></div>
@@ -120,7 +119,7 @@
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${listCategoryGilaa}" var="G">
-                                                        <li><a href="gilaa.jsp">${G.categoryName}</a></li><br/>
+                                                        <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
                                                         </c:forEach>
                                                     </ul>
                                                 </div>
@@ -130,7 +129,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                    <a href="gilaa.jsp"><img src="images/top2_2.png" alt=" "/></a>
+                                                    <a href="category.jsp"><img src="images/top2_2.png" alt=" "/></a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -294,7 +293,7 @@
                         <div class="carousel-caption">
                             <h3>Rom&nd <span>Lip</span></h3>
                             <p>Lip Make Up</p>
-                            <a class="hvr-outline-out button2" href="romand.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
                         </div>
                     </div>
                 </div>
@@ -303,7 +302,7 @@
                         <div class="carousel-caption">
                             <h3><span>Gilaa</span></h3>
                             <p></p>
-                            <a class="hvr-outline-out button2" href="romand.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
                         </div>
                     </div>
                 </div>
@@ -312,7 +311,7 @@
                         <div class="carousel-caption">
                             <h3>ROM&ND <span></span></h3>
                             <p>Tinh tế, cuốn hút</p>
-                            <a class="hvr-outline-out button2" href="romand.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
                         </div>
                     </div>
                 </div>
@@ -321,7 +320,7 @@
                         <div class="carousel-caption">
                             <h3>Bộ Sưu tập <span>mới</span></h3>
                             <p>GILAA</p>
-                            <a class="hvr-outline-out button2" href="romand.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
                         </div>
                     </div>
                 </div>
@@ -330,7 +329,7 @@
                         <div class="carousel-caption">
                             <h3>ROM&ND <span></span></h3>
                             <p></p>
-                            <a class="hvr-outline-out button2" href="romand.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
                         </div>
                     </div>
                 </div> 
@@ -350,7 +349,7 @@
             <div class="container">
                 <div class="banner_bottom_agile_info_inner_w3ls">
                     <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
-                        <a href="romand.jsp"><figure class="effect-roxy">
+                        <a href="category.jsp"><figure class="effect-roxy">
                                 <img src="images/romand-bia.webp" alt=" " class="img-responsive" />
                                 <figcaption>
                                     <h3><span>L</span>ip</h3>
@@ -360,7 +359,7 @@
                         </a>
                     </div>
                     <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
-                        <a href="gilaa.jsp"><figure class="effect-roxy">
+                        <a href="category.jsp"><figure class="effect-roxy">
                                 <img src="images/gilaa-bia.webp" alt=" " class="img-responsive" />
                                 <figcaption>
                                     <h3><span>L</span>ip</h3>
@@ -410,7 +409,7 @@
                         <h3 class="wthree_text_info">What's <span>Trending</span></h3>
         
                         <div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
-                            <a href="gilaa.jsp">
+                            <a href="category.jsp">
                                 <div class="bb-left-agileits-w3layouts-inner grid">
                                     <figure class="effect-roxy">
                                         <img src="images/hot.webp" alt=" " class="img-responsive" />
@@ -423,7 +422,7 @@
                             </a>
                         </div>
                         <div class="col-md-7 bb-grids bb-middle-agileits-w3layouts">
-                            <a href="romand.jsp">
+                            <a href="category.jsp">
                                 <div class="bb-middle-agileits-w3layouts grid">
                                     <figure class="effect-roxy">
                                         <img src="images/hot222.jpg" alt=" " class="img-responsive" />
@@ -434,7 +433,7 @@
                                     </figure>
                                 </div>
                             </a>
-                            <a href="romand.jsp">
+                            <a href="category.jsp">
                                 <div class="bb-middle-agileits-w3layouts forth grid">
                                     <figure class="effect-roxy">
                                         <img src="images/bottom4.jpg" alt=" " class="img-responsive">
@@ -452,11 +451,11 @@
         <!--/grids-->
         <!--        <div class="agile_last_double_sectionw3ls">
                     <div class="col-md-6 multi-gd-img multi-gd-text ">
-                        <a href="romand.jsp"><img src="images/bot_1.jpg" alt=" "><h4>Son <span>Romand</span> </h4></a>
+                        <a href="category.jsp"><img src="images/bot_1.jpg" alt=" "><h4>Son <span>Romand</span> </h4></a>
         
                     </div>
                     <div class="col-md-6 multi-gd-img multi-gd-text ">
-                        <a href="gilaa.jsp"><img src="images/bot_2.jpg" alt=" "><h4>Son <span>Gilaa</span> </h4></a>
+                        <a href="category.jsp"><img src="images/bot_2.jpg" alt=" "><h4>Son <span>Gilaa</span> </h4></a>
                     </div>
                     <div class="clearfix"></div>
                 </div>							-->
@@ -563,638 +562,6 @@
                             <div class="clearfix"></div>
                         </div>
                         <!--//tab_two-->
-                        <div class="tab3">
-
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/b1.jpg" alt="" class="pro-image-front">
-                                        <img src="images/b1.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Laptop Messenger Bag</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$140.99</span>
-                                            <del>$169.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value=" Laptop Messenger Bag" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/b2.jpg" alt="" class="pro-image-front">
-                                        <img src="images/b2.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Puma Backpack</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$127.99</span>
-                                            <del>$169.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Puma Backpack" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/b3.jpg" alt="" class="pro-image-front">
-                                        <img src="images/b3.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp"> Laptop Backpack</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$120.99</span>
-                                            <del>$189.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value=" Laptop Backpack" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/b4.jpg" alt="" class="pro-image-front">
-                                        <img src="images/b4.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Travel Duffel Bag </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$190.99</span>
-                                            <del>$259.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Travel Duffel Bag " />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/b5.jpg" alt="" class="pro-image-front">
-                                        <img src="images/b5.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp"> Hand-held Bag </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$190.99</span>
-                                            <del>$259.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value=" Hand-held Bag " />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/b6.jpg" alt="" class="pro-image-front">
-                                        <img src="images/b6.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Butterflies Bag </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$190.99</span>
-                                            <del>$259.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Butterflies Bag" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/b7.jpg" alt="" class="pro-image-front">
-                                        <img src="images/b7.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Costa Swiss Bag </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$290.99</span>
-                                            <del>$359.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Costa Swiss Bag" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/b8.jpg" alt="" class="pro-image-front">
-                                        <img src="images/b8.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Noble Designs Bag </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$120.99</span>
-                                            <del>$159.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Noble Designs Bag " />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="tab4">
-
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/s1.jpg" alt="" class="pro-image-front">
-                                        <img src="images/s1.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Running Shoes</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$80.99</span>
-                                            <del>$89.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Running Shoes" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/s2.jpg" alt="" class="pro-image-front">
-                                        <img src="images/s2.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Shoetopia Lace Up</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$90.99</span>
-                                            <del>$59.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Shoetopia Lace Up" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/s3.jpg" alt="" class="pro-image-front">
-                                        <img src="images/s3.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Steemo Casuals(Black)</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$90.99</span>
-                                            <del>$59.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Steemo Casuals (Black)" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/s4.jpg" alt="" class="pro-image-front">
-                                        <img src="images/s4.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Benetton Flip Flops</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$40.99</span>
-                                            <del>$99.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Benetton Flip Flops" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/s5.jpg" alt="" class="pro-image-front">
-                                        <img src="images/s5.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Moonwalk Bellies </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$80.99</span>
-                                            <del>$99.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Moonwalk Bellies" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/s6.jpg" alt="" class="pro-image-front">
-                                        <img src="images/s6.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Aero Canvas Loafers  </a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$120.99</span>
-                                            <del>$199.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Aero Canvas Loafers" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/s7.jpg" alt="" class="pro-image-front">
-                                        <img src="images/s7.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Sparx Sporty Canvas Shoes</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$160.99</span>
-                                            <del>$199.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Sparx Sporty Canvas Shoes" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="images/s8.jpg" alt="" class="pro-image-front">
-                                        <img src="images/s8.jpg" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
-                                            </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
-
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">Women BLACK Heels</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">$180.99</span>
-                                            <del>$199.71</del>
-                                        </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="Women BLACK Heels" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
-
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="clearfix"></div>
-                        </div>
                     </div>
                 </div>	
             </div>
@@ -1284,8 +651,8 @@
                             <h4>Các trang <span></span> </h4>
                             <ul>
                                 <li><a href="home">Trang chủ</a></li>
-                                <li><a href="romand.jsp">Romand</a></li>
-                                <li><a href="gilaa.jsp">Gilaa</a></li>
+                                <li><a href="category.jsp">Romand</a></li>
+                                <li><a href="category.jsp">Gilaa</a></li>
                                 <li><a href="about.jsp">Mangosteen</a></li>
                                 <!--                                <li><a href="typography.html">Short Codes</a></li>-->
                                 <li><a href="contact.jsp">Liên hệ</a></li>

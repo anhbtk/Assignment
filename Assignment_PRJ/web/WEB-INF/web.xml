@@ -32,6 +32,10 @@
         <servlet-name>ListCategory</servlet-name>
         <servlet-class>Controller.ListCategory</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>CategoryController</servlet-name>
+        <servlet-class>Controller.CategoryController</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListProduct</servlet-name>
         <url-pattern>/list-products</url-pattern>
@@ -63,6 +67,10 @@
     <servlet-mapping>
         <servlet-name>ListCategory</servlet-name>
         <url-pattern>/list-category</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>CategoryController</servlet-name>
+        <url-pattern>/category-controller</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

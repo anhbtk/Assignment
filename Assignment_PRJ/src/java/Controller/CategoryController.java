@@ -5,20 +5,23 @@
  */
 package Controller;
 
+import DAO.CategoryDAO;
 import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Category;
 import model.Product;
 
 /**
  *
  * @author USER
  */
-public class CreateProduct extends HttpServlet {
+public class CategoryController extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,7 +37,14 @@ public class CreateProduct extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            /* TODO output your page here. You may use following sample code. */
+            int categoryId = Integer.parseInt(request.getParameter("categoryId"));
+            List<Product> listProduct = new ProductDAO().getAllProductbyCategory(categoryId);
+            List<Category> listCategoryRomand = new CategoryDAO().getAllCategoryRomand();
+            List<Category> listCategoryGilaa = new CategoryDAO().getAllCategoryGilaa();
+            request.setAttribute("listCategoryRomand", listCategoryRomand);
+            request.setAttribute("listCategoryGilaa", listCategoryGilaa);
+            request.setAttribute("listProductByCategoryId", listProduct);
+            request.getRequestDispatcher("category.jsp").forward(request, response);
         }
     }
 
@@ -50,9 +60,7 @@ public class CreateProduct extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        request.getRequestDispatcher("createProduct.jsp").forward(request, response);
-
+        processRequest(request, response);
     }
 
     /**
@@ -66,23 +74,7 @@ public class CreateProduct extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-                response.setCharacterEncoding("UTF-8");
-        response.setCharacterEncoding("UTF-8");
-
-        String name = request.getParameter("name");
-        int category_id = Integer.parseInt(request.getParameter("category_id"));
-        int quantity = Integer.parseInt(request.getParameter("quantity"));
-        int price = Integer.parseInt(request.getParameter("price"));
-        String description = request.getParameter("description");
-        String imagine = request.getParameter("imagine");
-        String imagine2 = request.getParameter("imagine2");
-        String imagine3 = request.getParameter("imagine3");
-        String created_date = request.getParameter("created_date");
-
-        Product p = new Product(0, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date,"");
-        ProductDAO.create(p);
-        response.sendRedirect("list-products");
-
+        processRequest(request, response);
     }
 
     /**

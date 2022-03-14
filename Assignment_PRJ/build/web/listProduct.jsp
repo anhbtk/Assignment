@@ -14,7 +14,7 @@
     </head>
     <body>
         <h3>List Product</h3>
-        <a href ="create-product">Create New<a/><br/><br/>
+        <button><a href ="create-product">Create New<a/></button><br/><br/>
             <table border="1">
                 <thead>
                     <tr>
@@ -44,7 +44,7 @@
                         <td><img src="${product.imagine2}" style="height: 100px; width: 100px"></td>
                         <td><img src="${product.imagine3}" style="height: 100px; width: 100px"></td>
                         <td>${product.created_date}</td>
-                        <td><a href ="update-product?id=${product.id}">Update<a/>|<a href ="delete-product?id=${product.id}">Delete<a/> </tr></td>           
+                        <td><button><a href ="update-product?id=${product.id}">Update<a/></button><br/><br/><button><a href ="delete-product?id=${product.id}">Delete<a/></button> </tr></td>           
                     </tr>      
                     </c:forEach>
                 </tbody>
