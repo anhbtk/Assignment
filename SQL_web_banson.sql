@@ -122,19 +122,14 @@ insert into Product (id, name, category_id, quantity, price, description, imagin
 insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (88, 'Job', 2, 48, 175000, 'Injury of right uterine artery, subsequent encounter', '', '', '', '2022-02-24');
 insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (89, 'Namfix', 10, 47, 175000, 'Unspecified injury of deep palmar arch of right hand', '', '', '', '2021-12-23');
 insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (90, 'Greenlam', 6, 41, 175000, 'Terrorism involving biolg weapons, publ sfty offcl injured', '', '', '', '2020-03-27');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (91, 'Viva', 9, 19, 175000, 'Other specified crystal arthropathies, right elbow','', '', '', '2022-01-13');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (92, 'Ventosanzap', 3, 33, 175000, 'Other reactive arthropathies, ankle and foot', '', '', '', '2022-08-09');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (93, 'Transcof', 5, 18, 175000, 'Poisoning by methylphenidate, accidental, init', '', '', '', '');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (94, 'Tin', 6, 25, 175000, 'Lac w fb of unsp external genital organs, female, init', '', '', '', '');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (95, 'Hatity', 8, 11, 175000, 'Contact with hot household appliance, undetermined intent', '', '', '', '2021-05-16');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (96, 'Treeflex', 7, 44, 175000, 'Nondisp oblique fx shaft of l ulna, 7thK', '', '', '', '2020-02-16');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (97, 'Treeflex', 5, 40, 175000, 'Displaced dome fx unsp acetabulum, subs for fx w routn heal', '', '', '', '2021-09-06');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (98, 'Matsoft', 4, 34, 175000, 'Poisoning by antiparkns drug/centr musc-tone depr, self-harm', '', '', '', '2020-10-17');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (99, 'Home Ing', 4, 50, 175000, 'Displ seg fx shaft of r femr, 7thJ', '', '', '', '2022-10-17');
-insert into Product (id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values (100, 'Trippledex', 6, 23, 175000, 'Poisoning by heroin, intentional self-harm, subs encntr', '', '', '', '2020-11-02');
 
-select *  from Product p inner join Categogies c on p.category_id = c.id
+select * from Product p inner join Categogies c on p.category_id = c.id
+
 select * from Categogies where name like '%Romand%'
+
+select top 8 * from Product p inner join Categogies c on p.category_id = c.id where c.name like '%Romand%'
+order by created_date desc 
+
 
 drop table Account
 create table Account (

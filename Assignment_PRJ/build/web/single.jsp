@@ -50,7 +50,7 @@
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 logo_agile">
-                    <h1><a href="index.html"><span>M</span>angosteen<i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+                    <h1><a href="home"><span>M</span>angosteen<i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
@@ -148,7 +148,7 @@
                                                                                 <li><a href="typography.html">Typography</a></li>
                                                                             </ul>
                                                                         </li>-->
-                                    <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ</a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="contact.jsp">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -286,13 +286,13 @@
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3>Single <span>Page </span></h3>
+                <h3>Sản Phẩm <span> </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">
 
                         <ul class="w3_short">
-                            <li><a href="index.html">Trang chủ</a><i>|</i></li>
+                            <li><a href="home">Trang chủ</a><i>|</i></li>
                             <li>Sản phẩm</li>
                         </ul>
                     </div>
@@ -309,14 +309,14 @@
                         <div class="flexslider">
 
                             <ul class="slides">
-                                <li data-thumb="images/d2.jpg">
-                                    <div class="thumb-image"> <img src="images/d2.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                <li data-thumb="${product.imagine2}">
+                                    <div class="thumb-image"> <img src="${product.imagine2}" data-imagezoom="true" class="img-responsive"> </div>
                                 </li>
-                                <li data-thumb="images/d1.jpg">
-                                    <div class="thumb-image"> <img src="images/d1.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                <li data-thumb="${product.imagine}">
+                                    <div class="thumb-image"> <img src="${product.imagine}" data-imagezoom="true" class="img-responsive"> </div>
                                 </li>	
-                                <li data-thumb="images/d3.jpg">
-                                    <div class="thumb-image"> <img src="images/d3.jpg" data-imagezoom="true" class="img-responsive"> </div>
+                                <li data-thumb="${product.imagine3}">
+                                    <div class="thumb-image"> <img src="${product.imagine3}" data-imagezoom="true" class="img-responsive"> </div>
                                 </li>
                             </ul>
                             <div class="clearfix"></div>
@@ -324,15 +324,15 @@
                     </div>
                 </div>
                 <div class="col-md-8 single-right-left simpleCart_shelfItem">
-                    <h3>Big Wing Sneakers  (Navy)</h3>
-                    <p><span class="item_price">$650</span> <del>- $900</del></p>
+                    <h3>${product.name} - ${product.category_name}</h3>
+                    <p><h2><span class="item_price" style="color: #d43f3a">${product.price}</span> VND </h2></p>
                     <div class="rating1">
                         <span class="starRating">
                             <input id="rating5" type="radio" name="rating" value="5">
                             <label for="rating5">5</label>
                             <input id="rating4" type="radio" name="rating" value="4">
                             <label for="rating4">4</label>
-                            <input id="rating3" type="radio" name="rating" value="3" checked="">
+                            <input id="rating3" type="radio" name="rating" value="3">
                             <label for="rating3">3</label>
                             <input id="rating2" type="radio" name="rating" value="2">
                             <label for="rating2">2</label>
@@ -340,27 +340,22 @@
                             <label for="rating1">1</label>
                         </span>
                     </div>
-                    <div class="description">
-                        <h5>Check delivery, payment options and charges at your location</h5>
-                        <form action="#" method="post">
+                    <div class="description" style="width: 600px">
+                        <div>${product.description}</div>
+<!--                        <form action="#" method="post">
                             <input type="text" value="Enter pincode" onfocus="this.value = '';" onblur="if (this.value == '') {
                                         this.value = 'Enter pincode';
                                     }" required="">
                             <input type="submit" value="Check">
-                        </form>
+                        </form>-->
                     </div>
                     <div class="color-quality">
                         <div class="color-quality-right">
-                            <h5>Quality :</h5>
-                            <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-                                <option value="null">5 Qty</option>
-                                <option value="null">6 Qty</option> 
-                                <option value="null">7 Qty</option>					
-                                <option value="null">10 Qty</option>								
-                            </select>
+                            <div style="color: #2fdab8">Quality :</div>
+                            <input type="text" name="quantity"/>
                         </div>
                     </div>
-                    <div class="occasional">
+<!--                    <div class="occasional">
                         <h5>Types :</h5>
                         <div class="colr ert">
                             <label class="radio"><input type="radio" name="radio" checked=""><i></i>Casual Shoes</label>
@@ -372,7 +367,7 @@
                             <label class="radio"><input type="radio" name="radio"><i></i>Formal Shoes</label>
                         </div>
                         <div class="clearfix"> </div>
-                    </div>
+                    </div>-->
                     <div class="occasion-cart">
                         <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                             <form action="#" method="post">
@@ -689,7 +684,7 @@
         <div class="footer">
             <div class="footer_agile_inner_info_w3l">
                 <div class="col-md-3 footer-left">
-                    <h2><a href="index.html"><span>E</span>lite Shoppy </a></h2>
+                    <h2><a href="home"><span>E</span>lite Shoppy </a></h2>
                     <p>Lorem ipsum quia dolor
                         sit amet, consectetur, adipisci velit, sed quia non 
                         numquam eius modi tempora.</p>
@@ -713,12 +708,12 @@
                         <div class="col-md-4 sign-gd">
                             <h4>Our <span>Information</span> </h4>
                             <ul>
-                                <li><a href="index.html">Home</a></li>
+                                <li><a href="home">Home</a></li>
                                 <li><a href="mens.html">Men's Wear</a></li>
                                 <li><a href="womens.html">Women's wear</a></li>
                                 <li><a href="about.html">About</a></li>
                                 <li><a href="typography.html">Short Codes</a></li>
-                                <li><a href="contact.html">Contact</a></li>
+                                <li><a href="contact.jsp">Contact</a></li>
                             </ul>
                         </div>
 

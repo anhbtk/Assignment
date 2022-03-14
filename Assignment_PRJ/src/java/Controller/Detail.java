@@ -5,12 +5,14 @@
  */
 package Controller;
 
+import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Product;
 
 /**
  *
@@ -32,8 +34,10 @@ public class Detail extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            int productId = Integer.parseInt(request.getParameter("productId"));
-            
+            int productId = Integer.parseInt(request.getParameter("productID"));
+            Product p = new ProductDAO().getProductById(productId);
+            request.setAttribute("product", p);
+            request.getRequestDispatcher("single.jsp").forward(request, response);
         }
     }
 
