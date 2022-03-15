@@ -39,6 +39,8 @@ public class CategoryController extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             int categoryId = Integer.parseInt(request.getParameter("categoryId"));
             List<Product> listProductByCategoryId = new ProductDAO().getAllProductbyCategory(categoryId);
+            List<Category> listCategory = new CategoryDAO().getAllCategory();
+            request.setAttribute("listCategory", listCategory);
             request.setAttribute("listProduct", listProductByCategoryId);
             request.getRequestDispatcher("category.jsp").forward(request, response);
         }

@@ -106,8 +106,8 @@
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${sessionScope.listCategoryRomand}" var="R">
-                                                        <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
-                                                        </c:forEach>
+                                                            <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
+                                                            </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
@@ -125,13 +125,13 @@
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${sessionScope.listCategoryGilaa}" var="G">
-                                                        <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
-                                                        </c:forEach>
+                                                            <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
+                                                            </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
@@ -314,10 +314,25 @@
                             </li>			
                         </ul>
                     </div>
-                    <div class="css-treeview">
-                        <h4>Categories</h4>
-                        <ul class="tree-list-pad">
-                            <li><input type="checkbox" checked="checked" id="item-0" /><label for="item-0"><a href="romand.jsp"><i class="fa fa-long-arrow-right" aria-hidden="true"></i> Men's Wear</a></label> </li>
+                    <div >
+
+                        <table  style=" padding: 100px" >
+                            <thead>
+                                <tr>
+                                    <th><b><h3 style="color: #17c3a2; font-family: 'Open Sans', sans-serif;">PHÂN LOẠI</h3></b></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><c:forEach items="${listCategory}" var="C">
+                                            <br/>
+                                            <label> <a href="category-controller?categoryId=${C.categoryId}">${C.categoryName} </a>
+                                            </label>
+                                            <br/>
+                                        </c:forEach></td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                     <div class="community-poll">
                         <h4>Community Poll</h4>
@@ -332,7 +347,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-md-8 products-right">
-<!--                    <h5>Product <span>Compare(0)</span></h5>-->
+                    <!--                    <h5>Product <span>Compare(0)</span></h5>-->
                     <div class="sort-grid">
                         <div class="sorting">
                             <h6>Sort By</h6>
@@ -406,8 +421,8 @@
                                 <div class="item-info-product ">
                                     <h4><a href="single.jsp">${product.name}</a></h4>
                                     <div class="info-product-price">
-                                        <span class="item_price">${product.price}</span>
-<!--                                        <del>$390.71</del>-->
+                                        <span class="item_price">${product.price}.000Đ</span>
+                                        <!--                                        <del>$390.71</del>-->
                                     </div>
                                     <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                                         <form action="#" method="post">
@@ -430,9 +445,9 @@
                             </div>
                         </div>
                     </c:forEach>
-                    
+
                     <div class="clearfix"></div>
-                    
+
                 </div>
                 <div class="clearfix"></div>
             </div>

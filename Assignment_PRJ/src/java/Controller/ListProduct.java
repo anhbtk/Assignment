@@ -36,7 +36,7 @@ public class ListProduct extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
             List<Product> listProduct = new ProductDAO().getAllProduct();
-            request.setAttribute("listProduct", listProduct);
+            request.setAttribute("listProduct", listProduct);           
             request.getRequestDispatcher("listProduct.jsp").forward(request, response);
         }
     }

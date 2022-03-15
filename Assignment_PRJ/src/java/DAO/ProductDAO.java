@@ -61,6 +61,25 @@ public class ProductDAO {
 
         return list;
     }
+    
+    public List<Product> getAllNewGilaaProduct() {
+        List<Product> list = new ArrayList<>();
+        try {
+            String sql = "select top 8 * from Product p inner join Categogies c on p.category_id = c.id where c.name like '%Gilaa%'\n"
+                    + "order by created_date desc ";
+            Connection conn = new BaseDAO().getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12));
+                list.add(p);
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(ProductDAO.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+        return list;
+    }
 
     public static void create(Product p) {
         try {

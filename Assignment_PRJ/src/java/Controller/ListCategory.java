@@ -13,6 +13,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Category;
 
 /**
@@ -37,6 +38,9 @@ public class ListCategory extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             List<Category> listCategory = new CategoryDAO().getAllCategory();
+//            HttpSession session = request.getSession();
+//            session.setAttribute("listCategory", listCategory);
+
             request.setAttribute("listCategory", listCategory);
             request.getRequestDispatcher("listCategory.jsp").forward(request, response);
         }

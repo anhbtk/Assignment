@@ -5,6 +5,7 @@
  */
 package Controller;
 
+import DAO.CategoryDAO;
 import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -14,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import model.Category;
 import model.Product;
 
 /**
@@ -40,6 +42,8 @@ public class Search extends HttpServlet {
             String keyword = request.getParameter("keyword");
             List<Product> listProductByKeyword = new ProductDAO().Search(keyword);
             request.setAttribute("listProduct", listProductByKeyword);
+            List<Category> listCategory = new CategoryDAO().getAllCategory();
+            request.setAttribute("listCategory", listCategory);
             request.getRequestDispatcher("category.jsp").forward(request, response);
 
         }

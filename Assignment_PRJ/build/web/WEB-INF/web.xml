@@ -44,6 +44,10 @@
         <servlet-name>Detail</servlet-name>
         <servlet-class>Controller.Detail</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>ShopNow</servlet-name>
+        <servlet-class>Controller.ShopNow</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListProduct</servlet-name>
         <url-pattern>/list-products</url-pattern>
@@ -87,6 +91,10 @@
     <servlet-mapping>
         <servlet-name>Detail</servlet-name>
         <url-pattern>/detail</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ShopNow</servlet-name>
+        <url-pattern>/shop-now</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

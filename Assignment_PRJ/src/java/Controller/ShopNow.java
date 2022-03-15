@@ -14,7 +14,6 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 import model.Category;
 import model.Product;
 
@@ -22,7 +21,7 @@ import model.Product;
  *
  * @author USER
  */
-public class Home extends HttpServlet {
+public class ShopNow extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,19 +35,13 @@ public class Home extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            List<Product> listAllNewRomandProduct = new ProductDAO().getAllNewRomandProduct();
-            List<Product> listAllNewGilaaProduct = new ProductDAO().getAllNewGilaaProduct();
-            List<Category> listCategoryRomand = new CategoryDAO().getAllCategoryRomand();
-            List<Category> listCategoryGilaa = new CategoryDAO().getAllCategoryGilaa();
-            HttpSession session = request.getSession();
-            session.setAttribute("listCategoryRomand", listCategoryRomand);
-            session.setAttribute("listCategoryGilaa", listCategoryGilaa);
-            request.setAttribute("listAllNewRomandProduct", listAllNewRomandProduct);
-            request.setAttribute("listAllNewGilaaProduct", listAllNewGilaaProduct);
-            request.getRequestDispatcher("index.jsp").forward(request, response);
+            List<Product> listProduct = new ProductDAO().getAllProduct();
+            request.setAttribute("listProduct", listProduct); 
+            List<Category> listCategory = new CategoryDAO().getAllCategory();
+            request.setAttribute("listCategory", listCategory);
+            request.getRequestDispatcher("category.jsp").forward(request, response);
         }
     }
 

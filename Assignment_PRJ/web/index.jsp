@@ -51,17 +51,17 @@
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social">
-                        <li class="share">Share On : </li>
-                        <li><a href="#" class="facebook">
+                        <li class="share"></li>
+                        <li><a  class="facebook">
                                 <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="twitter"> 
+                        <li><a  class="twitter"> 
                                 <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="instagram">
+                        <li><a  class="instagram">
                                 <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="pinterest">
+                        <li><a  class="pinterest">
                                 <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                     </ul>
@@ -294,7 +294,7 @@
                         <div class="carousel-caption">
                             <h3>Rom&nd <span>Lip</span></h3>
                             <p>Lip Make Up</p>
-                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="shop-now">Shop Now</input> </a>
                         </div>
                     </div>
                 </div>
@@ -303,7 +303,7 @@
                         <div class="carousel-caption">
                             <h3><span>Gilaa</span></h3>
                             <p></p>
-                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="shop-now">Shop Now </a>
                         </div>
                     </div>
                 </div>
@@ -312,7 +312,7 @@
                         <div class="carousel-caption">
                             <h3>ROM&ND <span></span></h3>
                             <p>Tinh tế, cuốn hút</p>
-                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="shop-now">Shop Now </a>
                         </div>
                     </div>
                 </div>
@@ -321,7 +321,7 @@
                         <div class="carousel-caption">
                             <h3>Bộ Sưu tập <span>mới</span></h3>
                             <p>GILAA</p>
-                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="shop-now">Shop Now </a>
                         </div>
                     </div>
                 </div>
@@ -330,7 +330,7 @@
                         <div class="carousel-caption">
                             <h3>ROM&ND <span></span></h3>
                             <p></p>
-                            <a class="hvr-outline-out button2" href="category.jsp">Shop Now </a>
+                            <a class="hvr-outline-out button2" href="shop-now">Shop Now </a>
                         </div>
                     </div>
                 </div> 
@@ -350,7 +350,7 @@
             <div class="container">
                 <div class="banner_bottom_agile_info_inner_w3ls">
                     <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
-                        <a href="category.jsp"><figure class="effect-roxy">
+                        <a href="shop-now"><figure class="effect-roxy">
                                 <img src="images/romand-bia.webp" alt=" " class="img-responsive" />
                                 <figcaption>
                                     <h3><span>L</span>ip</h3>
@@ -360,7 +360,7 @@
                         </a>
                     </div>
                     <div class="col-md-6 wthree_banner_bottom_grid_three_left1 grid">
-                        <a href="category.jsp"><figure class="effect-roxy">
+                        <a href="shop-now"><figure class="effect-roxy">
                                 <img src="images/gilaa-bia.webp" alt=" " class="img-responsive" />
                                 <figcaption>
                                     <h3><span>L</span>ip</h3>
@@ -464,7 +464,7 @@
         <!-- /new_arrivals --> 
         <div class="new_arrivals_agile_w3ls_info"> 
             <div class="container">
-                <h3 class="wthree_text_info">New <span>Arrivals</span></h3>		
+                <h3 class="wthree_text_info">SẢN PHẨM <span style="color: #dd4b39">MỚI</span> </h3>		
                 <div id="horizontalTab">
                     <ul class="resp-tabs-list">
                         <li> Romand</li>
@@ -492,7 +492,7 @@
                                         <div class="item-info-product ">
                                             <h4><a href="single.jsp">${product.name}</a></h4>
                                             <div class="info-product-price">
-                                                <span class="item_price">${product.price}</span>
+                                                <span class="item_price">${product.price}.000Đ</span>
                                                 <del></del>
                                             </div>
                                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
@@ -538,7 +538,7 @@
                                     <div class="item-info-product ">
                                         <h4><a href="single.jsp">${product.name}</a></h4>
                                         <div class="info-product-price">
-                                            <span class="item_price">${product.price}</span>
+                                            <span class="item_price">${product.price}.000Đ</span>
 <!--                                            <del>$189.71</del>-->
                                         </div>
                                         <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
@@ -588,8 +588,9 @@
                             <i class="fa fa-truck" aria-hidden="true"></i>
                         </div>
                         <div class="w3layouts_mail_grid_left2">
-                            <h3>FREE SHIPPING</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <br>
+                            <h3>MIỄN PHÍ VẬN CHUYỂN</h3>
+                            <p></p>
                         </div>
                     </div>
                     <div class="col-md-3 w3layouts_mail_grid_left">
@@ -597,8 +598,9 @@
                             <i class="fa fa-headphones" aria-hidden="true"></i>
                         </div>
                         <div class="w3layouts_mail_grid_left2">
-                            <h3>24/7 SUPPORT</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <br>
+                            <h3> HỖ TRỢ 24/7 </h3>
+                            <p></p>
                         </div>
                     </div>
                     <div class="col-md-3 w3layouts_mail_grid_left">
@@ -606,8 +608,9 @@
                             <i class="fa fa-shopping-bag" aria-hidden="true"></i>
                         </div>
                         <div class="w3layouts_mail_grid_left2">
-                            <h3>MONEY BACK GUARANTEE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <br>
+                            <h3>THANH TOÁN KHI NHẬN HÀNG </h3>
+                            <p></p>
                         </div>
                     </div>
                     <div class="col-md-3 w3layouts_mail_grid_left">
@@ -615,8 +618,9 @@
                             <i class="fa fa-gift" aria-hidden="true"></i>
                         </div>
                         <div class="w3layouts_mail_grid_left2">
-                            <h3>FREE GIFT COUPONS</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <br>
+                            <h3>QUÀ TẶNG</h3>
+                            <p></p>
                         </div>
                     </div>
                     <div class="clearfix"> </div>
@@ -681,7 +685,7 @@
                                     </div>
                                     <div class="w3-address-right">
                                         <h6>Địa chỉ Email </h6>
-                                        <p>Email :<a href="mailto:example@email.com"> kimkim01@gmail.com</a></p>
+                                        <p>Email : kimkim01@gmail.com</p>
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
@@ -700,37 +704,13 @@
                             </div>
                         </div>
                         <div class="col-md-3 sign-gd flickr-post">
-                            <h4>Flickr <span>Posts</span></h4>
-                            <ul>
-                                <li><a href="single.jsp"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
-                            </ul>
+                            
                         </div>
                         <div class="clearfix"></div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <div class="agile_newsletter_footer">
-                    <div class="col-sm-6 newsleft">
-                        <h3>SIGN UP FOR NEWSLETTER !</h3>
-                    </div>
-                    <div class="col-sm-6 newsright">
-                        <form action="#" method="post">
-                            <input type="email" placeholder="Enter your email..." name="email" required="">
-                            <input type="submit" value="Submit">
-                        </form>
-                    </div>
-
-                    <div class="clearfix"></div>
-                </div>
-                <!--                <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>-->
+                
             </div>
         </div>
         <!-- //footer -->
