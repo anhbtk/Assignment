@@ -1,9 +1,6 @@
 
 package model;
 
-import lombok.Builder;
-
-@Builder
 public class Cart {
     Product product;
     int quantity_cart;

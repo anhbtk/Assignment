@@ -1,5 +1,7 @@
 
 
+<%@page import="java.util.Map"%>
+<%@page import="model.Cart"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
@@ -285,12 +287,12 @@
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3>Giỏ hàng <span> </span></h3>
+                <h3 style="color: #ac2925">Giỏ hàng <span> </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">
                         <ul class="w3_short">
-                            <li><a href="home">Trang chủ</a><i>|</i></li>
+                            <li><a href="home" style="color: #ac2925">Trang chủ</a><i>|</i></li>
                             <li>Giỏ hàng</li>
                         </ul>
                     </div>
@@ -310,36 +312,40 @@
                     </c:when>
                     <c:otherwise>
                         <h3></h3>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th scope="col"></th>
-                                <th scope="col">Sản Phẩm</th>
-                                <th scope="col">Tên sản phẩm</th>
-                                <th scope="col">Giá</th>
-                                <th scope="col">Số lượng</th>
-                                <th scope="col">Tổng tiền</th>
-                                <th scope="col">Xóa</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                            <c:forEach items="${cart}" var="c">
+                        <table class="table">
+                            <thead>
                                 <tr>
+                                    <th scope="col"></th>
+                                    <th scope="col">Sản Phẩm</th>
+                                    <th scope="col">Tên sản phẩm</th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Tổng tiền</th>
+                                    <th scope="col">Xóa</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <c:forEach items="${cart}" var="c">
+                                <form action="update-quantity">
+                                    <tr>
+                                    <input type="hidden" name="productId" value="${c.value.product.id}"/>
                                     <th scope="row"></th>
                                     <td><a href="detail?productID=${c.value.product.id}"><img src="${c.value.product.imagine}"style="height: 100px; width: 100px"></a></td>
                                     <td>${c.value.product.name}</td>
                                     <td>${c.value.product.price}.000Đ</td>
-                                    <td>${c.value.quantity_cart}</td>
+                                    <td><input onchange="this.form.submit()" type="number" name="quantity" value="${c.value.quantity_cart}"/></td>
                                     <td>${c.value.product.price*c.value.quantity_cart}.000Đ</td>
                                     <td><button><a href ="delete-cart?productId=${c.value.product.id}">Delete<a/></button></td>
-                                </tr>
+                                    </tr>
+                                </form>
                             </c:forEach>
-
-                        </tbody>
-                    </table>
+                            </tbody>
+                        </table>
+                        <!--                        <h3>Tổng Thanh Toán</h3>-->
+                        <div style="text-align: center"><a  href="check" class="btn btn-success w-25">Check out</a></div>
                     </c:otherwise>
                 </c:choose>
+
                 <!--/grids-->
                 <div class="coupons">
                     <div class="coupons-grids text-center">

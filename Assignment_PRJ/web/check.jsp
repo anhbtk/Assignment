@@ -1,13 +1,14 @@
 
 
+<%@page import="java.util.Map"%>
+<%@page import="model.Cart"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-
 
 <!DOCTYPE html>
 <html>
     <head>
-        <title>Mangosteen: Category</title>
+        <title>Single : Mangosteen</title>
         <!--/tags -->
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -15,14 +16,17 @@
               Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
         <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
             function hideURLbar(){ window.scrollTo(0,1); } </script>
-        <!--//tags -->
+        <!-- //tags -->
         <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
-        <link rel="stylesheet" type="text/css" href="css/jquery-ui.css">
-        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+        <link rel="stylesheet" href="css/flexslider.css" type="text/css" media="screen" />
         <link href="css/font-awesome.css" rel="stylesheet"> 
+        <link href="css/easy-responsive-tabs.css" rel='stylesheet' type='text/css'/>
+        <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+
         <!-- //for bootstrap working -->
         <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800" rel="stylesheet">
         <link href='//fonts.googleapis.com/css?family=Lato:400,100,100italic,300,300italic,400italic,700,900,900italic,700italic' rel='stylesheet' type='text/css'>
+
     </head>
     <body>
         <!-- header -->
@@ -32,7 +36,7 @@
                     <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng nhập </a></li>
                     <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
                     <li><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> <a href="mailto:info@example.com">kimkim01@gmail.com</a></li>
+                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</a></li>
                 </ul>
             </div>
         </div>
@@ -49,7 +53,7 @@
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 logo_agile">
-                    <h1><a href="home"><span>M</span>angosteen <i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
+                    <h1><a href="home"><span>M</span>angosteen<i class="fa fa-shopping-bag top_logo_agile_bag" aria-hidden="true"></i></a></h1>
                 </div>
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
@@ -58,7 +62,7 @@
                         <li><a  class="facebook">
                                 <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                        <li><a  class="twitter"> 
+                        <li><a class="twitter"> 
                                 <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
                         <li><a  class="instagram">
@@ -101,13 +105,13 @@
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                    <a href="category.jsp"><img src="images/top1_1.png" alt=" "/></a>
+                                                    <a href="shop-now"><img src="images/top1_1.png" alt=" "/></a>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${sessionScope.listCategoryRomand}" var="R">
                                                             <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
-                                                            </c:forEach>
+                                                            </c:forEach> 
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
@@ -130,12 +134,11 @@
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
-                                                    <ul class="multi-column-dropdown">
-
+                                                    <ul class="multi-column-dropdown">                                        
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                    <a href="category.jsp"><img src="images/top2_2.png" alt=" "/></a>
+                                                    <a href="shop-now"><img src="images/top2_2.png" alt=" "/></a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -191,16 +194,16 @@
                                 <input type="submit" value="Đăng nhập">
                             </form>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
-                                <li><a href="#" class="facebook">
+                                <li><a  class="facebook">
                                         <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                                         <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="twitter"> 
+                                <li><a  class="twitter"> 
                                         <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                                         <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="instagram">
+                                <li><a  class="instagram">
                                         <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
                                         <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="pinterest">
+                                <li><a class="pinterest">
                                         <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
                                         <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                             </ul>
@@ -280,17 +283,17 @@
             </div>
         </div>
         <!-- //Modal2 -->
+        <!--/single_page-->
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3 style="color: #ac2925">Sản Phẩm <span>  </span></h3>
+                <h3 style="color: #ac2925">Thanh Toán <span> </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">
-
                         <ul class="w3_short">
-                            <li><a style="color: #ac2925" href="home">Trang chủ</a><i>|</i></li>
-                            <li>Sản Phẩm</li>
+                            <li><a href="home" style="color: #ac2925">Trang chủ</a><i>|</i></li>
+                            <li>Thanh Toán</li>
                         </ul>
                     </div>
                 </div>
@@ -299,214 +302,138 @@
         </div>
 
         <!-- banner-bootom-w3-agileits -->
-        <div class="banner-bootom-w3-agileits">
-            <div class="container">
-                <!-- mens -->
-                <div class="col-md-4 products-left">
-                    <div class="filter-price">
-                        <h3>Tùy chọn <span>mức giá</span></h3>
-                        <ul class="dropdown-menu6">
-                            <li>                
-                                <div id="slider-range"></div>							
-                                <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
-                            </li>			
-                        </ul>
-                    </div>
-                    <div >
 
-                        <table  style=" padding: 100px" >
+        <!--//single_page-->
+        <div class="banner-bootom-w3-agileits">
+            <div class="container"  >
+                <h1>Thanh Toán</h1><br/>
+
+                <div class="row">
+                    <div class="col-md-8" style="border: 1px solid #ccc; border-radius: 5px; padding: 1rem">
+                        <h3 style="text-align: left">Danh sách sản phẩm</h3><br/>
+                        <table class="table">
                             <thead>
                                 <tr>
-                                    <th><b><h3 style="color: #17c3a2; font-family: 'Open Sans', sans-serif;">PHÂN LOẠI</h3></b></th>
+                                    <th scope="col"></th>
+                                    <th scope="col">Sản Phẩm</th>
+                                    <th scope="col">Tên sản phẩm</th>
+                                    <th scope="col">Giá</th>
+                                    <th scope="col">Số lượng</th>
+                                    <th scope="col">Tổng tiền</th>
+                                    <th scope="col">Xóa</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td><c:forEach items="${listCategory}" var="C">
-                                            <br/>
-                                            <label> <a href="category-controller?categoryId=${C.categoryId}">${C.categoryName} </a>
-                                            </label>
-                                            <br/>
-                                        </c:forEach></td>
-                                </tr>
+                                <c:forEach items="${cart}" var="c">
+                                <form action="update-quantity">
+                                    <tr>
+                                    <input type="hidden" name="productId" value="${c.value.product.id}"/>
+                                    <th scope="row"></th>
+                                    <td><a href="detail?productID=${c.value.product.id}"><img src="${c.value.product.imagine}"style="height: 100px; width: 100px"></a></td>
+                                    <td>${c.value.product.name}</td>
+                                    <td>${c.value.product.price}.000Đ</td>
+                                    <td><input onchange="this.form.submit()" type="number" name="quantity" value="${c.value.quantity_cart}"/></td>
+                                    <td>${c.value.product.price*c.value.quantity_cart}.000Đ</td>
+                                    <td><button><a href ="delete-cart?productId=${c.value.product.id}">Delete<a/></button></td>
+                                    </tr>
+                                </form>
+                            </c:forEach>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="community-poll">
-                        <h4>Community Poll</h4>
-                        <div class="swit form">	
-                            <form>
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Money back guaranteed</label> </div></div>	
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Others</label> </div></div>		
-                                <input type="submit" value="SEND">
-                            </form>
-                        </div>
-                    </div>
-                    <div class="clearfix"></div>
-                </div>
-                <div class="col-md-8 products-right">
-                    <!--                    <h5>Product <span>Compare(0)</span></h5>-->
-                    <div class="sort-grid">
-                        <div class="sorting">
-                            <h6>Sort By</h6>
-                            <select id="country1" onchange="change_country(this.value)" class="frm-field required sect">
-                                <option value="null">Default</option>
-                                <option value="null">Name(A - Z)</option> 
-                                <option value="null">Name(Z - A)</option>
-                                <option value="null">Price(High - Low)</option>
-                                <option value="null">Price(Low - High)</option>	
-                                <option value="null">Model(A - Z)</option>
-                                <option value="null">Model(Z - A)</option>					
-                            </select>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="sorting">
-                            <h6>Showing</h6>
-                            <select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
-                                <option value="null">7</option>
-                                <option value="null">14</option> 
-                                <option value="null">28</option>					
-                                <option value="null">35</option>								
-                            </select>
-                            <div class="clearfix"></div>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                    <!--                    <div class="men-wear-top">
-                    
-                                            <div  id="top" class="callbacks_container">
-                                                <ul class="rslides" id="slider3">
-                                                    <li>
-                                                        <img class="img-responsive" src="images/banner2.jpg" alt=" "/>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive" src="images/banner5.jpg" alt=" "/>
-                                                    </li>
-                                                    <li>
-                                                        <img class="img-responsive" src="images/banner2.jpg" alt=" "/>
-                                                    </li>
-                    
-                                                </ul>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>-->
-                    <!--                    <div class="men-wear-bottom">
-                                            <div class="col-sm-4 men-wear-left">
-                                                <img class="img-responsive" src="images/bb2.jpg" alt=" " />
-                                            </div>
-                                            <div class="col-sm-8 men-wear-right">
-                                                <h4>Exclusive Men's <span>Collections</span></h4>
-                                                <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem 
-                                                    accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae 
-                                                    ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt
-                                                    explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
-                                                    odit aut fugit. </p>
-                                            </div>
-                                            <div class="clearfix"></div>
-                                        </div>-->
-                    <c:forEach  items="${listProduct}" var="product">
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="${product.imagine}" alt="" class="pro-image-front">
-                                    <img src="${product.imagine}" alt="" class="pro-image-back">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="detail?productID=${product.id}" class="link-product-add-cart">Chi tiết</a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4><a href="single.jsp">${product.name}</a></h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price">${product.price}.000Đ</span>
-                                        <!--                                        <del>$390.71</del>-->
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                        <form action="add-to-card?productID=${product.id}" method="post">
-                                            <fieldset>
-                                                <input type="submit" name="submit" value="+ Giỏ Hàng" class="button">
-                                            </fieldset>
-                                        </form>
-                                    </div>
 
+                    </div>
+                    <div class="col-md-4" style="border: 1px solid #ccc; border-radius: 5px">
+                        <h3>Thông tin nhận hàng</h3><br/>
+                        <form>
+                            <div class="mb-3">
+                                <label for="exampleInputEmail1" class="form-label">Email address</label>
+                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="exampleInputPassword1" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="exampleInputPassword1">
+                            </div>
+                            <div class="mb-3 form-check">
+                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            </div>
+                            <div style="text-align: center"><button type="submit" class="btn btn-primary" style="width: 100">Submit</button></div>
+                        </form>
+                    </div>
+
+                </div>
+
+
+                <!--/grids-->
+                <br/><br/><br/>
+                <div class="coupons">
+                    <div class="coupons-grids text-center">
+                        <div class="w3layouts_mail_grid">
+                            <div class="col-md-3 w3layouts_mail_grid_left">
+                                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                                    <i class="fa fa-truck" aria-hidden="true"></i>
+                                </div>
+                                <div class="w3layouts_mail_grid_left2">
+                                    <br>
+                                    <h3>MIỄN PHÍ VẬN CHUYỂN</h3>
+                                    <p></p>
                                 </div>
                             </div>
-                        </div>
-                    </c:forEach>
-
-                    <div class="clearfix"></div>
-
-                </div>
-                <div class="clearfix"></div>
-            </div>
-        </div>	
-        <!-- //mens -->
-        <!--/grids-->
-        <div class="coupons">
-            <div class="coupons-grids text-center">
-                <div class="w3layouts_mail_grid">
-                    <div class="col-md-3 w3layouts_mail_grid_left">
-                        <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                            <i class="fa fa-truck" aria-hidden="true"></i>
-                        </div>
-                        <div class="w3layouts_mail_grid_left2">
-                            <h3>FREE SHIPPING</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 w3layouts_mail_grid_left">
-                        <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                            <i class="fa fa-headphones" aria-hidden="true"></i>
-                        </div>
-                        <div class="w3layouts_mail_grid_left2">
-                            <h3>24/7 SUPPORT</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                        </div>
-                    </div>
-                    <div class="col-md-3 w3layouts_mail_grid_left">
-                        <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                            <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                        </div>
-                        <div class="w3layouts_mail_grid_left2">
-                            <h3>MONEY BACK GUARANTEE</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
+                            <div class="col-md-3 w3layouts_mail_grid_left">
+                                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                                    <i class="fa fa-headphones" aria-hidden="true"></i>
+                                </div>
+                                <div class="w3layouts_mail_grid_left2">
+                                    <br>
+                                    <h3> HỖ TRỢ 24/7 </h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 w3layouts_mail_grid_left">
+                                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
+                                </div>
+                                <div class="w3layouts_mail_grid_left2">
+                                    <br>
+                                    <h3>THANH TOÁN KHI NHẬN HÀNG </h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="col-md-3 w3layouts_mail_grid_left">
+                                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
+                                    <i class="fa fa-gift" aria-hidden="true"></i>
+                                </div>
+                                <div class="w3layouts_mail_grid_left2">
+                                    <br>
+                                    <h3>QUÀ TẶNG</h3>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
                         </div>
                     </div>
-                    <div class="col-md-3 w3layouts_mail_grid_left">
-                        <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                            <i class="fa fa-gift" aria-hidden="true"></i>
-                        </div>
-                        <div class="w3layouts_mail_grid_left2">
-                            <h3>FREE GIFT COUPONS</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur</p>
-                        </div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-
-            </div>
-        </div>
+                </div> </div> </div>
         <!--grids-->
         <!-- footer -->
         <div class="footer">
             <div class="footer_agile_inner_info_w3l">
                 <div class="col-md-3 footer-left">
-                    <h2><a href="home"><span>M</span>angosteen</a></h2>
+                    <h2><a href="home"><span>M</span>angosteen </a></h2>
                     <p>Lorem ipsum quia dolor
                         sit amet, consectetur, adipisci velit, sed quia non 
                         numquam eius modi tempora.</p>
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-                        <li><a href="#" class="facebook">
+                        <li><a  class="facebook">
                                 <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="twitter"> 
+                        <li><a  class="twitter"> 
                                 <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="instagram">
+                        <li><a  class="instagram">
                                 <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="pinterest">
+                        <li><a  class="pinterest">
                                 <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                     </ul>
@@ -516,12 +443,12 @@
                         <div class="col-md-4 sign-gd">
                             <h4>Các trang <span></span> </h4>
                             <ul>
-                                <li><a href="home">Trang Chủ</a></li>
-                                <li><a href="romand.jsp">Romand</a></li>
-                                <li><a href="gilaa.jsp">Gilaa</a></li>
+                                <li><a href="home">Trang chủ</a></li>
+                                <li><a href="category.jsp">Romand</a></li>
+                                <li><a href="category.jsp">Gilaa</a></li>
                                 <li><a href="about.jsp">Mangosteen</a></li>
                                 <!--                                <li><a href="typography.html">Short Codes</a></li>-->
-                                <li><a href="contact.jsp">Liên Hệ</a></li>
+                                <li><a href="contact.jsp">Liên hệ</a></li>
                             </ul>
                         </div>
 
@@ -544,7 +471,7 @@
                                     </div>
                                     <div class="w3-address-right">
                                         <h6>Địa chỉ Email </h6>
-                                        <p>Email :<a href="mailto:example@email.com"> kimkim01@gmail.com</a></p>
+                                        <p>Email : kimkim01@gmail.com</p>
                                     </div>
                                     <div class="clearfix"> </div>
                                 </div>
@@ -555,7 +482,6 @@
                                     <div class="w3-address-right">
                                         <h6>Địa chỉ</h6>
                                         <p>Số 32, Đường Hùng Vương, phường Nam Thành, tp Ninh Bình. 
-
                                         </p>
                                     </div>
                                     <div class="clearfix"> </div>
@@ -563,37 +489,11 @@
                             </div>
                         </div>
                         <div class="col-md-3 sign-gd flickr-post">
-                            <h4>Flickr <span>Posts</span></h4>
-                            <ul>
-                                <li><a href="single.jsp"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t1.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t3.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t2.jpg" alt=" " class="img-responsive" /></a></li>
-                                <li><a href="single.jsp"><img src="images/t4.jpg" alt=" " class="img-responsive" /></a></li>
-                            </ul>
                         </div>
                         <div class="clearfix"></div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                <div class="agile_newsletter_footer">
-                    <div class="col-sm-6 newsleft">
-                        <h3>SIGN UP FOR NEWSLETTER !</h3>
-                    </div>
-                    <div class="col-sm-6 newsright">
-                        <form action="#" method="post">
-                            <input type="email" placeholder="Enter your email..." name="email" required="">
-                            <input type="submit" value="Submit">
-                        </form>
-                    </div>
-
-                    <div class="clearfix"></div>
-                </div>
-                <!--                <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>-->
             </div>
         </div>
         <!-- //footer -->
@@ -675,26 +575,6 @@
         <!-- js -->
         <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
         <!-- //js -->
-        <script src="js/responsiveslides.min.js"></script>
-        <script>
-                                                // You can also use "$(window).load(function() {"
-                                                $(function () {
-                                                    // Slideshow 4
-                                                    $("#slider3").responsiveSlides({
-                                                        auto: true,
-                                                        pager: true,
-                                                        nav: false,
-                                                        speed: 500,
-                                                        namespace: "callbacks",
-                                                        before: function () {
-                                                            $('.events').append("<li>before event fired.</li>");
-                                                        },
-                                                        after: function () {
-                                                            $('.events').append("<li>after event fired.</li>");
-                                                        }
-                                                    });
-                                                });
-        </script>
         <script src="js/modernizr.custom.js"></script>
         <!-- Custom-JavaScript-File-Links --> 
         <!-- cart-js -->
@@ -711,35 +591,56 @@
         </script>
 
         <!-- //cart-js --> 
-        <!---->
-        <script type='text/javascript'>//<![CDATA[ 
-            $(window).load(function () {
-                $("#slider-range").slider({
-                    range: true,
-                    min: 0,
-                    max: 9000,
-                    values: [1000, 7000],
-                    slide: function (event, ui) {
-                        $("#amount").val("$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ]);
-                    }
-                });
-                $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-
-            });//]]>  
-
+        <!-- single -->
+        <script src="js/imagezoom.js"></script>
+        <!-- single -->
+        <!-- script for responsive tabs -->						
+        <script src="js/easy-responsive-tabs.js"></script>
+        <script>
+                                                $(document).ready(function () {
+                                                    $('#horizontalTab').easyResponsiveTabs({
+                                                        type: 'default', //Types: default, vertical, accordion           
+                                                        width: 'auto', //auto or any width like 600px
+                                                        fit: true, // 100% fit in a container
+                                                        closed: 'accordion', // Start closed if in accordion view
+                                                        activate: function (event) { // Callback function if tab is switched
+                                                            var $tab = $(this);
+                                                            var $info = $('#tabInfo');
+                                                            var $name = $('span', $info);
+                                                            $name.text($tab.text());
+                                                            $info.show();
+                                                        }
+                                                    });
+                                                    $('#verticalTab').easyResponsiveTabs({
+                                                        type: 'vertical',
+                                                        width: 'auto',
+                                                        fit: true
+                                                    });
+                                                });
         </script>
-        <script type="text/javascript" src="js/jquery-ui.js"></script>
-        <!---->
+        <!-- FlexSlider -->
+        <script src="js/jquery.flexslider.js"></script>
+        <script>
+                                                // Can also be used with $(document).ready()
+                                                $(window).load(function () {
+                                                    $('.flexslider').flexslider({
+                                                        animation: "slide",
+                                                        controlNav: "thumbnails"
+                                                    });
+                                                });
+        </script>
+        <!-- //FlexSlider-->
+        <!-- //script for responsive tabs -->		
         <!-- start-smoth-scrolling -->
         <script type="text/javascript" src="js/move-top.js"></script>
         <script type="text/javascript" src="js/jquery.easing.min.js"></script>
         <script type="text/javascript">
-            jQuery(document).ready(function ($) {
-                $(".scroll").click(function (event) {
-                    event.preventDefault();
-                    $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
-                });
-            });
+                                                jQuery(document).ready(function ($) {
+                                                    $(".scroll").click(function (event) {
+                                                        event.preventDefault();
+                                                        $('html,body').animate({scrollTop: $(this.hash).offset().top}, 1000);
+                                                    });
+                                                });
         </script>
         <!-- here stars scrolling icon -->
         <script type="text/javascript">
@@ -763,4 +664,3 @@
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </body>
 </html>
-

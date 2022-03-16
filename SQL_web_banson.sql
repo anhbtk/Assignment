@@ -97,14 +97,14 @@ drop table Account
 select*from Account
 
 create table Account (
-	id INT,
-	username VARCHAR(50) primary key,
+	id INT identity(1,1) primary key,
+	username VARCHAR(50),
 	password VARCHAR(50),
 	displayname VARCHAR(50),
 	email VARCHAR(50),
 	numberphone VARCHAR(50),
 	address VARCHAR(50),
-	status int
+	status int,
 );
 insert into Account (id, username, password, displayname, email, numberphone, address,status) values (1, 'Admin', '123456', 'Brightdog', 'ochestnutt0@comcast.net', '763-534-3469', '66 Bashford Way',1);
 insert into Account (id, username, password, displayname, email, numberphone, address,status) values (2, 'Overhold', 'x7xKOQ', 'Photobug', 'lalderman1@wisc.edu', '303-229-7950', '0 Holy Cross Avenue',0);
@@ -112,6 +112,9 @@ insert into Account (id, username, password, displayname, email, numberphone, ad
 insert into Account (id, username, password, displayname, email, numberphone, address,status) values (4, 'Aerified', 'qSiPr1Ob7m7', 'Oyoloo', 'hsherbourne3@list-manage.com', '820-119-2114', '31 Lakewood Gardens Hill',0);
 insert into Account (id, username, password, displayname, email, numberphone, address,status) values (5, 'Cardify', 'dp7iexVD', 'Thoughtstorm', 'ewraighte4@posterous.com', '616-133-7732', '893 Sauthoff Park',0);
 
+drop table OrderDetail
+drop table Orders
+drop table Shipping
 
 create table OrderDetail(
 	id int IDENTITY(1,1)  primary key,
@@ -120,6 +123,7 @@ create table OrderDetail(
 	productImage nvarchar(255) ,
 	productPrice float ,
 	quantity int ,
+	FOREIGN KEY (order_id) REFERENCES Orders(id)	
 )
 
 create table Orders(
@@ -128,12 +132,14 @@ create table Orders(
 	totalPrice float ,
 	note text ,
 	created_date date ,
-	shipping_id int
+	shipping_id int,
+	CONSTRAINT FK__Orders__shipping FOREIGN KEY(shipping_id)REFERENCES Shipping (id),
+	CONSTRAINT FK__Orders__account FOREIGN KEY(account_id)REFERENCES Account (id)
  )
  
  create table Shipping(
 	id int IDENTITY(1,1) primary key,
 	name nvarchar(255) ,
 	phone nvarchar(255) ,
-	address nvarchar(255) 
+	address nvarchar(255) ,
 )

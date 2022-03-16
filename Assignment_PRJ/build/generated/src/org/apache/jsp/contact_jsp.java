@@ -11,10 +11,20 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   private static java.util.List<String> _jspx_dependants;
 
+  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
+
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
   public java.util.List<String> getDependants() {
     return _jspx_dependants;
+  }
+
+  public void _jspInit() {
+    _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
+  }
+
+  public void _jspDestroy() {
+    _jspx_tagPool_c_forEach_var_items.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -45,6 +55,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("\n");
       out.write("\n");
+      out.write("\n");
       out.write("<!DOCTYPE html>\n");
       out.write("<html>\n");
       out.write("    <head>\n");
@@ -66,7 +77,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("    </head>\n");
       out.write("    <body>\n");
       out.write("        <!-- header -->\n");
-      out.write("        <<div class=\"header\" id=\"home\">\n");
+      out.write("        <div class=\"header\" id=\"home\">\n");
       out.write("            <div class=\"container\">\n");
       out.write("                <ul>\n");
       out.write("                    <li> <a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal\"><i class=\"fa fa-unlock-alt\" aria-hidden=\"true\"></i> Đăng Nhập </a></li>\n");
@@ -81,30 +92,30 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"header-bot\">\n");
       out.write("            <div class=\"header-bot_inner_wthreeinfo_header_mid\">\n");
       out.write("                <div class=\"col-md-4 header-middle\">\n");
-      out.write("                    <form action=\"#\" method=\"post\">\n");
-      out.write("                        <input type=\"search\" name=\"search\" placeholder=\"Search here...\" required=\"\">\n");
+      out.write("                    <form action=\"search\" method=\"post\">\n");
+      out.write("                        <input type=\"search\" name=\"keyword\" placeholder=\"Tìm kiếm...\" required=\"\">\n");
       out.write("                        <input type=\"submit\" value=\" \">\n");
       out.write("                        <div class=\"clearfix\"></div>\n");
       out.write("                    </form>\n");
       out.write("                </div>\n");
       out.write("                <!-- header-bot -->\n");
       out.write("                <div class=\"col-md-4 logo_agile\">\n");
-      out.write("                    <h1><a href=\"indext.jsp\"><span>M</span>angosteen <i class=\"fa fa-shopping-bag top_logo_agile_bag\" aria-hidden=\"true\"></i></a></h1>\n");
+      out.write("                    <h1><a href=\"home\"><span>M</span>angosteen <i class=\"fa fa-shopping-bag top_logo_agile_bag\" aria-hidden=\"true\"></i></a></h1>\n");
       out.write("                </div>\n");
       out.write("                <!-- header-bot -->\n");
       out.write("                <div class=\"col-md-4 agileits-social top_content\">\n");
       out.write("                    <ul class=\"social-nav model-3d-0 footer-social w3_agile_social\">\n");
-      out.write("                        <li class=\"share\">Share On : </li>\n");
-      out.write("                        <li><a href=\"#\" class=\"facebook\">\n");
+      out.write("                        <li class=\"share\"> </li>\n");
+      out.write("                        <li><a  class=\"facebook\">\n");
       out.write("                                <div class=\"front\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></div>\n");
       out.write("                                <div class=\"back\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></div></a></li>\n");
-      out.write("                        <li><a href=\"#\" class=\"twitter\"> \n");
+      out.write("                        <li><a  class=\"twitter\"> \n");
       out.write("                                <div class=\"front\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></div>\n");
       out.write("                                <div class=\"back\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></div></a></li>\n");
-      out.write("                        <li><a href=\"#\" class=\"instagram\">\n");
+      out.write("                        <li><a  class=\"instagram\">\n");
       out.write("                                <div class=\"front\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></div>\n");
       out.write("                                <div class=\"back\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></div></a></li>\n");
-      out.write("                        <li><a href=\"#\" class=\"pinterest\">\n");
+      out.write("                        <li><a class=\"pinterest\">\n");
       out.write("                                <div class=\"front\"><i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i></div>\n");
       out.write("                                <div class=\"back\"><i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i></div></a></li>\n");
       out.write("                    </ul>\n");
@@ -134,29 +145,25 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <!-- Collect the nav links, forms, and other content for toggling -->\n");
       out.write("                            <div class=\"collapse navbar-collapse menu--shylock\" id=\"bs-example-navbar-collapse-1\">\n");
       out.write("                                <ul class=\"nav navbar-nav menu__list\">\n");
-      out.write("                                    <li class=\"active menu__item menu__item--current\"><a class=\"menu__link\" href=\"index.jsp\">Trang chủ <span class=\"sr-only\">(current)</span></a></li>\n");
+      out.write("                                    <li class=\"active menu__item menu__item--current\"><a class=\"menu__link\" href=\"home\">Trang chủ <span class=\"sr-only\">(current)</span></a></li>\n");
       out.write("                                    <li class=\" menu__item\"><a class=\"menu__link\" href=\"about.jsp\">Mangosteen</a></li>\n");
       out.write("                                    <li class=\"dropdown menu__item\">\n");
       out.write("                                        <a href=\"#\" class=\"dropdown-toggle menu__link\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Romand<span class=\"caret\"></span></a>\n");
       out.write("                                        <ul class=\"dropdown-menu multi-column columns-3\">\n");
       out.write("                                            <div class=\"agile_inner_drop_nav_info\">\n");
       out.write("                                                <div class=\"col-sm-6 multi-gd-img1 multi-gd-text \">\n");
-      out.write("                                                    <a href=\"romand.jsp\"><img src=\"images/top1_1.png\" alt=\" \"/></a>\n");
+      out.write("                                                    <a href=\"shop-now\"><img src=\"images/top1_1.png\" alt=\" \"/></a>\n");
       out.write("                                                </div>\n");
       out.write("                                                <div class=\"col-sm-3 multi-gd-img\">\n");
       out.write("                                                    <ul class=\"multi-column-dropdown\">\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Glasting Water Tint</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Zero Velvet Tint</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Glasting Water Gloss</a></li>\n");
+      out.write("                                                        ");
+      if (_jspx_meth_c_forEach_0(_jspx_page_context))
+        return;
       out.write("\n");
       out.write("                                                    </ul>\n");
       out.write("                                                </div>\n");
       out.write("                                                <div class=\"col-sm-3 multi-gd-img\">\n");
       out.write("                                                    <ul class=\"multi-column-dropdown\">\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Seethrough Matte Tint</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Zero Matte Lipstick</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"romand.jsp\">Son Juicy Lasting Tint</a></li>\n");
-      out.write("\n");
       out.write("                                                    </ul>\n");
       out.write("                                                </div>\n");
       out.write("                                                <div class=\"clearfix\"></div>\n");
@@ -169,18 +176,19 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                            <div class=\"agile_inner_drop_nav_info\">\n");
       out.write("                                                <div class=\"col-sm-3 multi-gd-img\">\n");
       out.write("                                                    <ul class=\"multi-column-dropdown\">\n");
-      out.write("                                                        <li><a href=\"gilaa.jsp\">Son Gilaa Plumping Lip Serum</a></li><br/>\n");
-      out.write("                                                        <li><a href=\"gilaa.jsp\">Son Gilaa Long Wear Lip Cream </a></li>\n");
+      out.write("                                                        ");
+      if (_jspx_meth_c_forEach_1(_jspx_page_context))
+        return;
+      out.write("\n");
       out.write("                                                    </ul>\n");
       out.write("                                                </div>\n");
       out.write("                                                <div class=\"col-sm-3 multi-gd-img\">\n");
-      out.write("                                                    <ul class=\"multi-column-dropdown\">                                        \n");
-      out.write("                                                        <li><a href=\"gilaa.jsp\">Son Gilaa Long Wear Lip Cream Rich Rosie </a></li><br/>\n");
-      out.write("                                                        <li><a href=\"gilaa.jsp\">Son Gilaa Long Wear Lip Cream Mini Size</a></li>\n");
+      out.write("                                                    <ul class=\"multi-column-dropdown\">\n");
+      out.write("                                                        \n");
       out.write("                                                    </ul>\n");
       out.write("                                                </div>\n");
       out.write("                                                <div class=\"col-sm-6 multi-gd-img multi-gd-text \">\n");
-      out.write("                                                    <a href=\"gilaa.jsp\"><img src=\"images/top2_2.png\" alt=\" \"/></a>\n");
+      out.write("                                                    <a href=\"shop-now\"><img src=\"images/top2_2.png\" alt=\" \"/></a>\n");
       out.write("                                                </div>\n");
       out.write("                                                <div class=\"clearfix\"></div>\n");
       out.write("                                            </div>\n");
@@ -199,14 +207,14 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        </div>\n");
       out.write("                    </nav>\t\n");
       out.write("                </div>\n");
+      out.write("                <!--cart-->\n");
       out.write("                <div class=\"top_nav_right\">\n");
       out.write("                    <div class=\"wthreecartaits wthreecartaits2 cart cart box_1\"> \n");
-      out.write("                        <form action=\"#\" method=\"post\" class=\"last\"> \n");
-      out.write("                            <input type=\"hidden\" name=\"cmd\" value=\"_cart\">\n");
-      out.write("                            <input type=\"hidden\" name=\"display\" value=\"1\">\n");
-      out.write("                            <button class=\"w3view-cart\" type=\"submit\" name=\"submit\" value=\"\"><i class=\"fa fa-cart-arrow-down\" aria-hidden=\"true\"></i></button>\n");
+      out.write("                        <form action=\"carts\" method=\"post\" class=\"last\"> \n");
+      out.write("                            <button class=\"w3view-cart\" type=\"submit\" name=\"submit\" value=\"\"><i class=\"fa fa-cart-arrow-down\" aria-hidden=\"true\"></i></button> (");
+      out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.cart.size()}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+      out.write(")\n");
       out.write("                        </form>  \n");
-      out.write("\n");
       out.write("                    </div>\n");
       out.write("                </div>\n");
       out.write("                <div class=\"clearfix\"></div>\n");
@@ -223,19 +231,19 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </div>\n");
       out.write("                    <div class=\"modal-body modal-body-sub_agile\">\n");
       out.write("                        <div class=\"col-md-8 modal_body_left modal_body_left1\">\n");
-      out.write("                            <h3 class=\"agileinfo_sign\">Sign In <span>Now</span></h3>\n");
+      out.write("                            <h3 class=\"agileinfo_sign\">Đăng Nhập <span> Mangosteen</span></h3>\n");
       out.write("                            <form action=\"#\" method=\"post\">\n");
       out.write("                                <div class=\"styled-input agile-styled-input-top\">\n");
       out.write("                                    <input type=\"text\" name=\"Name\" required=\"\">\n");
-      out.write("                                    <label>Name</label>\n");
+      out.write("                                    <label>Tên đăng nhập</label>\n");
       out.write("                                    <span></span>\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"styled-input\">\n");
-      out.write("                                    <input type=\"email\" name=\"Email\" required=\"\"> \n");
-      out.write("                                    <label>Email</label>\n");
+      out.write("                                    <input type=\"text\" name=\"Password\" required=\"\"> \n");
+      out.write("                                    <label>Mật khẩu</label>\n");
       out.write("                                    <span></span>\n");
       out.write("                                </div> \n");
-      out.write("                                <input type=\"submit\" value=\"Sign In\">\n");
+      out.write("                                <input type=\"submit\" value=\"Đăng nhập\">\n");
       out.write("                            </form>\n");
       out.write("                            <ul class=\"social-nav model-3d-0 footer-social w3_agile_social top_agile_third\">\n");
       out.write("                                <li><a href=\"#\" class=\"facebook\">\n");
@@ -252,7 +260,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                        <div class=\"back\"><i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i></div></a></li>\n");
       out.write("                            </ul>\n");
       out.write("                            <div class=\"clearfix\"></div>\n");
-      out.write("                            <p><a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal2\" > Don't have an account?</a></p>\n");
+      out.write("                            <p><a href=\"#\" data-toggle=\"modal\" data-target=\"#myModal2\" > Bạn không có tài khoản?</a></p>\n");
       out.write("\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"col-md-4 modal_body_right modal_body_right1\">\n");
@@ -275,11 +283,11 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                    </div>\n");
       out.write("                    <div class=\"modal-body modal-body-sub_agile\">\n");
       out.write("                        <div class=\"col-md-8 modal_body_left modal_body_left1\">\n");
-      out.write("                            <h3 class=\"agileinfo_sign\">Sign Up <span>Now</span></h3>\n");
+      out.write("                            <h3 class=\"agileinfo_sign\">Đăng kí <span>Mangosteen</span></h3>\n");
       out.write("                            <form action=\"#\" method=\"post\">\n");
       out.write("                                <div class=\"styled-input agile-styled-input-top\">\n");
       out.write("                                    <input type=\"text\" name=\"Name\" required=\"\">\n");
-      out.write("                                    <label>Name</label>\n");
+      out.write("                                    <label>Tên Đăng Nhập</label>\n");
       out.write("                                    <span></span>\n");
       out.write("                                </div>\n");
       out.write("                                <div class=\"styled-input\">\n");
@@ -289,15 +297,15 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                </div> \n");
       out.write("                                <div class=\"styled-input\">\n");
       out.write("                                    <input type=\"password\" name=\"password\" required=\"\"> \n");
-      out.write("                                    <label>Password</label>\n");
+      out.write("                                    <label>Mật khẩu</label>\n");
       out.write("                                    <span></span>\n");
       out.write("                                </div> \n");
       out.write("                                <div class=\"styled-input\">\n");
       out.write("                                    <input type=\"password\" name=\"Confirm Password\" required=\"\"> \n");
-      out.write("                                    <label>Confirm Password</label>\n");
+      out.write("                                    <label>Xác nhận lại mật khẩu</label>\n");
       out.write("                                    <span></span>\n");
       out.write("                                </div> \n");
-      out.write("                                <input type=\"submit\" value=\"Sign Up\">\n");
+      out.write("                                <input type=\"submit\" value=\"Đăng kí\">\n");
       out.write("                            </form>\n");
       out.write("                            <ul class=\"social-nav model-3d-0 footer-social w3_agile_social top_agile_third\">\n");
       out.write("                                <li><a href=\"#\" class=\"facebook\">\n");
@@ -330,7 +338,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- /banner_bottom_agile_info -->\n");
       out.write("        <div class=\"page-head_agile_info_w3l\">\n");
       out.write("            <div class=\"container\">\n");
-      out.write("                <h3>L<span>iên hệ Mangosteen </span></h3>\n");
+      out.write("                <h3 style=\"color: #ac2925\">L<span>iên hệ Mangosteen </span></h3>\n");
       out.write("                <!--/w3_short-->\n");
       out.write("                <div class=\"services-breadcrumb\">\n");
       out.write("                    <div class=\"agile_inner_breadcrumb\">\n");
@@ -352,7 +360,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <div class=\"contact-grid-agile-w31\">\n");
       out.write("                            <i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i>\n");
       out.write("                            <h4>Đia chỉ</h4>\n");
-      out.write("                            <p>12K Street, 45 Building Road <span>California, USA.</span></p>\n");
+      out.write("                            <p>Số 32, Đường Hùng Vương,  <span>phường Nam Thành, tp Ninh Bình.</span></p>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"col-md-4 contact-grid-agile-w3\">\n");
@@ -366,91 +374,15 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <div class=\"contact-grid-agile-w33\">\n");
       out.write("                            <i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i>\n");
       out.write("                            <h4>Email</h4>\n");
-      out.write("                            <p><a href=\"mailto:info@example.com\">kimkim01@gmail.com</a><span><a href=\"mailto:info@example.com\">kimkim02@gmail.com</a></span></p>\n");
+      out.write("                            <p>kimkim01@gmail.com<span>kimkim02@gmail.com</span></p>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"clearfix\"> </div>\n");
       out.write("                </div>\n");
       out.write("            </div>\n");
       out.write("        </div>\n");
-      out.write("        <div class=\"contact-w3-agile1 map\" data-aos=\"flip-right\">\n");
-      out.write("\n");
-      out.write("            <iframe src=\"https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d100949.24429313939!2d-122.44206553967531!3d37.75102885910819!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80859a6d00690021%3A0x4a501367f076adff!2sSan+Francisco%2C+CA%2C+USA!5e0!3m2!1sen!2sin!4v1472190196783\" class=\"map\" style=\"border:0\" allowfullscreen=\"\"></iframe>\n");
-      out.write("        </div>\n");
-      out.write("        <div class=\"banner_bottom_agile_info\">\n");
-      out.write("            <div class=\"container\">\n");
-      out.write("                <div class=\"agile-contact-grids\">\n");
-      out.write("                    <div class=\"agile-contact-left\">\n");
-      out.write("                        <div class=\"col-md-6 address-grid\">\n");
-      out.write("                            <h4>For More <span>Information</span></h4>\n");
-      out.write("                            <div class=\"mail-agileits-w3layouts\">\n");
-      out.write("                                <i class=\"fa fa-volume-control-phone\" aria-hidden=\"true\"></i>\n");
-      out.write("                                <div class=\"contact-right\">\n");
-      out.write("                                    <p>Telephone </p><span>+1 (100)222-23-33</span>\n");
-      out.write("                                </div>\n");
-      out.write("                                <div class=\"clearfix\"> </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"mail-agileits-w3layouts\">\n");
-      out.write("                                <i class=\"fa fa-envelope-o\" aria-hidden=\"true\"></i>\n");
-      out.write("                                <div class=\"contact-right\">\n");
-      out.write("                                    <p>Mail </p><a href=\"mailto:info@example.com\">info@example.com</a>\n");
-      out.write("                                </div>\n");
-      out.write("                                <div class=\"clearfix\"> </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <div class=\"mail-agileits-w3layouts\">\n");
-      out.write("                                <i class=\"fa fa-map-marker\" aria-hidden=\"true\"></i>\n");
-      out.write("                                <div class=\"contact-right\">\n");
-      out.write("                                    <p>Location</p><span>7784 Diamonds street, California, US.</span>\n");
-      out.write("                                </div>\n");
-      out.write("                                <div class=\"clearfix\"> </div>\n");
-      out.write("                            </div>\n");
-      out.write("                            <ul class=\"social-nav model-3d-0 footer-social w3_agile_social two contact\">\n");
-      out.write("                                <li class=\"share\">SHARE ON : </li>\n");
-      out.write("                                <li><a href=\"#\" class=\"facebook\">\n");
-      out.write("                                        <div class=\"front\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></div>\n");
-      out.write("                                        <div class=\"back\"><i class=\"fa fa-facebook\" aria-hidden=\"true\"></i></div></a></li>\n");
-      out.write("                                <li><a href=\"#\" class=\"twitter\"> \n");
-      out.write("                                        <div class=\"front\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></div>\n");
-      out.write("                                        <div class=\"back\"><i class=\"fa fa-twitter\" aria-hidden=\"true\"></i></div></a></li>\n");
-      out.write("                                <li><a href=\"#\" class=\"instagram\">\n");
-      out.write("                                        <div class=\"front\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></div>\n");
-      out.write("                                        <div class=\"back\"><i class=\"fa fa-instagram\" aria-hidden=\"true\"></i></div></a></li>\n");
-      out.write("                                <li><a href=\"#\" class=\"pinterest\">\n");
-      out.write("                                        <div class=\"front\"><i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i></div>\n");
-      out.write("                                        <div class=\"back\"><i class=\"fa fa-linkedin\" aria-hidden=\"true\"></i></div></a></li>\n");
-      out.write("                            </ul>\n");
-      out.write("                        </div>\n");
-      out.write("                        <div class=\"col-md-6 contact-form\">\n");
-      out.write("                            <h4 class=\"white-w3ls\">Contact <span>Form</span></h4>\n");
-      out.write("                            <form action=\"#\" method=\"post\">\n");
-      out.write("                                <div class=\"styled-input agile-styled-input-top\">\n");
-      out.write("                                    <input type=\"text\" name=\"Name\" required=\"\">\n");
-      out.write("                                    <label>Name</label>\n");
-      out.write("                                    <span></span>\n");
-      out.write("                                </div>\n");
-      out.write("                                <div class=\"styled-input\">\n");
-      out.write("                                    <input type=\"email\" name=\"Email\" required=\"\"> \n");
-      out.write("                                    <label>Email</label>\n");
-      out.write("                                    <span></span>\n");
-      out.write("                                </div> \n");
-      out.write("                                <div class=\"styled-input\">\n");
-      out.write("                                    <input type=\"text\" name=\"Subject\" required=\"\">\n");
-      out.write("                                    <label>Subject</label>\n");
-      out.write("                                    <span></span>\n");
-      out.write("                                </div>\n");
-      out.write("                                <div class=\"styled-input\">\n");
-      out.write("                                    <textarea name=\"Message\" required=\"\"></textarea>\n");
-      out.write("                                    <label>Message</label>\n");
-      out.write("                                    <span></span>\n");
-      out.write("                                </div>\t \n");
-      out.write("                                <input type=\"submit\" value=\"SEND\">\n");
-      out.write("                            </form>\n");
-      out.write("                        </div>\n");
-      out.write("                    </div>\n");
-      out.write("                    <div class=\"clearfix\"> </div>\n");
-      out.write("                </div>\n");
-      out.write("            </div>\n");
-      out.write("        </div>\n");
+      out.write("        \n");
+      out.write("        \n");
       out.write("        <!--//contact-->\n");
       out.write("        <!--/grids-->\n");
       out.write("        <div class=\"coupons\">\n");
@@ -461,8 +393,9 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <i class=\"fa fa-truck\" aria-hidden=\"true\"></i>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"w3layouts_mail_grid_left2\">\n");
-      out.write("                            <h3>FREE SHIPPING</h3>\n");
-      out.write("                            <p>Lorem ipsum dolor sit amet, consectetur</p>\n");
+      out.write("                            <br>\n");
+      out.write("                            <h3>MIỄN PHÍ VẬN CHUYỂN</h3>\n");
+      out.write("                            <p></p>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"col-md-3 w3layouts_mail_grid_left\">\n");
@@ -470,8 +403,9 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <i class=\"fa fa-headphones\" aria-hidden=\"true\"></i>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"w3layouts_mail_grid_left2\">\n");
-      out.write("                            <h3>24/7 SUPPORT</h3>\n");
-      out.write("                            <p>Lorem ipsum dolor sit amet, consectetur</p>\n");
+      out.write("                            <br>\n");
+      out.write("                            <h3> HỖ TRỢ 24/7 </h3>\n");
+      out.write("                            <p></p>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"col-md-3 w3layouts_mail_grid_left\">\n");
@@ -479,8 +413,9 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <i class=\"fa fa-shopping-bag\" aria-hidden=\"true\"></i>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"w3layouts_mail_grid_left2\">\n");
-      out.write("                            <h3>MONEY BACK GUARANTEE</h3>\n");
-      out.write("                            <p>Lorem ipsum dolor sit amet, consectetur</p>\n");
+      out.write("                            <br>\n");
+      out.write("                            <h3>THANH TOÁN KHI NHẬN HÀNG </h3>\n");
+      out.write("                            <p></p>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"col-md-3 w3layouts_mail_grid_left\">\n");
@@ -488,8 +423,9 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            <i class=\"fa fa-gift\" aria-hidden=\"true\"></i>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"w3layouts_mail_grid_left2\">\n");
-      out.write("                            <h3>FREE GIFT COUPONS</h3>\n");
-      out.write("                            <p>Lorem ipsum dolor sit amet, consectetur</p>\n");
+      out.write("                            <br>\n");
+      out.write("                            <h3>QUÀ TẶNG</h3>\n");
+      out.write("                            <p></p>\n");
       out.write("                        </div>\n");
       out.write("                    </div>\n");
       out.write("                    <div class=\"clearfix\"> </div>\n");
@@ -502,7 +438,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <div class=\"footer\">\n");
       out.write("            <div class=\"footer_agile_inner_info_w3l\">\n");
       out.write("                <div class=\"col-md-3 footer-left\">\n");
-      out.write("                    <h2><a href=\"indext.jsp\"><span>E</span>lite Shoppy </a></h2>\n");
+      out.write("                    <h2><a href=\"home\"><span>M</span>angosteen </a></h2>\n");
       out.write("                    <p>Lorem ipsum quia dolor\n");
       out.write("                        sit amet, consectetur, adipisci velit, sed quia non \n");
       out.write("                        numquam eius modi tempora.</p>\n");
@@ -526,17 +462,15 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                        <div class=\"col-md-4 sign-gd\">\n");
       out.write("                            <h4>Thông tin <span>Mangosteen</span> </h4>\n");
       out.write("                            <ul>\n");
-      out.write("                                <li><a href=\"indext.jsp\">Trang Chủ</a></li>\n");
-      out.write("                                <li><a href=\"romand.jsp\">Romand</a></li>\n");
-      out.write("                                <li><a href=\"gilaa.jsp\">Gilaa</a></li>\n");
+      out.write("                                <li><a href=\"home\">Trang Chủ</a></li>\n");
+      out.write("                                <li><a href=\"shop-now.jsp\">shopping</a></li>\n");
       out.write("                                <li><a href=\"about.jsp\">Mangosteen</a></li>\n");
-      out.write("<!--                                <li><a href=\"typography.html\">Short Codes</a></li>-->\n");
       out.write("                                <li><a href=\"contact.jsp\">Liên hệ</a></li>\n");
       out.write("                            </ul>\n");
       out.write("                        </div>\n");
       out.write("\n");
       out.write("                        <div class=\"col-md-5 sign-gd-two\">\n");
-      out.write("                            <h4>Store <span>Mangosteen</span></h4>\n");
+      out.write("                            <h4>Liên Hệ <span>Mangosteen</span></h4>\n");
       out.write("                            <div class=\"w3-address\">\n");
       out.write("                                <div class=\"w3-address-grid\">\n");
       out.write("                                    <div class=\"w3-address-left\">\n");
@@ -564,7 +498,7 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                                    </div>\n");
       out.write("                                    <div class=\"w3-address-right\">\n");
       out.write("                                        <h6>Địa chỉ</h6>\n");
-      out.write("                                        <p>Broome St, NY 10002,California, USA. \n");
+      out.write("                                        <p>Số 32, Đường Hùng Vương, phường Nam Thành, tp Ninh Bình. \n");
       out.write("\n");
       out.write("                                        </p>\n");
       out.write("                                    </div>\n");
@@ -573,37 +507,13 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("                            </div>\n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"col-md-3 sign-gd flickr-post\">\n");
-      out.write("                            <h4>Flickr <span>Posts</span></h4>\n");
-      out.write("                            <ul>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t1.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t2.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t3.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t4.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t1.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t2.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t3.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t2.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                                <li><a href=\"single.html\"><img src=\"images/t4.jpg\" alt=\" \" class=\"img-responsive\" /></a></li>\n");
-      out.write("                            </ul>\n");
+      out.write("                            \n");
       out.write("                        </div>\n");
       out.write("                        <div class=\"clearfix\"></div>\n");
       out.write("                    </div>\n");
       out.write("                </div>\n");
       out.write("                <div class=\"clearfix\"></div>\n");
-      out.write("                <div class=\"agile_newsletter_footer\">\n");
-      out.write("                    <div class=\"col-sm-6 newsleft\">\n");
-      out.write("                        <h3>SIGN UP FOR NEWSLETTER !</h3>\n");
-      out.write("                    </div>\n");
-      out.write("                    <div class=\"col-sm-6 newsright\">\n");
-      out.write("                        <form action=\"#\" method=\"post\">\n");
-      out.write("                            <input type=\"email\" placeholder=\"Enter your email...\" name=\"email\" required=\"\">\n");
-      out.write("                            <input type=\"submit\" value=\"Submit\">\n");
-      out.write("                        </form>\n");
-      out.write("                    </div>\n");
-      out.write("\n");
-      out.write("                    <div class=\"clearfix\"></div>\n");
-      out.write("                </div>\n");
-      out.write("                <p class=\"copy-right\">&copy 2017 Elite shoppy. All rights reserved | Design by <a href=\"http://w3layouts.com/\">W3layouts</a></p>\n");
+      out.write("               \n");
       out.write("            </div>\n");
       out.write("        </div>\n");
       out.write("        <!-- //footer -->\n");
@@ -752,5 +662,89 @@ public final class contact_jsp extends org.apache.jasper.runtime.HttpJspBase
     } finally {
       _jspxFactory.releasePageContext(_jspx_page_context);
     }
+  }
+
+  private boolean _jspx_meth_c_forEach_0(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_0 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_0.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_0.setParent(null);
+    _jspx_th_c_forEach_0.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.listCategoryRomand}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_0.setVar("R");
+    int[] _jspx_push_body_count_c_forEach_0 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_0 = _jspx_th_c_forEach_0.doStartTag();
+      if (_jspx_eval_c_forEach_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("                                                        <li><a href=\"category-controller?categoryId=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${R.categoryId}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${R.categoryName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></li><br/>\n");
+          out.write("                                                        ");
+          int evalDoAfterBody = _jspx_th_c_forEach_0.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_0[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_0.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_0.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_0);
+    }
+    return false;
+  }
+
+  private boolean _jspx_meth_c_forEach_1(PageContext _jspx_page_context)
+          throws Throwable {
+    PageContext pageContext = _jspx_page_context;
+    JspWriter out = _jspx_page_context.getOut();
+    //  c:forEach
+    org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_1 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
+    _jspx_th_c_forEach_1.setPageContext(_jspx_page_context);
+    _jspx_th_c_forEach_1.setParent(null);
+    _jspx_th_c_forEach_1.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.listCategoryGilaa}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
+    _jspx_th_c_forEach_1.setVar("G");
+    int[] _jspx_push_body_count_c_forEach_1 = new int[] { 0 };
+    try {
+      int _jspx_eval_c_forEach_1 = _jspx_th_c_forEach_1.doStartTag();
+      if (_jspx_eval_c_forEach_1 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
+        do {
+          out.write("\n");
+          out.write("                                                        <li><a href=\"category-controller?categoryId=");
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${G.categoryId}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write('"');
+          out.write('>');
+          out.write((java.lang.String) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${G.categoryName}", java.lang.String.class, (PageContext)_jspx_page_context, null));
+          out.write("</a></li><br/>\n");
+          out.write("                                                        ");
+          int evalDoAfterBody = _jspx_th_c_forEach_1.doAfterBody();
+          if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
+            break;
+        } while (true);
+      }
+      if (_jspx_th_c_forEach_1.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
+        return true;
+      }
+    } catch (Throwable _jspx_exception) {
+      while (_jspx_push_body_count_c_forEach_1[0]-- > 0)
+        out = _jspx_page_context.popBody();
+      _jspx_th_c_forEach_1.doCatch(_jspx_exception);
+    } finally {
+      _jspx_th_c_forEach_1.doFinally();
+      _jspx_tagPool_c_forEach_var_items.reuse(_jspx_th_c_forEach_1);
+    }
+    return false;
   }
 }

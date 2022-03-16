@@ -5,20 +5,18 @@
  */
 package Controller;
 
-import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.LinkedHashMap;
-import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.Cart;
-import model.Product;
 
-public class AddToCart extends HttpServlet {
+/**
+ *
+ * @author USER
+ */
+public class check extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -34,28 +32,7 @@ public class AddToCart extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            int id = Integer.parseInt(request.getParameter("productID"));
-            HttpSession session = request.getSession();
-            Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
-            if (cart == null) {
-                cart = new LinkedHashMap<>();
-            }
-            if (!cart.containsKey(id)) {
-                Product product = new ProductDAO().getProductById(id);
-                Cart c = new Cart(product, 1);
-                cart.put(id, c);
-            } else {
-                int slc = cart.get(id).getQuantity_cart();
-                cart.get(id).setQuantity_cart(slc + 1);
-                
-            }
-            session.setAttribute("cart", cart);
-            System.out.println(cart);
-            String url = (String) session.getAttribute("url");
-            if (url == null) {
-                url = "home";
-            }
-            response.sendRedirect(url);
+            request.getRequestDispatcher("check.jsp").forward(request, response);
         }
     }
 

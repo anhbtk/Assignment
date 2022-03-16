@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
 
+
 /**
  *
  * @author USER
@@ -36,12 +37,22 @@ public class Cart extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             HttpSession session = request.getSession();
-            Map<Integer,Cart> cart = (Map<Integer,Cart>) session.getAttribute("cart");
+            Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
             if (cart == null) {
                 cart = new LinkedHashMap<>();
             }
+            double total = 0;
+            //for (Map.Entry<Integer, Cart> entry : cart.entrySet()) {
+               // Integer key = entry.getKey();
+                //Cart carts = entry.getValue();
+                //total += carts.getQuantity_cart() * carts.getProduct().getPrice();
+                //System.out.println(carts);
+               // System.out.println(entry.getValue().getProduct());
+            //}
+           
             session.setAttribute("cart", cart);
             request.getRequestDispatcher("cart.jsp").forward(request, response);
+
         }
     }
 
@@ -58,6 +69,7 @@ public class Cart extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         processRequest(request, response);
+
     }
 
     /**
@@ -83,5 +95,13 @@ public class Cart extends HttpServlet {
     public String getServletInfo() {
         return "Short description";
     }// </editor-fold>
+
+    private Object getProduct() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    private Object get(Integer key) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
 
 }

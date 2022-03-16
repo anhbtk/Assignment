@@ -289,7 +289,7 @@
                 <div class="item active"> 
                     <div class="container">
                         <div class="carousel-caption">
-                            <h3>Rom&nd <span>Lip</span></h3>
+                            <h3>Rom&nd <span style="color: #ac2925">Lip</span></h3>
                             <p>Lip Make Up</p>
                             <a class="hvr-outline-out button2" href="shop-now">Shop Now</input> </a>
                         </div>
@@ -298,7 +298,7 @@
                 <div class="item item2"> 
                     <div class="container">
                         <div class="carousel-caption">
-                            <h3><span>Gilaa</span></h3>
+                            <h3><span style="color: #ac2925">Gilaa</span></h3>
                             <p></p>
                             <a class="hvr-outline-out button2" href="shop-now">Shop Now </a>
                         </div>
@@ -307,7 +307,7 @@
                 <div class="item item3"> 
                     <div class="container">
                         <div class="carousel-caption">
-                            <h3>ROM&ND <span></span></h3>
+                            <h3>ROM<span style="color: #ac2925">&</span>ND</h3>
                             <p>Tinh tế, cuốn hút</p>
                             <a class="hvr-outline-out button2" href="shop-now">Shop Now </a>
                         </div>
@@ -316,7 +316,7 @@
                 <div class="item item4"> 
                     <div class="container">
                         <div class="carousel-caption">
-                            <h3>Bộ Sưu tập <span>mới</span></h3>
+                            <h3>Bộ Sưu tập <span style="color: #ac2925">mới</span></h3>
                             <p>GILAA</p>
                             <a class="hvr-outline-out button2" href="shop-now">Shop Now </a>
                         </div>
@@ -325,7 +325,7 @@
                 <div class="item item5"> 
                     <div class="container">
                         <div class="carousel-caption">
-                            <h3>ROM&ND <span></span></h3>
+                            <h3>ROM<span style="color: #ac2925">&</span>ND</h3>
                             <p></p>
                             <a class="hvr-outline-out button2" href="shop-now">Shop Now </a>
                         </div>

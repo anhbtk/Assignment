@@ -6,7 +6,7 @@ import javax.servlet.jsp.*;
 import java.util.Map;
 import model.Cart;
 
-public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
+public final class check_jsp extends org.apache.jasper.runtime.HttpJspBase
     implements org.apache.jasper.runtime.JspSourceDependent {
 
   private static final JspFactory _jspxFactory = JspFactory.getDefaultFactory();
@@ -14,9 +14,6 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
   private static java.util.List<String> _jspx_dependants;
 
   private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_forEach_var_items;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_choose;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_otherwise;
-  private org.apache.jasper.runtime.TagHandlerPool _jspx_tagPool_c_when_test;
 
   private org.glassfish.jsp.api.ResourceInjector _jspx_resourceInjector;
 
@@ -26,16 +23,10 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
 
   public void _jspInit() {
     _jspx_tagPool_c_forEach_var_items = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_choose = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_otherwise = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
-    _jspx_tagPool_c_when_test = org.apache.jasper.runtime.TagHandlerPool.getTagHandlerPool(getServletConfig());
   }
 
   public void _jspDestroy() {
     _jspx_tagPool_c_forEach_var_items.release();
-    _jspx_tagPool_c_choose.release();
-    _jspx_tagPool_c_otherwise.release();
-    _jspx_tagPool_c_when_test.release();
   }
 
   public void _jspService(HttpServletRequest request, HttpServletResponse response)
@@ -355,13 +346,13 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("        <!-- /banner_bottom_agile_info -->\n");
       out.write("        <div class=\"page-head_agile_info_w3l\">\n");
       out.write("            <div class=\"container\">\n");
-      out.write("                <h3 style=\"color: #ac2925\">Giỏ hàng <span> </span></h3>\n");
+      out.write("                <h3 style=\"color: #ac2925\">Thanh Toán <span> </span></h3>\n");
       out.write("                <!--/w3_short-->\n");
       out.write("                <div class=\"services-breadcrumb\">\n");
       out.write("                    <div class=\"agile_inner_breadcrumb\">\n");
       out.write("                        <ul class=\"w3_short\">\n");
       out.write("                            <li><a href=\"home\" style=\"color: #ac2925\">Trang chủ</a><i>|</i></li>\n");
-      out.write("                            <li>Giỏ hàng</li>\n");
+      out.write("                            <li>Thanh Toán</li>\n");
       out.write("                        </ul>\n");
       out.write("                    </div>\n");
       out.write("                </div>\n");
@@ -373,13 +364,58 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
       out.write("\n");
       out.write("        <!--//single_page-->\n");
       out.write("        <div class=\"banner-bootom-w3-agileits\">\n");
-      out.write("            <div class=\"container\" >\n");
-      out.write("                ");
-      if (_jspx_meth_c_choose_0(_jspx_page_context))
+      out.write("            <div class=\"container\"  >\n");
+      out.write("                <h1>Thanh Toán</h1><br/>\n");
+      out.write("\n");
+      out.write("                <div class=\"row\">\n");
+      out.write("                    <div class=\"col-md-8\" style=\"border: 1px solid #ccc; border-radius: 5px; padding: 1rem\">\n");
+      out.write("                        <h3 style=\"text-align: left\">Danh sách sản phẩm</h3><br/>\n");
+      out.write("                        <table class=\"table\">\n");
+      out.write("                            <thead>\n");
+      out.write("                                <tr>\n");
+      out.write("                                    <th scope=\"col\"></th>\n");
+      out.write("                                    <th scope=\"col\">Sản Phẩm</th>\n");
+      out.write("                                    <th scope=\"col\">Tên sản phẩm</th>\n");
+      out.write("                                    <th scope=\"col\">Giá</th>\n");
+      out.write("                                    <th scope=\"col\">Số lượng</th>\n");
+      out.write("                                    <th scope=\"col\">Tổng tiền</th>\n");
+      out.write("                                    <th scope=\"col\">Xóa</th>\n");
+      out.write("                                </tr>\n");
+      out.write("                            </thead>\n");
+      out.write("                            <tbody>\n");
+      out.write("                                ");
+      if (_jspx_meth_c_forEach_2(_jspx_page_context))
         return;
+      out.write("\n");
+      out.write("                            </tbody>\n");
+      out.write("                        </table>\n");
+      out.write("\n");
+      out.write("                    </div>\n");
+      out.write("                    <div class=\"col-md-4\" style=\"border: 1px solid #ccc; border-radius: 5px\">\n");
+      out.write("                        <h3>Thông tin nhận hàng</h3><br/>\n");
+      out.write("                        <form>\n");
+      out.write("                            <div class=\"mb-3\">\n");
+      out.write("                                <label for=\"exampleInputEmail1\" class=\"form-label\">Email address</label>\n");
+      out.write("                                <input type=\"email\" class=\"form-control\" id=\"exampleInputEmail1\" aria-describedby=\"emailHelp\">\n");
+      out.write("                                <div id=\"emailHelp\" class=\"form-text\">We'll never share your email with anyone else.</div>\n");
+      out.write("                            </div>\n");
+      out.write("                            <div class=\"mb-3\">\n");
+      out.write("                                <label for=\"exampleInputPassword1\" class=\"form-label\">Password</label>\n");
+      out.write("                                <input type=\"password\" class=\"form-control\" id=\"exampleInputPassword1\">\n");
+      out.write("                            </div>\n");
+      out.write("                            <div class=\"mb-3 form-check\">\n");
+      out.write("                                <input type=\"checkbox\" class=\"form-check-input\" id=\"exampleCheck1\">\n");
+      out.write("                                <label class=\"form-check-label\" for=\"exampleCheck1\">Check me out</label>\n");
+      out.write("                            </div>\n");
+      out.write("                            <button type=\"submit\" class=\"btn btn-primary\" w-100>Submit</button>\n");
+      out.write("                        </form>\n");
+      out.write("                    </div>\n");
+      out.write("\n");
+      out.write("                </div>\n");
       out.write("\n");
       out.write("\n");
       out.write("                <!--/grids-->\n");
+      out.write("                <br/><br/><br/>\n");
       out.write("                <div class=\"coupons\">\n");
       out.write("                    <div class=\"coupons-grids text-center\">\n");
       out.write("                        <div class=\"w3layouts_mail_grid\">\n");
@@ -774,124 +810,14 @@ public final class cart_jsp extends org.apache.jasper.runtime.HttpJspBase
     return false;
   }
 
-  private boolean _jspx_meth_c_choose_0(PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:choose
-    org.apache.taglibs.standard.tag.common.core.ChooseTag _jspx_th_c_choose_0 = (org.apache.taglibs.standard.tag.common.core.ChooseTag) _jspx_tagPool_c_choose.get(org.apache.taglibs.standard.tag.common.core.ChooseTag.class);
-    _jspx_th_c_choose_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_choose_0.setParent(null);
-    int _jspx_eval_c_choose_0 = _jspx_th_c_choose_0.doStartTag();
-    if (_jspx_eval_c_choose_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\n");
-        out.write("                    ");
-        if (_jspx_meth_c_when_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
-          return true;
-        out.write("\n");
-        out.write("                    ");
-        if (_jspx_meth_c_otherwise_0((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_choose_0, _jspx_page_context))
-          return true;
-        out.write("\n");
-        out.write("                ");
-        int evalDoAfterBody = _jspx_th_c_choose_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_choose_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_choose.reuse(_jspx_th_c_choose_0);
-      return true;
-    }
-    _jspx_tagPool_c_choose.reuse(_jspx_th_c_choose_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_when_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:when
-    org.apache.taglibs.standard.tag.rt.core.WhenTag _jspx_th_c_when_0 = (org.apache.taglibs.standard.tag.rt.core.WhenTag) _jspx_tagPool_c_when_test.get(org.apache.taglibs.standard.tag.rt.core.WhenTag.class);
-    _jspx_th_c_when_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_when_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
-    _jspx_th_c_when_0.setTest(((java.lang.Boolean) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${sessionScope.cart == null||sessionScope.cart.size() == 0}", java.lang.Boolean.class, (PageContext)_jspx_page_context, null)).booleanValue());
-    int _jspx_eval_c_when_0 = _jspx_th_c_when_0.doStartTag();
-    if (_jspx_eval_c_when_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\n");
-        out.write("                        <h1 style=\"text-align: center\">\"Bạn không có sản phẩm nào trong giỏ hàng.\"</h1><br/><br/><br/><br/><br/>\n");
-        out.write("                    ");
-        int evalDoAfterBody = _jspx_th_c_when_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_when_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_0);
-      return true;
-    }
-    _jspx_tagPool_c_when_test.reuse(_jspx_th_c_when_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_otherwise_0(javax.servlet.jsp.tagext.JspTag _jspx_th_c_choose_0, PageContext _jspx_page_context)
-          throws Throwable {
-    PageContext pageContext = _jspx_page_context;
-    JspWriter out = _jspx_page_context.getOut();
-    //  c:otherwise
-    org.apache.taglibs.standard.tag.common.core.OtherwiseTag _jspx_th_c_otherwise_0 = (org.apache.taglibs.standard.tag.common.core.OtherwiseTag) _jspx_tagPool_c_otherwise.get(org.apache.taglibs.standard.tag.common.core.OtherwiseTag.class);
-    _jspx_th_c_otherwise_0.setPageContext(_jspx_page_context);
-    _jspx_th_c_otherwise_0.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_choose_0);
-    int _jspx_eval_c_otherwise_0 = _jspx_th_c_otherwise_0.doStartTag();
-    if (_jspx_eval_c_otherwise_0 != javax.servlet.jsp.tagext.Tag.SKIP_BODY) {
-      do {
-        out.write("\n");
-        out.write("                        <h3></h3>\n");
-        out.write("                        <table class=\"table\">\n");
-        out.write("                            <thead>\n");
-        out.write("                                <tr>\n");
-        out.write("                                    <th scope=\"col\"></th>\n");
-        out.write("                                    <th scope=\"col\">Sản Phẩm</th>\n");
-        out.write("                                    <th scope=\"col\">Tên sản phẩm</th>\n");
-        out.write("                                    <th scope=\"col\">Giá</th>\n");
-        out.write("                                    <th scope=\"col\">Số lượng</th>\n");
-        out.write("                                    <th scope=\"col\">Tổng tiền</th>\n");
-        out.write("                                    <th scope=\"col\">Xóa</th>\n");
-        out.write("                                </tr>\n");
-        out.write("                            </thead>\n");
-        out.write("                            <tbody>\n");
-        out.write("                                ");
-        if (_jspx_meth_c_forEach_2((javax.servlet.jsp.tagext.JspTag) _jspx_th_c_otherwise_0, _jspx_page_context))
-          return true;
-        out.write("\n");
-        out.write("                            </tbody>\n");
-        out.write("                        </table>\n");
-        out.write("                        <!--                        <h3>Tổng Thanh Toán</h3>-->\n");
-        out.write("                        <a href=\"checkout\" class=\"btn btn-success w-25\">Check out</a>\n");
-        out.write("                    ");
-        int evalDoAfterBody = _jspx_th_c_otherwise_0.doAfterBody();
-        if (evalDoAfterBody != javax.servlet.jsp.tagext.BodyTag.EVAL_BODY_AGAIN)
-          break;
-      } while (true);
-    }
-    if (_jspx_th_c_otherwise_0.doEndTag() == javax.servlet.jsp.tagext.Tag.SKIP_PAGE) {
-      _jspx_tagPool_c_otherwise.reuse(_jspx_th_c_otherwise_0);
-      return true;
-    }
-    _jspx_tagPool_c_otherwise.reuse(_jspx_th_c_otherwise_0);
-    return false;
-  }
-
-  private boolean _jspx_meth_c_forEach_2(javax.servlet.jsp.tagext.JspTag _jspx_th_c_otherwise_0, PageContext _jspx_page_context)
+  private boolean _jspx_meth_c_forEach_2(PageContext _jspx_page_context)
           throws Throwable {
     PageContext pageContext = _jspx_page_context;
     JspWriter out = _jspx_page_context.getOut();
     //  c:forEach
     org.apache.taglibs.standard.tag.rt.core.ForEachTag _jspx_th_c_forEach_2 = (org.apache.taglibs.standard.tag.rt.core.ForEachTag) _jspx_tagPool_c_forEach_var_items.get(org.apache.taglibs.standard.tag.rt.core.ForEachTag.class);
     _jspx_th_c_forEach_2.setPageContext(_jspx_page_context);
-    _jspx_th_c_forEach_2.setParent((javax.servlet.jsp.tagext.Tag) _jspx_th_c_otherwise_0);
+    _jspx_th_c_forEach_2.setParent(null);
     _jspx_th_c_forEach_2.setItems((java.lang.Object) org.apache.jasper.runtime.PageContextImpl.evaluateExpression("${cart}", java.lang.Object.class, (PageContext)_jspx_page_context, null));
     _jspx_th_c_forEach_2.setVar("c");
     int[] _jspx_push_body_count_c_forEach_2 = new int[] { 0 };
