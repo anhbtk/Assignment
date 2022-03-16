@@ -100,7 +100,7 @@
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                    <a href="romand.jsp"><img src="images/top1_1.png" alt=" "/></a>
+                                                    <a href="shop-now"><img src="images/top1_1.png" alt=" "/></a>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
@@ -135,7 +135,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                    <a href="gilaa.jsp"><img src="images/top2_2.png" alt=" "/></a>
+                                                    <a href="shop-now"><img src="images/top2_2.png" alt=" "/></a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>
@@ -148,7 +148,7 @@
                                             <li><a href="typography.html">Typography</a></li>
                                         </ul>
                                     </li>-->
-                                    <li class=" menu__item"><a class="menu__link" href="contact.html">Liên hệ</a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="contact.jsp">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>

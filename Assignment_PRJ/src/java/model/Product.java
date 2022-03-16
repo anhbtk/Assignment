@@ -13,10 +13,28 @@ public class Product {
     String imagine3;
     String created_date;
     String category_name;
+    String category_description;
 
     public Product() {
     }
 
+    public Product(int id, String name, int category_id, int quantity, int price, String description, String imagine, String imagine2, String imagine3, String created_date, String category_name, String category_description) {
+        this.id = id;
+        this.name = name;
+        this.category_id = category_id;
+        this.quantity = quantity;
+        this.price = price;
+        this.description = description;
+        this.imagine = imagine;
+        this.imagine2 = imagine2;
+        this.imagine3 = imagine3;
+        this.created_date = created_date;
+        this.category_name = category_name;
+        this.category_description = category_description;
+    }
+
+    
+    
     public Product(int id, String name, int category_id, int quantity, int price, String description, String imagine, String imagine2, String imagine3, String created_date, String category_name) {
         this.id = id;
         this.name = name;
@@ -119,10 +137,20 @@ public class Product {
         this.category_name = category_name;
     }
 
+    public String getCategory_description() {
+        return category_description;
+    }
+
+    public void setCategory_description(String category_description) {
+        this.category_description = category_description;
+    }
+
     @Override
     public String toString() {
-        return "Product{" + "id=" + id + ", name=" + name + ", category_id=" + category_id + ", quantity=" + quantity + ", price=" + price + ", description=" + description + ", imagine=" + imagine + ", imagine2=" + imagine2 + ", imagine3=" + imagine3 + ", created_date=" + created_date + ", category_name=" + category_name + '}';
+        return "Product{" + "id=" + id + ", name=" + name + ", category_id=" + category_id + ", quantity=" + quantity + ", price=" + price + ", description=" + description + ", imagine=" + imagine + ", imagine2=" + imagine2 + ", imagine3=" + imagine3 + ", created_date=" + created_date + ", category_name=" + category_name + ", category_description=" + category_description + '}';
     }
+
+    
 
     
    

@@ -38,8 +38,8 @@ public class ShopNow extends HttpServlet {
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             List<Product> listProduct = new ProductDAO().getAllProduct();
-            request.setAttribute("listProduct", listProduct); 
             List<Category> listCategory = new CategoryDAO().getAllCategory();
+            request.setAttribute("listProduct", listProduct);
             request.setAttribute("listCategory", listCategory);
             request.getRequestDispatcher("category.jsp").forward(request, response);
         }

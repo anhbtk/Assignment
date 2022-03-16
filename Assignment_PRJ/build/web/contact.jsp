@@ -99,7 +99,7 @@
                                         <ul class="dropdown-menu multi-column columns-3">
                                             <div class="agile_inner_drop_nav_info">
                                                 <div class="col-sm-6 multi-gd-img1 multi-gd-text ">
-                                                    <a href="category.jsp"><img src="images/top1_1.png" alt=" "/></a>
+                                                    <a href="shop-now"><img src="images/top1_1.png" alt=" "/></a>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
@@ -133,7 +133,7 @@
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
-                                                    <a href="category.jsp"><img src="images/top2_2.png" alt=" "/></a>
+                                                    <a href="shop-now"><img src="images/top2_2.png" alt=" "/></a>
                                                 </div>
                                                 <div class="clearfix"></div>
                                             </div>

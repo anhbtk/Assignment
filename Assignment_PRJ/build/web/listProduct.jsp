@@ -1,8 +1,4 @@
-<%-- 
-    Document   : listProduct
-    Created on : Mar 13, 2022, 3:35:56 AM
-    Author     : USER
---%>
+
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
