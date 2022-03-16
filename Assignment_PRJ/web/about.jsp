@@ -154,14 +154,12 @@
                         </div>
                     </nav>	
                 </div>
+                <!--cart-->
                 <div class="top_nav_right">
                     <div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
-                        <form action="#" method="post" class="last"> 
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="display" value="1">
-                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                        <form action="carts" method="post" class="last"> 
+                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button> (${sessionScope.cart.size()})
                         </form>  
-
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -285,7 +283,7 @@
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3>Một chút về <span>Mangosteen </span></h3>
+                <h3 style="color: #19a98c">Một chút về <span style="color: #000">Mangosteen </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">

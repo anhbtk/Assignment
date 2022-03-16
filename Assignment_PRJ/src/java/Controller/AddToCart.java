@@ -5,24 +5,20 @@
  */
 package Controller;
 
-import DAO.CategoryDAO;
 import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.Category;
+import model.Cart;
 import model.Product;
 
-/**
- *
- * @author USER
- */
-public class CategoryController extends HttpServlet {
+public class AddToCart extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,16 +32,31 @@ public class CategoryController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            int categoryId = Integer.parseInt(request.getParameter("categoryId"));
-            List<Product> listProductByCategoryId = new ProductDAO().getAllProductbyCategory(categoryId);
-            List<Category> listCategory = new CategoryDAO().getAllCategory();
-            request.setAttribute("listCategory", listCategory);
-            request.setAttribute("listProduct", listProductByCategoryId);
+            /* TODO output your page here. You may use following sample code. */
+            int id = Integer.parseInt(request.getParameter("productID"));
             HttpSession session = request.getSession();
-            session.setAttribute("url", "category-controller?categoryId="+categoryId);
-            request.getRequestDispatcher("category.jsp").forward(request, response);
+            Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
+            if (cart == null) {
+                cart = new LinkedHashMap<>();
+            }
+            if (!cart.containsKey(id)) {
+                Product product = new ProductDAO().getProductById(id);
+                Cart c = new Cart(product, 1);
+                cart.put(id, c);
+                //cart.put(id, Cart.builder().product(product).quantity_cart(1).build());
+            } else {
+                int slc = cart.get(id).getQuantity_cart();
+                cart.get(id).setQuantity_cart(slc + 1);
+                
+            }
+            session.setAttribute("cart", cart);
+            System.out.println(cart);
+            String url = (String) session.getAttribute("url");
+            if (url == null) {
+                url = "home";
+            }
+            response.sendRedirect(url);
         }
     }
 

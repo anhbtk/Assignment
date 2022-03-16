@@ -100,8 +100,8 @@
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${sessionScope.listCategoryRomand}" var="R">
-                                                        <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
-                                                        </c:forEach>
+                                                            <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
+                                                            </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
@@ -119,13 +119,13 @@
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${sessionScope.listCategoryGilaa}" var="G">
-                                                        <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
-                                                        </c:forEach>
+                                                            <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
+                                                            </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
@@ -148,15 +148,12 @@
                         </div>
                     </nav>	
                 </div>
+                <!--cart-->
                 <div class="top_nav_right">
                     <div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
-                        <form action="#" method="post" class="last"> 
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="display" value="1">
-                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
-                            
+                        <form action="carts" method="post" class="last"> 
+                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button> (${sessionScope.cart.size()})
                         </form>  
-
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -496,18 +493,9 @@
                                                 <del></del>
                                             </div>
                                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                                <form action="#" method="post">
+                                                <form action="add-to-card?productID=${product.id}" method="post">
                                                     <fieldset>
-                                                        <input type="hidden" name="cmd" value="_cart" />
-                                                        <input type="hidden" name="add" value="1" />
-                                                        <input type="hidden" name="business" value=" " />
-                                                        <input type="hidden" name="item_name" value="Sweatshirt" />
-                                                        <input type="hidden" name="amount" value="30.99" />
-                                                        <input type="hidden" name="discount_amount" value="1.00" />
-                                                        <input type="hidden" name="currency_code" value="USD" />
-                                                        <input type="hidden" name="return" value=" " />
-                                                        <input type="hidden" name="cancel_return" value=" " />
-                                                        <input type="submit" name="submit" value="Add to cart" class="button" />
+                                                        <input type="submit" name="submit" value="+ Giỏ Hàng" class="button">
                                                     </fieldset>
                                                 </form>
                                             </div>
@@ -522,45 +510,36 @@
                         <!--/tab_two-->
                         <div class="tab2">
                             <c:forEach  items="${listAllNewGilaaProduct}" var="product">
-                            <div class="col-md-3 product-men">
-                                <div class="men-pro-item simpleCart_shelfItem">
-                                    <div class="men-thumb-item">
-                                        <img src="${product.imagine}" alt="" class="pro-image-front">
-                                        <img src="${product.imagine}" alt="" class="pro-image-back">
-                                        <div class="men-cart-pro">
-                                            <div class="inner-men-cart-pro">
-                                                <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
+                                <div class="col-md-3 product-men">
+                                    <div class="men-pro-item simpleCart_shelfItem">
+                                        <div class="men-thumb-item">
+                                            <img src="${product.imagine}" alt="" class="pro-image-front">
+                                            <img src="${product.imagine}" alt="" class="pro-image-back">
+                                            <div class="men-cart-pro">
+                                                <div class="inner-men-cart-pro">
+                                                    <a href="single.jsp" class="link-product-add-cart">Chi tiết</a>
+                                                </div>
                                             </div>
-                                        </div>
-                                        <span class="product-new-top">New</span>
+                                            <span class="product-new-top">New</span>
 
-                                    </div>
-                                    <div class="item-info-product ">
-                                        <h4><a href="single.jsp">${product.name}</a></h4>
-                                        <div class="info-product-price">
-                                            <span class="item_price">${product.price}.000Đ</span>
-<!--                                            <del>$189.71</del>-->
                                         </div>
-                                        <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                            <form action="#" method="post">
-                                                <fieldset>
-                                                    <input type="hidden" name="cmd" value="_cart" />
-                                                    <input type="hidden" name="add" value="1" />
-                                                    <input type="hidden" name="business" value=" " />
-                                                    <input type="hidden" name="item_name" value="A-line Black Skirt" />
-                                                    <input type="hidden" name="amount" value="30.99" />
-                                                    <input type="hidden" name="discount_amount" value="1.00" />
-                                                    <input type="hidden" name="currency_code" value="USD" />
-                                                    <input type="hidden" name="return" value=" " />
-                                                    <input type="hidden" name="cancel_return" value=" " />
-                                                    <input type="submit" name="submit" value="Add to cart" class="button" />
-                                                </fieldset>
-                                            </form>
-                                        </div>
+                                        <div class="item-info-product ">
+                                            <h4><a href="single.jsp">${product.name}</a></h4>
+                                            <div class="info-product-price">
+                                                <span class="item_price">${product.price}.000Đ</span>
+                                                <!--                                            <del>$189.71</del>-->
+                                            </div>
+                                            <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                                <form action="add-to-card?productID=${product.id}" method="post">
+                                                    <fieldset>
+                                                        <input type="submit" name="submit" value="Add to cart" class="button">
+                                                    </fieldset>
+                                                </form>
+                                            </div>
 
+                                        </div>
                                     </div>
-                                </div>
-                            </div>  
+                                </div>  
                             </c:forEach>
                             <div class="clearfix"></div>
                         </div>
@@ -704,13 +683,13 @@
                             </div>
                         </div>
                         <div class="col-md-3 sign-gd flickr-post">
-                            
+
                         </div>
                         <div class="clearfix"></div>
                     </div>
                 </div>
                 <div class="clearfix"></div>
-                
+
             </div>
         </div>
         <!-- //footer -->

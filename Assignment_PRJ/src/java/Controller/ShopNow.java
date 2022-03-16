@@ -14,6 +14,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Category;
 import model.Product;
 
@@ -41,6 +42,8 @@ public class ShopNow extends HttpServlet {
             List<Category> listCategory = new CategoryDAO().getAllCategory();
             request.setAttribute("listProduct", listProduct);
             request.setAttribute("listCategory", listCategory);
+            HttpSession session = request.getSession();
+            session.setAttribute("url", "shop-now");
             request.getRequestDispatcher("category.jsp").forward(request, response);
         }
     }

@@ -15,6 +15,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Category;
 import model.Product;
 
@@ -44,6 +45,8 @@ public class Search extends HttpServlet {
             request.setAttribute("listProduct", listProductByKeyword);
             List<Category> listCategory = new CategoryDAO().getAllCategory();
             request.setAttribute("listCategory", listCategory);
+            HttpSession session = request.getSession();
+            session.setAttribute("url", "search");
             request.getRequestDispatcher("category.jsp").forward(request, response);
 
         }

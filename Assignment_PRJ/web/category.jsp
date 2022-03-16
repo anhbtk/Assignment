@@ -54,17 +54,17 @@
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social">
-                        <li class="share">Share On : </li>
-                        <li><a href="#" class="facebook">
+                        <li class="share"> </li>
+                        <li><a  class="facebook">
                                 <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="twitter"> 
+                        <li><a  class="twitter"> 
                                 <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="instagram">
+                        <li><a  class="instagram">
                                 <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="pinterest">
+                        <li><a  class="pinterest">
                                 <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                     </ul>
@@ -154,14 +154,12 @@
                         </div>
                     </nav>	
                 </div>
+                <!--cart-->
                 <div class="top_nav_right">
                     <div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
-                        <form action="#" method="post" class="last"> 
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="display" value="1">
-                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                        <form action="carts" method="post" class="last"> 
+                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button> (${sessionScope.cart.size()})
                         </form>  
-
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -425,18 +423,9 @@
                                         <!--                                        <del>$390.71</del>-->
                                     </div>
                                     <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                        <form action="#" method="post">
+                                        <form action="add-to-card?productID=${product.id}" method="post">
                                             <fieldset>
-                                                <input type="hidden" name="cmd" value="_cart">
-                                                <input type="hidden" name="add" value="1">
-                                                <input type="hidden" name="business" value=" ">
-                                                <input type="hidden" name="item_name" value="Party Men's Blazer">
-                                                <input type="hidden" name="amount" value="30.99">
-                                                <input type="hidden" name="discount_amount" value="1.00">
-                                                <input type="hidden" name="currency_code" value="USD">
-                                                <input type="hidden" name="return" value=" ">
-                                                <input type="hidden" name="cancel_return" value=" ">
-                                                <input type="submit" name="submit" value="Add to cart" class="button">
+                                                <input type="submit" name="submit" value="+ Giỏ Hàng" class="button">
                                             </fieldset>
                                         </form>
                                     </div>

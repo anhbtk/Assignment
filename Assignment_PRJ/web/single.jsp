@@ -55,17 +55,17 @@
                 <!-- header-bot -->
                 <div class="col-md-4 agileits-social top_content">
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social">
-                        <li class="share">Share On : </li>
-                        <li><a href="#" class="facebook">
+                        <li class="share"> </li>
+                        <li><a  class="facebook">
                                 <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="twitter"> 
+                        <li><a class="twitter"> 
                                 <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="instagram">
+                        <li><a  class="instagram">
                                 <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                        <li><a href="#" class="pinterest">
+                        <li><a  class="pinterest">
                                 <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
                                 <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                     </ul>
@@ -95,7 +95,7 @@
                             <!-- Collect the nav links, forms, and other content for toggling -->
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
-                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="index.jsp">Trang chủ <span class="sr-only">(current)</span></a></li>
+                                    <li class="active menu__item menu__item--current"><a class="menu__link" href="home">Trang chủ <span class="sr-only">(current)</span></a></li>
                                     <li class=" menu__item"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
                                         <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand<span class="caret"></span></a>
@@ -154,14 +154,12 @@
                         </div>
                     </nav>	
                 </div>
+                <!--cart-->
                 <div class="top_nav_right">
                     <div class="wthreecartaits wthreecartaits2 cart cart box_1"> 
-                        <form action="#" method="post" class="last"> 
-                            <input type="hidden" name="cmd" value="_cart">
-                            <input type="hidden" name="display" value="1">
-                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button>
+                        <form action="carts" method="post" class="last"> 
+                            <button class="w3view-cart" type="submit" name="submit" value=""><i class="fa fa-cart-arrow-down" aria-hidden="true"></i></button> (${sessionScope.cart.size()})
                         </form>  
-
                     </div>
                 </div>
                 <div class="clearfix"></div>
@@ -193,16 +191,16 @@
                                 <input type="submit" value="Đăng nhập">
                             </form>
                             <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
-                                <li><a href="#" class="facebook">
+                                <li><a  class="facebook">
                                         <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
                                         <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="twitter"> 
+                                <li><a  class="twitter"> 
                                         <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
                                         <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="instagram">
+                                <li><a  class="instagram">
                                         <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
                                         <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="pinterest">
+                                <li><a class="pinterest">
                                         <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
                                         <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
                             </ul>
@@ -349,12 +347,12 @@
                                                     <input type="submit" value="Check">
                                                 </form>-->
                     </div>
-                    <div class="color-quality">
+<!--                    <div class="color-quality">
                         <div class="color-quality-right">
                             <div style="color: #2fdab8">Quality :</div>
                             <input type="text" name="quantity"/>
                         </div>
-                    </div>
+                    </div>-->
                     <br/>
                     <!--                    <div class="occasional">
                                             <h5>Types :</h5>
@@ -369,11 +367,12 @@
                                             </div>
                                             <div class="clearfix"> </div>
                                         </div>-->
+                    <!--Add to card-->
                     <div class="occasion-cart">
                         <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                            <form action="#" method="post">
+                            <form action="add-to-card?productID=${product.id}" method="post">
                                 <fieldset>
-                                    <input type="submit" name="submit" value="Add to cart" class="button">
+                                    <input type="submit" name="submit" value="+ Giỏ Hàng" class="button">
                                 </fieldset>
                             </form>
                             
@@ -387,6 +386,8 @@
                             
                         </div>-->
                     </div>
+                    
+                    <!--Buy now-->
                     <div class="occasion-cart">
                         <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
                             <form action="#" method="post">
@@ -396,6 +397,7 @@
                             </form>
                         </div>
                     </div>
+                    <!--logo-->
                     <ul class="social-nav model-3d-0 footer-social w3_agile_social single_page_w3ls">
                         <li class="share"> </li>
                         <li><a  class="facebook">

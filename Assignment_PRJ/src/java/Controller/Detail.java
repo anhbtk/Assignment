@@ -12,6 +12,7 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Product;
 
 /**
@@ -36,6 +37,8 @@ public class Detail extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             int productId = Integer.parseInt(request.getParameter("productID"));
             Product p = new ProductDAO().getProductById(productId);
+            HttpSession session = request.getSession();
+            session.setAttribute("url", "detail?productID="+productId);
             request.setAttribute("product", p);
             request.getRequestDispatcher("single.jsp").forward(request, response);
         }

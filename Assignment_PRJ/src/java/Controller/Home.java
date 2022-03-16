@@ -46,6 +46,7 @@ public class Home extends HttpServlet {
             HttpSession session = request.getSession();
             session.setAttribute("listCategoryRomand", listCategoryRomand);
             session.setAttribute("listCategoryGilaa", listCategoryGilaa);
+            session.setAttribute("url", "home");
             request.setAttribute("listAllNewRomandProduct", listAllNewRomandProduct);
             request.setAttribute("listAllNewGilaaProduct", listAllNewGilaaProduct);
             request.getRequestDispatcher("index.jsp").forward(request, response);

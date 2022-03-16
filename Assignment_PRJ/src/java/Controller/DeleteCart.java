@@ -5,24 +5,21 @@
  */
 package Controller;
 
-import DAO.CategoryDAO;
-import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.List;
+import java.util.LinkedHashMap;
+import java.util.Map;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.Category;
-import model.Product;
 
 /**
  *
  * @author USER
  */
-public class CategoryController extends HttpServlet {
+public class DeleteCart extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -36,16 +33,19 @@ public class CategoryController extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
-            int categoryId = Integer.parseInt(request.getParameter("categoryId"));
-            List<Product> listProductByCategoryId = new ProductDAO().getAllProductbyCategory(categoryId);
-            List<Category> listCategory = new CategoryDAO().getAllCategory();
-            request.setAttribute("listCategory", listCategory);
-            request.setAttribute("listProduct", listProductByCategoryId);
+            /* TODO output your page here. You may use following sample code. */
+            int id = Integer.parseInt(request.getParameter("productId"));
             HttpSession session = request.getSession();
-            session.setAttribute("url", "category-controller?categoryId="+categoryId);
-            request.getRequestDispatcher("category.jsp").forward(request, response);
+            Map<Integer,Cart> cart = (Map<Integer,Cart>) session.getAttribute("cart");
+            if (cart == null) {
+                cart = new LinkedHashMap<>();
+            }
+            if(cart.containsKey(id)){
+                cart.remove(id);
+            }
+            session.setAttribute("cart", cart);
+            response.sendRedirect("carts");
         }
     }
 
