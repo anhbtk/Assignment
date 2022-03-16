@@ -283,7 +283,7 @@
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3 style="color: #19a98c">Một chút về <span style="color: #000">Mangosteen </span></h3>
+                <h3 style="color: #19a98c ">Một chút về <span style="color: black">Mangosteen </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">
