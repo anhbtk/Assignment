@@ -104,13 +104,12 @@ create table Account (
 	email VARCHAR(50),
 	numberphone VARCHAR(50),
 	address VARCHAR(50),
-	status int,
 );
-insert into Account (id, username, password, displayname, email, numberphone, address,status) values (1, 'Admin', '123456', 'Brightdog', 'ochestnutt0@comcast.net', '763-534-3469', '66 Bashford Way',1);
-insert into Account (id, username, password, displayname, email, numberphone, address,status) values (2, 'Overhold', 'x7xKOQ', 'Photobug', 'lalderman1@wisc.edu', '303-229-7950', '0 Holy Cross Avenue',0);
-insert into Account (id, username, password, displayname, email, numberphone, address,status) values (3, 'Solarbreeze', 'suV0ew', 'Avamm', 'dsimkovich2@google.de', '382-547-1419', '5 Trailsway Pass',0);
-insert into Account (id, username, password, displayname, email, numberphone, address,status) values (4, 'Aerified', 'qSiPr1Ob7m7', 'Oyoloo', 'hsherbourne3@list-manage.com', '820-119-2114', '31 Lakewood Gardens Hill',0);
-insert into Account (id, username, password, displayname, email, numberphone, address,status) values (5, 'Cardify', 'dp7iexVD', 'Thoughtstorm', 'ewraighte4@posterous.com', '616-133-7732', '893 Sauthoff Park',0);
+insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Admin', '123456', 'Admin', 'Admin@gmail.com', '0398492158', 'Hanoi');
+insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Ruoi', '123456', 'User', 'coco@gmail.com', '0123456789', 'Hanoi');
+insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Ca', '123456', 'User', 'coco@gmail.com', '032012349', 'Hanoi');
+insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Lon', '123456', 'User', 'coco@gmail.com', '032012114', 'Hanoi');
+insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Hoa', '123456', 'User', 'coco@gmail.com', '034133732', 'Hanoi');
 
 drop table OrderDetail
 drop table Orders

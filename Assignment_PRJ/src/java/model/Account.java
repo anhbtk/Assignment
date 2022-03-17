@@ -10,6 +10,10 @@ package model;
  * @author USER
  */
 public class Account {
+
+    public static Object builder() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     int id;
     String username;
     String password;
@@ -17,12 +21,11 @@ public class Account {
     String email;
     int numberphone;
     String address;
-    int status;
 
     public Account() {
     }
 
-    public Account(int id, String username, String password, String displayname, String email, int numberphone, String address, int status) {
+    public Account(int id, String username, String password, String displayname, String email, int numberphone, String address) {
         this.id = id;
         this.username = username;
         this.password = password;
@@ -30,7 +33,6 @@ public class Account {
         this.email = email;
         this.numberphone = numberphone;
         this.address = address;
-        this.status = status;
     }
 
     public int getId() {
@@ -89,19 +91,11 @@ public class Account {
         this.address = address;
     }
 
-    public int getStatus() {
-        return status;
-    }
-
-    public void setStatus(int status) {
-        this.status = status;
-    }
-
     @Override
     public String toString() {
-        return "Account{" + "id=" + id + ", username=" + username + ", password=" + password + ", displayname=" + displayname + ", email=" + email + ", numberphone=" + numberphone + ", address=" + address + ", status=" + status + '}';
+        return "AccountDAO{" + "id=" + id + ", username=" + username + ", password=" + password + ", displayname=" + displayname + ", email=" + email + ", numberphone=" + numberphone + ", address=" + address + '}';
     }
-    
+
     
     
 }

@@ -304,17 +304,12 @@
                 <!-- mens -->
                 <div class="col-md-4 products-left">
                     <div class="filter-price">
-                        <h3>Tùy chọn <span>mức giá</span></h3>
-                        <ul class="dropdown-menu6">
-                            <li>                
-                                <div id="slider-range"></div>							
-                                <input type="text" id="amount" style="border: 0; color: #ffffff; font-weight: normal;" />
-                            </li>			
-                        </ul>
-                    </div>
-                    <div >
 
-                        <table  style=" padding: 100px" >
+                    </div>
+
+                    <br/><br/><br/><br/>
+                    <div>
+                        <table class="table table-success table-striped">
                             <thead>
                                 <tr>
                                     <th><b><h3 style="color: #17c3a2; font-family: 'Open Sans', sans-serif;">PHÂN LOẠI</h3></b></th>
@@ -331,17 +326,20 @@
                                 </tr>
                             </tbody>
                         </table>
+
                     </div>
-                    <div class="community-poll">
-                        <h4>Community Poll</h4>
-                        <div class="swit form">	
-                            <form>
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Money back guaranteed</label> </div></div>	
-                                <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Others</label> </div></div>		
-                                <input type="submit" value="SEND">
-                            </form>
-                        </div>
-                    </div>
+
+
+                    <!--                    <div class="community-poll">
+                                            <h4>Hãng Son</h4>
+                                            <div class="swit form">	
+                                                <form action="">
+                                                    <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Romand</label> </div></div>	
+                                                    <div class="check_box"> <div class="radio"> <label><input type="radio" name="radio"><i></i>Gilaa</label> </div></div>		
+                                                    <input type="submit" value="SEND">
+                                                </form>
+                                            </div>
+                                        </div>-->
                     <div class="clearfix"></div>
                 </div>
                 <div class="col-md-8 products-right">
@@ -404,7 +402,7 @@
                                             </div>
                                             <div class="clearfix"></div>
                                         </div>-->
-                    <c:forEach  items="${listProduct}" var="product">
+                    <c:forEach items="${lp}" var="product">
                         <div class="col-md-4 product-men">
                             <div class="men-pro-item simpleCart_shelfItem">
                                 <div class="men-thumb-item">
@@ -436,7 +434,23 @@
                     </c:forEach>
 
                     <div class="clearfix"></div>
-
+                    <nav aria-label="Page navigation example" style="text-align: right">
+                        <ul class="pagination">
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Previous">
+                                    <span aria-hidden="true">&laquo;</span>
+                                </a>
+                            </li>
+                            <c:forEach begin="1"  end="${totalPage}"varStatus="i">
+                                <li class="page-item"><a class="page-link" href="shop-now?index=${i.index}"> ${i.index}</a></li>
+                                </c:forEach>
+                            <li class="page-item">
+                                <a class="page-link" href="#" aria-label="Next">
+                                    <span aria-hidden="true">&raquo;</span>
+                                </a>
+                            </li>
+                        </ul>
+                    </nav>
                 </div>
                 <div class="clearfix"></div>
             </div>

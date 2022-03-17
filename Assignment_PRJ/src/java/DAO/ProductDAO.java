@@ -8,6 +8,7 @@ package DAO;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
@@ -246,4 +247,40 @@ public class ProductDAO {
         }
         return list;
     }
+    
+    public int totalPage() throws Exception {
+        int total = 0;
+        try {
+            String sql = "select COUNT(*) from Product";
+            Connection conn = new BaseDAO().getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+                total = rs.getInt(1);
+            }
+        } catch (SQLException e) {
+        }
+        return total;
+    }
+
+    public ArrayList<Product> pagePerson(int pageIndex) throws Exception {
+        ArrayList<Product> lp = new ArrayList<>();
+        try {
+            String sql = "SELECT top 6 * \n"
+                    + "FROM Product p inner join Categogies c on p.category_id = c.id\n"
+                    + "where p.id > ?\n"
+                    + "ORDER BY p.id";
+            Connection conn = new BaseDAO().getConnection();
+            PreparedStatement ps = conn.prepareStatement(sql);
+            ps.setInt(1, (pageIndex - 1) * 10);
+            ResultSet rs = ps.executeQuery();
+            while (rs.next()) {
+               Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12));
+               lp.add(p);
+            }
+        } catch (SQLException e) {
+        }
+        return lp;
+    }
+
 }

@@ -9,7 +9,10 @@ import DAO.CategoryDAO;
 import DAO.ProductDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
@@ -34,13 +37,27 @@ public class ShopNow extends HttpServlet {
      * @throws IOException if an I/O error occurs
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
-            throws ServletException, IOException {
+            throws ServletException, IOException, Exception {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            List<Product> listProduct = new ProductDAO().getAllProduct();
+            //List<Product> listProduct = new ProductDAO().getAllProduct();
             List<Category> listCategory = new CategoryDAO().getAllCategory();
-            request.setAttribute("listProduct", listProduct);
+            ProductDAO pd = new ProductDAO();
+            int totalPage = pd.totalPage();
+            String index = request.getParameter("index");
+            if (index == null) {
+                index = "1";
+            }           
+            ArrayList<Product> lp = pd.pagePerson(Integer.parseInt(index));
+            if (totalPage % 6 != 0) {
+                totalPage = totalPage / 6 + 1;
+            } else {
+                totalPage = totalPage / 6;
+            }
+            request.setAttribute("totalPage", totalPage);
+            request.setAttribute("lp", lp);        
+            //request.setAttribute("listProduct", listProduct);
             request.setAttribute("listCategory", listCategory);
             HttpSession session = request.getSession();
             session.setAttribute("url", "shop-now");
@@ -60,7 +77,11 @@ public class ShopNow extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(ShopNow.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -74,7 +95,11 @@ public class ShopNow extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        try {
+            processRequest(request, response);
+        } catch (Exception ex) {
+            Logger.getLogger(ShopNow.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**

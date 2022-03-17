@@ -309,7 +309,7 @@
                 <h1>Thanh Toán</h1><br/>
 
                 <div class="row">
-                    <div class="col-md-8" style="border: 1px solid #ccc; border-radius: 5px; padding: 1rem">
+                    <div class="col-md-7" style="border: 1px solid #ccc; border-radius: 5px; padding: 1rem;margin-right: 40px">
                         <h3 style="text-align: left">Danh sách sản phẩm</h3><br/>
                         <table class="table">
                             <thead>
@@ -320,7 +320,7 @@
                                     <th scope="col">Giá</th>
                                     <th scope="col">Số lượng</th>
                                     <th scope="col">Tổng tiền</th>
-                                    <th scope="col">Xóa</th>
+<!--                                    <th scope="col">Xóa</th>-->
                                 </tr>
                             </thead>
                             <tbody>
@@ -329,12 +329,12 @@
                                     <tr>
                                     <input type="hidden" name="productId" value="${c.value.product.id}"/>
                                     <th scope="row"></th>
-                                    <td><a href="detail?productID=${c.value.product.id}"><img src="${c.value.product.imagine}"style="height: 100px; width: 100px"></a></td>
+                                    <td><img src="${c.value.product.imagine}"style="height: 100px; width: 100px"></td>
                                     <td>${c.value.product.name}</td>
                                     <td>${c.value.product.price}.000Đ</td>
-                                    <td><input onchange="this.form.submit()" type="number" name="quantity" value="${c.value.quantity_cart}"/></td>
+                                    <td>${c.value.quantity_cart}</td>
                                     <td>${c.value.product.price*c.value.quantity_cart}.000Đ</td>
-                                    <td><button><a href ="delete-cart?productId=${c.value.product.id}">Delete<a/></button></td>
+                                    
                                     </tr>
                                 </form>
                             </c:forEach>
@@ -343,22 +343,25 @@
 
                     </div>
                     <div class="col-md-4" style="border: 1px solid #ccc; border-radius: 5px">
-                        <h3>Thông tin nhận hàng</h3><br/>
-                        <form>
+                        <h4 style="text-align: center; padding-top: 10px" ><b>Thông tin nhận hàng</b></h4><br/>
+                        <form action="check" method="POST">
                             <div class="mb-3">
-                                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                                <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-                                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
                             </div>
                             <div class="mb-3">
-                                <label for="exampleInputPassword1" class="form-label">Password</label>
-                                <input type="password" class="form-control" id="exampleInputPassword1">
+                                <label for="phone" class="form-label">Phone</label>
+                                <input type="text" class="form-control" id="phone" name="phone" aria-describedby="emailHelp">
                             </div>
-                            <div class="mb-3 form-check">
-                                <input type="checkbox" class="form-check-input" id="exampleCheck1">
-                                <label class="form-check-label" for="exampleCheck1">Check me out</label>
+                            <div class="mb-3">
+                                <label for="address" class="form-label">Address</label>
+                                <input type="text" class="form-control" id="address" name="address" aria-describedby="emailHelp">
                             </div>
-                            <div style="text-align: center"><button type="submit" class="btn btn-primary" style="width: 100">Submit</button></div>
+                            <div class="mb-3">
+                                <label for="note" class="form-label">Note</label>
+                                <textarea class="form-control" id="note" name="note" rows="3"></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary w-100">Submit</button>
                         </form>
                     </div>
 

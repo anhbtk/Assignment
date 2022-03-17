@@ -42,7 +42,7 @@ public class CategoryController extends HttpServlet {
             List<Product> listProductByCategoryId = new ProductDAO().getAllProductbyCategory(categoryId);
             List<Category> listCategory = new CategoryDAO().getAllCategory();
             request.setAttribute("listCategory", listCategory);
-            request.setAttribute("listProduct", listProductByCategoryId);
+            request.setAttribute("lp", listProductByCategoryId);
             HttpSession session = request.getSession();
             session.setAttribute("url", "category-controller?categoryId="+categoryId);
             request.getRequestDispatcher("category.jsp").forward(request, response);
