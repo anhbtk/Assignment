@@ -14,6 +14,7 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
+import javax.servlet.http.HttpSession;
 import model.Account;
 
 /**
@@ -36,6 +37,22 @@ public class Login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
+            String username = request.getParameter("username");
+            String password = request.getParameter("password");
+            AccountDAO acc = new AccountDAO();
+            Account a = acc.login(username, password);
+            if(a==null){
+                request.setAttribute("u", username);
+                request.setAttribute("p", password);
+                request.setAttribute("wrong","Tên đăng nhập hoặc mật khẩu của bạn không đúng");
+                request.getRequestDispatcher("login.jsp").forward(request, response);
+            }else{
+                HttpSession session = request.getSession();
+                session.setAttribute("a", a);
+                response.sendRedirect("home");
+            }
+            
+            
 
         }
     }
@@ -52,8 +69,7 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        //processRequest(request, response);
-        request.getRequestDispatcher("login.jsp").forward(request, response);
+        processRequest(request, response);
     }
 
     /**
@@ -67,30 +83,7 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        // processRequest(request, response);
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-        boolean remember = request.getParameter("remember") != null;
-        
-        Account account = new AccountDAO().login(username, password);
-
-        if (account != null) { //hợp lệ -> lưu lên session
-            //remember
-            if (remember) {
-                Cookie usernameCookie = new Cookie("username", username);
-                usernameCookie.setMaxAge(60 * 60 * 24 * 2);
-                Cookie passwordCookie = new Cookie("password", password);
-                passwordCookie.setMaxAge(60 * 60 * 24 * 2);
-                response.addCookie(usernameCookie);
-                response.addCookie(passwordCookie);
-            }
-            request.getSession().setAttribute("account", account);
-            response.sendRedirect("home");
-            //không remember
-        } else {//Không hợp lệ -> trả về lỗi
-            request.setAttribute("error", "Username or password incorrect");
-            request.getRequestDispatcher("login.jsp").forward(request, response);
-        }
+         processRequest(request, response);
 
     }
 

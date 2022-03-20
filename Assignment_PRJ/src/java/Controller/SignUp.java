@@ -5,25 +5,20 @@
  */
 package Controller;
 
-import DAO.CategoryDAO;
-import DAO.ProductDAO;
+import DAO.AccountDAO;
 import java.io.IOException;
 import java.io.PrintWriter;
-import static java.util.Collections.list;
-import java.util.List;
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
-import model.Category;
-import model.Product;
+import model.Account;
 
 /**
  *
  * @author USER
  */
-public class Search extends HttpServlet {
+public class SignUp extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,18 +32,43 @@ public class Search extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
-        response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String keyword = request.getParameter("keyword");
-            List<Product> listProductByKeyword = new ProductDAO().Search(keyword);
-            request.setAttribute("lp", listProductByKeyword);
-            List<Category> listCategory = new CategoryDAO().getAllCategory();
-            request.setAttribute("listCategory", listCategory);
-            HttpSession session = request.getSession();
-            session.setAttribute("url", "search");
-            request.getRequestDispatcher("category.jsp").forward(request, response);
+            String user = request.getParameter("user");
+            String pass = request.getParameter("pass");
+            String rePass = request.getParameter("repass");
+            String displayName = request.getParameter("displayname");
+            String email = request.getParameter("email");
+            String phoneNumber = request.getParameter("phonenumber");
 
+            if (!pass.equals(rePass)) {
+                
+                request.setAttribute("user", user);
+                request.setAttribute("pass", pass);
+                request.setAttribute("repass", rePass);
+                request.setAttribute("displayname", displayName);
+                request.setAttribute("email", email);
+                request.setAttribute("phonenumber", phoneNumber);
+                request.setAttribute("kq", "Đăng kí tài khoản thất bại");
+                request.getRequestDispatcher("login_signUp.jsp").forward(request, response);
+            } else {
+                AccountDAO dao = new AccountDAO();
+                Account a = dao.checkUser(user);
+                if (a == null) {
+                    AccountDAO.signUp(user, pass, displayName, email, phoneNumber);
+                    response.sendRedirect("login.jsp");
+                } else {
+                    request.setAttribute("user", user);
+                    request.setAttribute("pass", pass);
+                    request.setAttribute("repass", rePass);
+                    request.setAttribute("displayname", displayName);
+                    request.setAttribute("email", email);
+                    request.setAttribute("phonenumber", phoneNumber);
+                    request.setAttribute("kq", "Đăng kí tài khoản thất bại");
+                    request.getRequestDispatcher("login_signUp.jsp").forward(request, response);
+                }
+
+            }
         }
     }
 

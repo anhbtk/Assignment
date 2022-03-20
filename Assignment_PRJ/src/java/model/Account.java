@@ -1,39 +1,28 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package model;
 
-/**
- *
- * @author USER
- */
 public class Account {
 
-    public static Object builder() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
     int id;
     String username;
     String password;
     String displayname;
     String email;
-    int numberphone;
-    String address;
+    String numberphone;
+    String isAdmin;
 
     public Account() {
     }
 
-    public Account(int id, String username, String password, String displayname, String email, int numberphone, String address) {
+    public Account(int id, String username, String password, String displayname, String email, String numberphone, String isAdmin) {
         this.id = id;
         this.username = username;
         this.password = password;
         this.displayname = displayname;
         this.email = email;
         this.numberphone = numberphone;
-        this.address = address;
-    }
+        this.isAdmin = isAdmin;
+    }   
 
     public int getId() {
         return id;
@@ -75,27 +64,25 @@ public class Account {
         this.email = email;
     }
 
-    public int getNumberphone() {
+    public String getNumberphone() {
         return numberphone;
     }
 
-    public void setNumberphone(int numberphone) {
+    public void setNumberphone(String numberphone) {
         this.numberphone = numberphone;
     }
 
-    public String getAddress() {
-        return address;
+    public String getIsAdmin() {
+        return isAdmin;
     }
 
-    public void setAddress(String address) {
-        this.address = address;
+    public void setIsAdmin(String isAdmin) {
+        this.isAdmin = isAdmin;
     }
 
     @Override
     public String toString() {
-        return "AccountDAO{" + "id=" + id + ", username=" + username + ", password=" + password + ", displayname=" + displayname + ", email=" + email + ", numberphone=" + numberphone + ", address=" + address + '}';
+        return "Account{" + "id=" + id + ", username=" + username + ", password=" + password + ", displayname=" + displayname + ", email=" + email + ", numberphone=" + numberphone + ", isAdmin=" + isAdmin + '}';
     }
 
-    
-    
 }

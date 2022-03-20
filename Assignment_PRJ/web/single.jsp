@@ -30,8 +30,8 @@
         <div class="header" id="home">
             <div class="container">
                 <ul>
-                    <li> <a href="#" data-toggle="modal" data-target="#myModal"><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng nhập </a></li>
-                    <li> <a href="#" data-toggle="modal" data-target="#myModal2"><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
+                    <li> <a href="login.jsp" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
+                    <li> <a href="login_signUp.jsp" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
                     <li><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
                     <li><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</a></li>
                 </ul>

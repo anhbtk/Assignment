@@ -103,13 +103,14 @@ create table Account (
 	displayname VARCHAR(50),
 	email VARCHAR(50),
 	numberphone VARCHAR(50),
-	address VARCHAR(50),
+	
+	isAdmin bit,
 );
-insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Admin', '123456', 'Admin', 'Admin@gmail.com', '0398492158', 'Hanoi');
-insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Ruoi', '123456', 'User', 'coco@gmail.com', '0123456789', 'Hanoi');
-insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Ca', '123456', 'User', 'coco@gmail.com', '032012349', 'Hanoi');
-insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Lon', '123456', 'User', 'coco@gmail.com', '032012114', 'Hanoi');
-insert into Account ( username, password, displayname, email, numberphone, address) values ( 'Hoa', '123456', 'User', 'coco@gmail.com', '034133732', 'Hanoi');
+insert into Account ( username, password, displayname, email, numberphone, isAdmin) values ( 'Admin', '123456', 'Admin', 'Admin@gmail.com', '0398492158', 1);
+insert into Account ( username, password, displayname, email, numberphone, isAdmin) values ( 'Ruoi', '123456', 'User', 'coco@gmail.com', '0123456789', 0);
+insert into Account ( username, password, displayname, email, numberphone, isAdmin) values ( 'Ca', '123456', 'User', 'coco@gmail.com', '032012349', 0);
+insert into Account ( username, password, displayname, email, numberphone, isAdmin) values ( 'Lon', '123456', 'User', 'coco@gmail.com', '032012114', 0);
+insert into Account ( username, password, displayname, email, numberphone, isAdmin) values ( 'Hoa', '123456', 'User', 'coco@gmail.com', '034133732', 0);
 
 drop table OrderDetail
 drop table Orders

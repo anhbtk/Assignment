@@ -1,8 +1,3 @@
-<%-- 
-    Document   : login
-    Created on : Mar 17, 2022, 6:53:54 AM
-    Author     : USER
---%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
@@ -11,224 +6,195 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>JSP Page</title>
         <style>
-            @import url('https://fonts.googleapis.com/css?family=Raleway:400,700');
+            body{
+                margin:0;
+                color:#6a6f8c;
+                background:#c8c8c8;
+                font:600 16px/18px 'Open Sans',sans-serif;
+            }
+            *,:after,:before{box-sizing:border-box}
+            .clearfix:after,.clearfix:before{content:'';display:table}
+            .clearfix:after{clear:both;display:block}
+            a{color:inherit;text-decoration:none}
 
-            * {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;	
-                font-family: Raleway, sans-serif;
+            .login-wrap{
+                width:100%;
+                margin:auto;
+                max-width:525px;
+                min-height:670px;
+                position:relative;
+                background:url(https://raw.githubusercontent.com/khadkamhn/day-01-login-form/master/img/bg.jpg) no-repeat center;
+                box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(0,0,0,.19);
+            }
+            .login-html{
+                width:100%;
+                height:100%;
+                position:absolute;
+                padding:90px 70px 50px 70px;
+                background:rgba(40,57,101,.9);
+            }
+            .login-html .sign-in-htm,
+            .login-html .sign-up-htm{
+                top:0;
+                left:0;
+                right:0;
+                bottom:0;
+                position:absolute;
+                transform:rotateY(180deg);
+                backface-visibility:hidden;
+                transition:all .4s linear;
+            }
+            .login-html .sign-in,
+            .login-html .sign-up,
+            .login-form .group .check{
+                display:none;
+            }
+            .login-html .tab,
+            .login-form .group .label,
+            .login-form .group .button{
+                text-transform:uppercase;
+            }
+            .login-html .tab{
+                font-size:22px;
+                margin-right:15px;
+                padding-bottom:5px;
+                margin:0 15px 10px 0;
+                display:inline-block;
+                border-bottom:2px solid transparent;
+            }
+            .login-html .sign-in:checked + .tab,
+            .login-html .sign-up:checked + .tab{
+                color:#fff;
+                border-color:#1161ee;
+            }
+            .login-form{
+                min-height:345px;
+                position:relative;
+                perspective:1000px;
+                transform-style:preserve-3d;
+            }
+            .login-form .group{
+                margin-bottom:15px;
+            }
+            .login-form .group .label,
+            .login-form .group .input,
+            .login-form .group .button{
+                width:100%;
+                color:#fff;
+                display:block;
+            }
+            .login-form .group .input,
+            .login-form .group .button{
+                border:none;
+                padding:15px 20px;
+                border-radius:25px;
+                background:rgba(255,255,255,.1);
+            }
+            .login-form .group input[data-type="password"]{
+                text-security:circle;
+                -webkit-text-security:circle;
+            }
+            .login-form .group .label{
+                color:#aaa;
+                font-size:12px;
+            }
+            .login-form .group .button{
+                background:#1161ee;
+            }
+            .login-form .group label .icon{
+                width:15px;
+                height:15px;
+                border-radius:2px;
+                position:relative;
+                display:inline-block;
+                background:rgba(255,255,255,.1);
+            }
+            .login-form .group label .icon:before,
+            .login-form .group label .icon:after{
+                content:'';
+                width:10px;
+                height:2px;
+                background:#fff;
+                position:absolute;
+                transition:all .2s ease-in-out 0s;
+            }
+            .login-form .group label .icon:before{
+                left:3px;
+                width:5px;
+                bottom:6px;
+                transform:scale(0) rotate(0);
+            }
+            .login-form .group label .icon:after{
+                top:6px;
+                right:0;
+                transform:scale(0) rotate(0);
+            }
+            .login-form .group .check:checked + label{
+                color:#fff;
+            }
+            .login-form .group .check:checked + label .icon{
+                background:#1161ee;
+            }
+            .login-form .group .check:checked + label .icon:before{
+                transform:scale(1) rotate(45deg);
+            }
+            .login-form .group .check:checked + label .icon:after{
+                transform:scale(1) rotate(-45deg);
+            }
+            .login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+                transform:rotate(0);
+            }
+            .login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+                transform:rotate(0);
             }
 
-            body {
-                background: linear-gradient(90deg, #C7C5F4, #776BCC);		
+            .hr{
+                height:2px;
+                margin:60px 0 50px 0;
+                background:rgba(255,255,255,.2);
             }
-
-            .container {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                min-height: 100vh;
-            }
-
-            .screen {		
-                background: linear-gradient(90deg, #5D54A4, #7C78B8);		
-                position: relative;	
-                height: 600px;
-                width: 360px;	
-                box-shadow: 0px 0px 24px #5C5696;
-            }
-
-            .screen__content {
-                z-index: 1;
-                position: relative;	
-                height: 100%;
-            }
-
-            .screen__background {		
-                position: absolute;
-                top: 0;
-                left: 0;
-                right: 0;
-                bottom: 0;
-                z-index: 0;
-                -webkit-clip-path: inset(0 0 0 0);
-                clip-path: inset(0 0 0 0);	
-            }
-
-            .screen__background__shape {
-                transform: rotate(45deg);
-                position: absolute;
-            }
-
-            .screen__background__shape1 {
-                height: 520px;
-                width: 520px;
-                background: #FFF;	
-                top: -50px;
-                right: 120px;	
-                border-radius: 0 72px 0 0;
-            }
-
-            .screen__background__shape2 {
-                height: 220px;
-                width: 220px;
-                background: #6C63AC;	
-                top: -172px;
-                right: 0;	
-                border-radius: 32px;
-            }
-
-            .screen__background__shape3 {
-                height: 540px;
-                width: 190px;
-                background: linear-gradient(270deg, #5D54A4, #6A679E);
-                top: -24px;
-                right: 0;	
-                border-radius: 32px;
-            }
-
-            .screen__background__shape4 {
-                height: 400px;
-                width: 200px;
-                background: #7E7BB9;	
-                top: 420px;
-                right: 50px;	
-                border-radius: 60px;
-            }
-
-            .login {
-                width: 320px;
-                padding: 30px;
-                padding-top: 156px;
-            }
-
-            .login__field {
-                padding: 20px 0px;	
-                position: relative;	
-            }
-
-            .login__icon {
-                position: absolute;
-                top: 30px;
-                color: #7875B5;
-            }
-
-            .login__input {
-                border: none;
-                border-bottom: 2px solid #D1D1D4;
-                background: none;
-                padding: 10px;
-                padding-left: 24px;
-                font-weight: 700;
-                width: 75%;
-                transition: .2s;
-            }
-
-            .login__input:active,
-            .login__input:focus,
-            .login__input:hover {
-                outline: none;
-                border-bottom-color: #6A679E;
-            }
-
-            .login__submit {
-                background: #fff;
-                font-size: 14px;
-                margin-top: 30px;
-                padding: 16px 20px;
-                border-radius: 26px;
-                border: 1px solid #D4D3E8;
-                text-transform: uppercase;
-                font-weight: 700;
-                display: flex;
-                align-items: center;
-                width: 100%;
-                color: #4C489D;
-                box-shadow: 0px 2px 2px #5C5696;
-                cursor: pointer;
-                transition: .2s;
-            }
-
-            .login__submit:active,
-            .login__submit:focus,
-            .login__submit:hover {
-                border-color: #6A679E;
-                outline: none;
-            }
-
-            .button__icon {
-                font-size: 24px;
-                margin-left: auto;
-                color: #7875B5;
-            }
-
-            .social-login {	
-                position: absolute;
-                height: 140px;
-                width: 160px;
-                text-align: center;
-                bottom: 0px;
-                right: 0px;
-                color: #fff;
-            }
-
-            .social-icons {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-            }
-
-            .social-login__icon {
-                padding: 20px 10px;
-                color: #fff;
-                text-decoration: none;	
-                text-shadow: 0px 0px 8px #7875B5;
-            }
-
-            .social-login__icon:hover {
-                transform: scale(1.5);	
+            .foot-lnk{
+                text-align:center;
             }
         </style>
     </head>
     <body>
-        <div class="container">
-            <div class="screen">
-                <div class="screen__content">
-                    <form action="login" method="POST" class="login" >
-                        <div class="login__field">
-                            <i class="login__icon fas fa-user"></i>
-                            <input type="text" name="username" class="login__input" placeholder="User name">
-                        </div>
-                        <div class="login__field">
-                            <i class="login__icon fas fa-lock"></i>
-                            <input type="password" name="password" class="login__input" placeholder="Password">
-                        </div>
-                        <div class="mb-3 form-check">
-                            <input type="checkbox" class="form-check-input" id="exampleCheck1" name="remember">
-                            <label class="form-check-label" for="exampleCheck1">Remember me</label>
-                        </div>
-                        <h3 class="text-danger">${error}</h3>
-                        <button class="button login__submit">
-                            <span class="button__text">Log In Now</span>
-                            <i class="button__icon fas fa-chevron-right"></i>
-                        </button>				
-                    </form>
-                    <div class="social-login">
-                        <h3>log in Mangosteen</h3>
-                        <div class="social-icons">
-                            <a href="#" class="social-login__icon fab fa-instagram"></a>
-                            <a href="#" class="social-login__icon fab fa-facebook"></a>
-                            <a href="#" class="social-login__icon fab fa-twitter"></a>
+        <div class="login-wrap">
+            <div class="login-html">
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Đăng nhập</label>
+                <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
+                <div class="login-form">
+                    <!--đăng nhập-->
+                    <div class="sign-in-htm">
+                        <form action="login" method="post">
+                            <div class="group">
+                                <label for="user" class="label">Tên đăng nhập</label>
+                                <input id="user" type="text" class="input" name="username" value="${u}">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Mật khẩu</label>
+                                <input id="pass" type="password" class="input" data-type="password" name="password" value="${p}">
+                            </div>
+                            <div class="group">
+                                <input id="check" type="checkbox" class="check" name="rmb">
+                                <label for="check"><span class="icon"></span> Ghi nhớ đăng nhập</label>
+                            </div>
+                            <div style="color: #ff9999">${wrong}</div><br>
+
+                            <div class="group">
+                                <input type="submit" class="button" value="Đăng nhập">
+                            </div>
+                        </form>
+                        <div class="hr"></div>
+                        <div class="foot-lnk">
+                            <a href="login_signUp.jsp">Bạn chưa có tài khoản?</a>
                         </div>
                     </div>
+                    <!--đăng kí-->
+                    <div class="sign-up-htm">
+                       
+                    </div>
                 </div>
-                <div class="screen__background">
-                    <span class="screen__background__shape screen__background__shape4"></span>
-                    <span class="screen__background__shape screen__background__shape3"></span>		
-                    <span class="screen__background__shape screen__background__shape2"></span>
-                    <span class="screen__background__shape screen__background__shape1"></span>
-                </div>		
             </div>
         </div>
     </body>

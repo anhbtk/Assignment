@@ -30,7 +30,7 @@
                 width:100%;
                 height:100%;
                 position:absolute;
-                padding:90px 70px 50px 70px;
+                padding:40px 70px 50px 70px;
                 background:rgba(40,57,101,.9);
             }
             .login-html .sign-in-htm,
@@ -150,7 +150,7 @@
 
             .hr{
                 height:2px;
-                margin:60px 0 50px 0;
+                margin:20px 0 10px 0;
                 background:rgba(255,255,255,.2);
             }
             .foot-lnk{
@@ -161,38 +161,52 @@
     <body>
         <div class="login-wrap">
             <div class="login-html">
-                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Đăng nhập</label>
+                <input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Đăng ký</label>
                 <input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab"></label>
                 <div class="login-form">
-                    <!--đăng nhập-->
+                    <!--đăng ký-->
                     <div class="sign-in-htm">
-                        <form action="login" method="post">
+                        <form action="signup" method="post">
                             <div class="group">
                                 <label for="user" class="label">Tên đăng nhập</label>
-                                <input id="user" type="text" class="input" name="username" value="${u}">
+                                <input id="user" type="text" class="input" name="user" value="${user}">
                             </div>
+                           
                             <div class="group">
                                 <label for="pass" class="label">Mật khẩu</label>
-                                <input id="pass" type="password" class="input" data-type="password" name="password" value="${p}">
+                                <input id="pass" type="password" class="input" data-type="password" name="pass" value="${pass}">
                             </div>
                             <div class="group">
-                                <input id="check" type="checkbox" class="check" name="rmb">
-                                <label for="check"><span class="icon"></span> Ghi nhớ đăng nhập</label>
+                                <label for="pass" class="label">Xác nhận lại mật khẩu</label>
+                                <input id="pass" type="password" class="input" data-type="password" name="repass" value="${repass}">
                             </div>
-                            <div style="color: #ff9999">${wrong}</div><br>
-
+                            
                             <div class="group">
-                                <input type="submit" class="button" value="Đăng nhập">
+                                <label for="pass" class="label">Họ và tên</label>
+                                <input id="pass" type="text" class="input" name="displayname" ${displayname}>
                             </div>
+                            <div class="group">
+                                <label for="pass" class="label">Email</label>
+                                <input id="pass" type="text" class="input" name="email" value="${email}">
+                            </div>
+                            <div class="group">
+                                <label for="pass" class="label">Số điện thoại</label>
+                                <input id="pass" type="text" class="input" name="phonenumber" value="${phonenumber}">
+                            </div>
+                            <div style="color: #ff9999">${kq}</div><br>
+                            <div class="group">
+                                <input type="submit" class="button" value="Đăng ký">
+                            </div>
+                            
                         </form>
                         <div class="hr"></div>
                         <div class="foot-lnk">
-                            <a href="login_signUp.jsp">Bạn chưa có tài khoản?</a>
+                            <a href="login.jsp">Đăng nhập?</a>
                         </div>
                     </div>
                     <!--đăng kí-->
                     <div class="sign-up-htm">
-                       
+                        
                     </div>
                 </div>
             </div>
