@@ -201,8 +201,8 @@
         <div class="banner-bootom-w3-agileits" >
             <div class="container" style="margin-bottom: 100px" >
                 <button><a href ="list-products">Danh sách sản phẩm<a/></button><br/><br/>
-                <button><a href ="list-category">Danh sách các loại sản phẩm<a/></button><br/><br/>
-                <button><a href ="#">Danh sách các tài khoản đã đăng kí<a/></button><br/><br/>
+<!--                <button><a href ="list-category">Danh sách các loại sản phẩm<a/></button><br/><br/>
+                <button><a href ="#">Danh sách các tài khoản đã đăng kí<a/></button><br/><br/>-->
                 <button><a href ="#">Các đơn đặt hàng<a/></button><br/><br/>
             </div>
         <!-- footer -->

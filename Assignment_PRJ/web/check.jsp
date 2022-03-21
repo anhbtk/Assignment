@@ -333,7 +333,7 @@
                             </thead>
                             <tbody>
                                 <c:forEach items="${cart}" var="c">
-                                <form action="update-quantity">
+                               
                                     <tr>
                                     <input type="hidden" name="productId" value="${c.value.product.id}"/>
                                     <th scope="row"></th>
@@ -343,7 +343,7 @@
                                     <td>${c.value.quantity_cart}</td>
                                     <td> <fmt:formatNumber maxFractionDigits="3" value="${c.value.product.price*c.value.quantity_cart*1000}" type="number"> </fmt:formatNumber></td>
                                     </tr>
-                                </form>
+                                
                             </c:forEach>
                             </tbody>
                         </table>

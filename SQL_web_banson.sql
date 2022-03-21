@@ -77,7 +77,7 @@ insert into Product ( name, category_id, quantity, price, description, imagine, 
 insert into Product ( name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values ( '12 Lavish', 6, 19, 199, N'Đánh nhạt sẽ cho ra màu cam tự nhiên, hệt màu hoa hồng Juliet. Khi chồng nhiều lớp, màu môi sẽ có sắc đất rõ nét, lôi cuốn cực kỳ.', 'https://product.hstatic.net/200000061028/product/1_ce11d28216914216b63dc876ccbc733f_1024x1024.jpg', 'https://salt.tikicdn.com/cache/525x525/ts/product/9a/80/05/03c2283d78d14e80041f012366daae10.jpg', 'https://cf.shopee.vn/file/a969f5323585033a4c3fa135fcf2678d', '2021-07-20');
 insert into Product ( name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date) values ( '13 Curse Reverse', 6, 11, 199, N'Khoảnh khắc kết thúc của cánh hồng úa tàn, màu son chứa đựng niềm yêu thích bị giấu kín. Sức hấp dẫn khơi gợi tinh thần chiếm hữu tột độ.', 'https://product.hstatic.net/200000061028/product/1_ce11d28216914216b63dc876ccbc733f_1024x1024.jpg', 'https://cf.shopee.vn/file/b18b2338d016f13258f0de695c5af0ed', 'https://www.watsons.vn/medias/zoom-side-211843.jpg?context=bWFzdGVyfHNpZGUvem9vbXw1MjIwMjd8aW1hZ2UvanBlZ3xzaWRlL3pvb20vaDg2L2hlZC85MzIyMjY2ODg2MTc0LmpwZ3xhMTBhYTM0OWExN2EwN2FlMGZlY2I4ZWY1OTRiNjI3YzhkZWFmMzc1ODgyOWE4YTM1ZTI1ODhmMGYwZGNiODhj', '2020-08-15');
 
-SELECT * FROM Product ORDER BY RAND(); 
+ 
 
 select * from Product p inner join Categogies c on p.category_id = c.id
 
@@ -143,3 +143,4 @@ create table Orders(
 	phone nvarchar(255) ,
 	address nvarchar(255) ,
 )
+select count(*)from Product p inner join Categogies c on p.category_id = c.id
