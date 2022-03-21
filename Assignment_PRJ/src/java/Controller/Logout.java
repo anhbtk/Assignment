@@ -5,23 +5,19 @@
  */
 package Controller;
 
-import DAO.AccountDAO;
-import model.Account;
 import java.io.IOException;
 import java.io.PrintWriter;
 import javax.servlet.ServletException;
-import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
-import model.Account;
 
 /**
  *
  * @author USER
  */
-public class Login extends HttpServlet {
+public class Logout extends HttpServlet {
 
     /**
      * Processes requests for both HTTP <code>GET</code> and <code>POST</code>
@@ -37,23 +33,9 @@ public class Login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            AccountDAO acc = new AccountDAO();
-            Account a = acc.login(username, password);
-            if(a==null){
-                request.setAttribute("u", username);
-                request.setAttribute("p", password);
-                request.setAttribute("wrong","Tên đăng nhập hoặc mật khẩu của bạn không đúng");
-                request.getRequestDispatcher("login.jsp").forward(request, response);
-            }else{
-                HttpSession session = request.getSession();
-                session.setAttribute("ac", a);
-                response.sendRedirect("home");
-            }
-            
-            
-
+            HttpSession se = request.getSession();
+            se.removeAttribute("ac");
+            response.sendRedirect("home");
         }
     }
 
@@ -83,8 +65,7 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         processRequest(request, response);
-
+        processRequest(request, response);
     }
 
     /**

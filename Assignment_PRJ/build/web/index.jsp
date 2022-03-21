@@ -26,10 +26,16 @@
         <div class="header" id="home">
             <div class="container">
                 <ul>
-                    <li> <a href="login.jsp" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
-                    <li> <a href="login_signUp.jsp" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
-                    <li><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
-                    <li><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
+                    <c:if test="${sessionScope.ac == null}">
+                        <li > <a href="login.jsp" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
+                        <li > <a href="login_signUp.jsp" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
+                        </c:if>
+                    <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
+                    <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
+                        <c:if test="${sessionScope.ac != null}">
+                        <li > <a href="logout" ><i class="fa fa-lock-alt" aria-hidden="true"></i> Đăng xuất </a></li>
+                        <li > <i class="fa fa-lock-alt" aria-hidden="true"></i> Xin chào ${sessionScope.ac.displayname} </li>
+                        </c:if>
                 </ul>
             </div>
         </div>
@@ -135,14 +141,12 @@
                                             </div>
                                         </ul>
                                     </li>
-                                    <!--                                    <li class="menu__item dropdown">
-                                                                            <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-                                                                            <ul class="dropdown-menu agile_short_dropdown">
-                                                                                <li><a href="icons.html">Web Icons</a></li>
-                                                                                <li><a href="typography.html">Typography</a></li>
-                                                                            </ul>
-                                                                        </li>-->
                                     <li class=" menu__item"><a class="menu__link" href="contact.jsp">Liên hệ</a></li>
+                                    <c:if test="${sessionScope.ac.isAdmin != null}">
+                                    <li class="menu__item ">
+                                        <a class="menu__link" href="manager">Quản lý </a>
+                                    </li>
+                                    </c:if>
                                 </ul>
                             </div>
                         </div>

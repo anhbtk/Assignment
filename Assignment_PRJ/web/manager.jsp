@@ -176,130 +176,18 @@
         </div>
         <!-- //banner-top -->
         <!-- Modal1 -->
-        <div class="modal fade" id="myModal" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body modal-body-sub_agile">
-                        <div class="col-md-8 modal_body_left modal_body_left1">
-                            <h3 class="agileinfo_sign">Đăng Nhập <span> Mangosteen</span></h3>
-                            <form action="#" method="post">
-                                <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="Name" required="">
-                                    <label>Tên đăng nhập</label>
-                                    <span></span>
-                                </div>
-                                <div class="styled-input">
-                                    <input type="text" name="Password" required=""> 
-                                    <label>Mật khẩu</label>
-                                    <span></span>
-                                </div> 
-                                <input type="submit" value="Đăng nhập">
-                            </form>
-                            <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
-                                <li><a  class="facebook">
-                                        <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                                        <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                                <li><a  class="twitter"> 
-                                        <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                        <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                                <li><a  class="instagram">
-                                        <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                                        <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                                <li><a class="pinterest">
-                                        <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                                        <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-                            </ul>
-                            <div class="clearfix"></div>
-                            <p><a href="#" data-toggle="modal" data-target="#myModal2" > Bạn không có tài khoản?</a></p>
-
-                        </div>
-                        <div class="col-md-4 modal_body_right modal_body_right1">
-                            <img src="images/log_pic.jpg" alt=" "/>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-                <!-- //Modal content-->
-            </div>
-        </div>
-        <!-- //Modal1 -->
-        <!-- Modal2 -->
-        <div class="modal fade" id="myModal2" tabindex="-1" role="dialog">
-            <div class="modal-dialog">
-                <!-- Modal content-->
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    </div>
-                    <div class="modal-body modal-body-sub_agile">
-                        <div class="col-md-8 modal_body_left modal_body_left1">
-                            <h3 class="agileinfo_sign">Đăng kí <span>Mangosteen</span></h3>
-                            <form action="#" method="post">
-                                <div class="styled-input agile-styled-input-top">
-                                    <input type="text" name="Name" required="">
-                                    <label>Tên Đăng Nhập</label>
-                                    <span></span>
-                                </div>
-                                <div class="styled-input">
-                                    <input type="email" name="Email" required=""> 
-                                    <label>Email</label>
-                                    <span></span>
-                                </div> 
-                                <div class="styled-input">
-                                    <input type="password" name="password" required=""> 
-                                    <label>Mật khẩu</label>
-                                    <span></span>
-                                </div> 
-                                <div class="styled-input">
-                                    <input type="password" name="Confirm Password" required=""> 
-                                    <label>Xác nhận lại mật khẩu</label>
-                                    <span></span>
-                                </div> 
-                                <input type="submit" value="Đăng kí">
-                            </form>
-                            <ul class="social-nav model-3d-0 footer-social w3_agile_social top_agile_third">
-                                <li><a href="#" class="facebook">
-                                        <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                                        <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="twitter"> 
-                                        <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                        <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="instagram">
-                                        <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                                        <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                                <li><a href="#" class="pinterest">
-                                        <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                                        <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-                            </ul>
-                            <div class="clearfix"></div>
-                            <p><a href="#">By clicking register, I agree to your terms</a></p>
-
-                        </div>
-                        <div class="col-md-4 modal_body_right modal_body_right1">
-                            <img src="images/log_pic.jpg" alt=" "/>
-                        </div>
-                        <div class="clearfix"></div>
-                    </div>
-                </div>
-                <!-- //Modal content-->
-            </div>
-        </div>
-        <!-- //Modal2 -->
+        
         <!--/single_page-->
         <!-- /banner_bottom_agile_info -->
         <div class="page-head_agile_info_w3l">
             <div class="container">
-                <h3 style="color: #ac2925">Thanh Toán <span> </span></h3>
+                <h3 style="color: #ac2925">Quản Lý <span> </span></h3>
                 <!--/w3_short-->
                 <div class="services-breadcrumb">
                     <div class="agile_inner_breadcrumb">
                         <ul class="w3_short">
                             <li><a href="home" style="color: #ac2925">Trang chủ</a><i>|</i></li>
-                            <li>Thanh Toán</li>
+                            <li>Quản lý</li>
                         </ul>
                     </div>
                 </div>
@@ -310,120 +198,13 @@
         <!-- banner-bootom-w3-agileits -->
 
         <!--//single_page-->
-        <div class="banner-bootom-w3-agileits">
-            <div class="container"  >
-                <h1>Thanh Toán</h1><br/>
-
-                <div class="row">
-                    <div class="col-md-7" style="border: 1px solid #ccc; border-radius: 5px; padding: 1rem;margin-right: 40px">
-                        <h3 style="text-align: left">Danh sách sản phẩm</h3><br/>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col"></th>
-                                    <th scope="col">Sản Phẩm</th>
-                                    <th scope="col">Tên sản phẩm</th>
-                                    <th scope="col">Giá</th>
-                                    <th scope="col">Số lượng</th>
-                                    <th scope="col">Tổng tiền</th>
-<!--                                    <th scope="col">Xóa</th>-->
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <c:forEach items="${cart}" var="c">
-                                <form action="update-quantity">
-                                    <tr>
-                                    <input type="hidden" name="productId" value="${c.value.product.id}"/>
-                                    <th scope="row"></th>
-                                    <td><img src="${c.value.product.imagine}"style="height: 100px; width: 100px"></td>
-                                    <td>${c.value.product.name}</td>
-                                    <td>${c.value.product.price}.000Đ</td>
-                                    <td>${c.value.quantity_cart}</td>
-                                    <td>${c.value.product.price*c.value.quantity_cart}.000Đ</td>
-                                    
-                                    </tr>
-                                </form>
-                            </c:forEach>
-                            </tbody>
-                        </table>
-
-                    </div>
-                    <div class="col-md-4" style="border: 1px solid #ccc; border-radius: 5px">
-                        <h4 style="text-align: center; padding-top: 10px" ><b>Thông tin nhận hàng</b></h4><br/>
-                        <form action="check" method="POST">
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="phone" class="form-label">Phone</label>
-                                <input type="text" class="form-control" id="phone" name="phone" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="address" class="form-label">Address</label>
-                                <input type="text" class="form-control" id="address" name="address" aria-describedby="emailHelp">
-                            </div>
-                            <div class="mb-3">
-                                <label for="note" class="form-label">Note</label>
-                                <textarea class="form-control" id="note" name="note" rows="3"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary w-100">Submit</button>
-                        </form>
-                    </div>
-
-                </div>
-
-
-                <!--/grids-->
-                <br/><br/><br/>
-                <div class="coupons">
-                    <div class="coupons-grids text-center">
-                        <div class="w3layouts_mail_grid">
-                            <div class="col-md-3 w3layouts_mail_grid_left">
-                                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                                    <i class="fa fa-truck" aria-hidden="true"></i>
-                                </div>
-                                <div class="w3layouts_mail_grid_left2">
-                                    <br>
-                                    <h3>MIỄN PHÍ VẬN CHUYỂN</h3>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 w3layouts_mail_grid_left">
-                                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                                    <i class="fa fa-headphones" aria-hidden="true"></i>
-                                </div>
-                                <div class="w3layouts_mail_grid_left2">
-                                    <br>
-                                    <h3> HỖ TRỢ 24/7 </h3>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 w3layouts_mail_grid_left">
-                                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                                    <i class="fa fa-shopping-bag" aria-hidden="true"></i>
-                                </div>
-                                <div class="w3layouts_mail_grid_left2">
-                                    <br>
-                                    <h3>THANH TOÁN KHI NHẬN HÀNG </h3>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="col-md-3 w3layouts_mail_grid_left">
-                                <div class="w3layouts_mail_grid_left1 hvr-radial-out">
-                                    <i class="fa fa-gift" aria-hidden="true"></i>
-                                </div>
-                                <div class="w3layouts_mail_grid_left2">
-                                    <br>
-                                    <h3>QUÀ TẶNG</h3>
-                                    <p></p>
-                                </div>
-                            </div>
-                            <div class="clearfix"> </div>
-                        </div>
-                    </div>
-                </div> </div> </div>
-        <!--grids-->
+        <div class="banner-bootom-w3-agileits" >
+            <div class="container" style="margin-bottom: 100px" >
+                <button><a href ="list-products">Danh sách sản phẩm<a/></button><br/><br/>
+                <button><a href ="list-category">Danh sách các loại sản phẩm<a/></button><br/><br/>
+                <button><a href ="#">Danh sách các tài khoản đã đăng kí<a/></button><br/><br/>
+                <button><a href ="#">Các đơn đặt hàng<a/></button><br/><br/>
+            </div>
         <!-- footer -->
         <div class="footer">
             <div class="footer_agile_inner_info_w3l">
@@ -673,3 +454,7 @@
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </body>
 </html>
+
+
+
+
