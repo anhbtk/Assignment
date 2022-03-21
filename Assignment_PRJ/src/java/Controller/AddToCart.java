@@ -15,6 +15,7 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import javax.servlet.http.HttpSession;
+import model.Account;
 import model.Cart;
 import model.Product;
 
@@ -34,8 +35,13 @@ public class AddToCart extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            int id = Integer.parseInt(request.getParameter("productID"));
             HttpSession session = request.getSession();
+            Account a = (Account) session.getAttribute("ac");
+            if(a==null){
+                response.sendRedirect("login");
+                return;
+            }
+            int id = Integer.parseInt(request.getParameter("productID"));
             Map<Integer, Cart> cart = (Map<Integer, Cart>) session.getAttribute("cart");
             if (cart == null) {
                 cart = new LinkedHashMap<>();
@@ -47,7 +53,7 @@ public class AddToCart extends HttpServlet {
             } else {
                 int slc = cart.get(id).getQuantity_cart();
                 cart.get(id).setQuantity_cart(slc + 1);
-                
+
             }
             session.setAttribute("cart", cart);
             System.out.println(cart);

@@ -36,6 +36,7 @@ public class ListProduct extends HttpServlet {
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException, Exception {
         response.setContentType("text/html;charset=UTF-8");
+        request.setCharacterEncoding("UTF-8");
         response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {           
             ProductDAO pd = new ProductDAO();
@@ -44,7 +45,7 @@ public class ListProduct extends HttpServlet {
             if (index == null) {
                 index = "1";
             }           
-            ArrayList<Product> lp = pd.pagePerson(Integer.parseInt(index));
+            ArrayList<Product> lp = pd.pageProduct(Integer.parseInt(index));
             if (totalPage % 6 != 0) {
                 totalPage = totalPage / 6 + 1;
             } else {

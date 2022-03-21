@@ -175,10 +175,7 @@
                                 <label for="pass" class="label">Mật khẩu</label>
                                 <input id="pass" type="password" class="input" data-type="password" name="password" value="${p}">
                             </div>
-                            <div class="group">
-                                <input id="check" type="checkbox" class="check" name="rmb">
-                                <label for="check"><span class="icon"></span> Ghi nhớ đăng nhập</label>
-                            </div>
+                            
                             <div style="color: #ff9999">${wrong}</div><br>
 
                             <div class="group">

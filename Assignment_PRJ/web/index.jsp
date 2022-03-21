@@ -1,6 +1,8 @@
 
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <!DOCTYPE html>
 <html>
     <head>
@@ -27,9 +29,9 @@
             <div class="container">
                 <ul>
                     <c:if test="${sessionScope.ac == null}">
-                        <li > <a href="login.jsp" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
-                        <li > <a href="login_signUp.jsp" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
-                        </c:if>
+                        <li > <a href="login" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
+                        <li > <a href="signup" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
+                    </c:if>
                     <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
                     <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
                         <c:if test="${sessionScope.ac != null}">
@@ -95,7 +97,7 @@
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
                                     <li class="active menu__item menu__item--current"><a class="menu__link" href="home">Trang chủ <span class="sr-only">(current)</span></a></li>
-                                    <li class=" menu__item"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="about">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
                                         <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand<span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
@@ -141,8 +143,8 @@
                                             </div>
                                         </ul>
                                     </li>
-                                    <li class=" menu__item"><a class="menu__link" href="contact.jsp">Liên hệ</a></li>
-                                    <c:if test="${sessionScope.ac.isAdmin != null}">
+                                    <li class=" menu__item"><a class="menu__link" href="contact">Liên hệ</a></li>
+                                    <c:if test="${sessionScope.ac.isAdmin == 1}">
                                     <li class="menu__item ">
                                         <a class="menu__link" href="manager">Quản lý </a>
                                     </li>
@@ -493,7 +495,7 @@
                                         <div class="item-info-product ">
                                             <h4><a href="single.jsp">${product.name}</a></h4>
                                             <div class="info-product-price">
-                                                <span class="item_price">${product.price}.000Đ</span>
+                                                <span class="item_price"><fmt:formatNumber maxFractionDigits="3" value="${product.price*1000}" type="number"> </fmt:formatNumber></span>
                                                 <del></del>
                                             </div>
                                             <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
@@ -641,11 +643,10 @@
                             <h4>Các trang <span></span> </h4>
                             <ul>
                                 <li><a href="home">Trang chủ</a></li>
-                                <li><a href="category.jsp">Romand</a></li>
-                                <li><a href="category.jsp">Gilaa</a></li>
-                                <li><a href="about.jsp">Mangosteen</a></li>
+                                <li><a href="shop-now">Sản phẩm</a></li>
+                                <li><a href="about">Mangosteen</a></li>
                                 <!--                                <li><a href="typography.html">Short Codes</a></li>-->
-                                <li><a href="contact.jsp">Liên hệ</a></li>
+                                <li><a href="contact">Liên hệ</a></li>
                             </ul>
                         </div>
 

@@ -29,9 +29,9 @@
             <div class="container">
                 <ul>
                     <c:if test="${sessionScope.ac == null}">
-                        <li > <a href="login.jsp" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
-                        <li > <a href="login_signUp.jsp" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
-                        </c:if>
+                        <li > <a href="login" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
+                        <li > <a href="signup" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
+                    </c:if>
                     <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
                     <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
                         <c:if test="${sessionScope.ac != null}">
@@ -82,7 +82,7 @@
         </div>
         <!-- //header-bot -->
         <!-- banner -->
-         <div class="ban-top">
+        <div class="ban-top">
             <div class="container">
                 <div class="top_nav_left">
                     <nav class="navbar navbar-default">
@@ -100,7 +100,7 @@
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
                                     <li class="active menu__item menu__item--current"><a class="menu__link" href="home">Trang chủ <span class="sr-only">(current)</span></a></li>
-                                    <li class=" menu__item"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="about">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
                                         <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand<span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
@@ -111,9 +111,9 @@
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${sessionScope.listCategoryRomand}" var="R">
-                                                        <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
-                                                        </c:forEach>
-                                                        
+                                                            <li><a href="category-controller?categoryId=${R.categoryId}">${R.categoryName}</a></li><br/>
+                                                            </c:forEach>
+
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
@@ -131,13 +131,13 @@
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">
                                                         <c:forEach items="${sessionScope.listCategoryGilaa}" var="G">
-                                                        <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
-                                                        </c:forEach>
+                                                            <li><a href="category-controller?categoryId=${G.categoryId}">${G.categoryName}</a></li><br/>
+                                                            </c:forEach>
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-3 multi-gd-img">
                                                     <ul class="multi-column-dropdown">                                        
-                                                        
+
                                                     </ul>
                                                 </div>
                                                 <div class="col-sm-6 multi-gd-img multi-gd-text ">
@@ -147,14 +147,14 @@
                                             </div>
                                         </ul>
                                     </li>
-<!--                                    <li class="menu__item dropdown">
-                                        <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
-                                        <ul class="dropdown-menu agile_short_dropdown">
-                                            <li><a href="icons.html">Web Icons</a></li>
-                                            <li><a href="typography.html">Typography</a></li>
-                                        </ul>
-                                    </li>-->
-                                    <li class=" menu__item"><a class="menu__link" href="contact.jsp">Liên hệ</a></li>
+                                    <!--                                    <li class="menu__item dropdown">
+                                                                            <a class="menu__link" href="#" class="dropdown-toggle" data-toggle="dropdown">Short Codes <b class="caret"></b></a>
+                                                                            <ul class="dropdown-menu agile_short_dropdown">
+                                                                                <li><a href="icons.html">Web Icons</a></li>
+                                                                                <li><a href="typography.html">Typography</a></li>
+                                                                            </ul>
+                                                                        </li>-->
+                                    <li class=" menu__item"><a class="menu__link" href="contact">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -341,208 +341,208 @@
             </div> 
         </div>
         <!-- team -->
-<!--        <div class="banner_bottom_agile_info team">
-            <div class="container">
-                <h3 class="wthree_text_info">Our Team <span>Members</span></h3>
-                <div class="inner_w3l_agile_grids">
-                    <div class="col-md-3 team-grids">
-                        <div class="thumbnail team-w3agile">
-                            <img src="images/t1.jpg" class="img-responsive" alt="">
-                            <div class="social-icons team-icons right-w3l fotw33">
-                                <div class="caption">
-                                    <h4>Joanna Vilken</h4>
-                                    <p>Add Short Description</p>						
+        <!--        <div class="banner_bottom_agile_info team">
+                    <div class="container">
+                        <h3 class="wthree_text_info">Our Team <span>Members</span></h3>
+                        <div class="inner_w3l_agile_grids">
+                            <div class="col-md-3 team-grids">
+                                <div class="thumbnail team-w3agile">
+                                    <img src="images/t1.jpg" class="img-responsive" alt="">
+                                    <div class="social-icons team-icons right-w3l fotw33">
+                                        <div class="caption">
+                                            <h4>Joanna Vilken</h4>
+                                            <p>Add Short Description</p>						
+                                        </div>
+                                        <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
+                                            <li><a href="#" class="facebook">
+                                                    <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="twitter"> 
+                                                    <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="instagram">
+                                                    <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="pinterest">
+                                                    <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                        </ul>
+                                    </div>
                                 </div>
-                                <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-                                    <li><a href="#" class="facebook">
-                                            <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="twitter"> 
-                                            <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="instagram">
-                                            <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="pinterest">
-                                            <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-                                </ul>
                             </div>
+                            <div class="col-md-3 team-grids">
+                                <div class="thumbnail team-w3agile">
+                                    <img src="images/t2.jpg" class="img-responsive" alt="">
+                                    <div class="social-icons team-icons right-w3l fotw33">
+                                        <div class="caption">
+                                            <h4>Anika Mollik</h4>
+                                            <p>Add Short Description</p>						
+                                        </div>
+                                        <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
+                                            <li><a href="#" class="facebook">
+                                                    <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="twitter"> 
+                                                    <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="instagram">
+                                                    <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="pinterest">
+                                                    <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 team-grids">
+                                <div class="thumbnail team-w3agile">
+                                    <img src="images/t3.jpg" class="img-responsive" alt="">
+                                    <div class="social-icons team-icons right-w3l fotw33">
+                                        <div class="caption">
+                                            <h4>Megali Deo</h4>
+                                            <p>Add Short Description</p>						
+                                        </div>
+                                        <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
+                                            <li><a href="#" class="facebook">
+                                                    <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="twitter"> 
+                                                    <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="instagram">
+                                                    <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="pinterest">
+                                                    <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-3 team-grids">
+                                <div class="thumbnail team-w3agile">
+                                    <img src="images/t4.jpg" class="img-responsive" alt="">
+                                    <div class="social-icons team-icons right-w3l fotw33">
+                                        <div class="caption">
+                                            <h4>Retas Word</h4>
+                                            <p>Add Short Description</p>						
+                                        </div>
+                                        <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
+                                            <li><a href="#" class="facebook">
+                                                    <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="twitter"> 
+                                                    <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="instagram">
+                                                    <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
+                                            <li><a href="#" class="pinterest">
+                                                    <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
+                                                    <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="clearfix"> </div>
                         </div>
                     </div>
-                    <div class="col-md-3 team-grids">
-                        <div class="thumbnail team-w3agile">
-                            <img src="images/t2.jpg" class="img-responsive" alt="">
-                            <div class="social-icons team-icons right-w3l fotw33">
-                                <div class="caption">
-                                    <h4>Anika Mollik</h4>
-                                    <p>Add Short Description</p>						
-                                </div>
-                                <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-                                    <li><a href="#" class="facebook">
-                                            <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="twitter"> 
-                                            <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="instagram">
-                                            <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="pinterest">
-                                            <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 team-grids">
-                        <div class="thumbnail team-w3agile">
-                            <img src="images/t3.jpg" class="img-responsive" alt="">
-                            <div class="social-icons team-icons right-w3l fotw33">
-                                <div class="caption">
-                                    <h4>Megali Deo</h4>
-                                    <p>Add Short Description</p>						
-                                </div>
-                                <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-                                    <li><a href="#" class="facebook">
-                                            <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="twitter"> 
-                                            <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="instagram">
-                                            <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="pinterest">
-                                            <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-md-3 team-grids">
-                        <div class="thumbnail team-w3agile">
-                            <img src="images/t4.jpg" class="img-responsive" alt="">
-                            <div class="social-icons team-icons right-w3l fotw33">
-                                <div class="caption">
-                                    <h4>Retas Word</h4>
-                                    <p>Add Short Description</p>						
-                                </div>
-                                <ul class="social-nav model-3d-0 footer-social w3_agile_social two">
-                                    <li><a href="#" class="facebook">
-                                            <div class="front"><i class="fa fa-facebook" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-facebook" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="twitter"> 
-                                            <div class="front"><i class="fa fa-twitter" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-twitter" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="instagram">
-                                            <div class="front"><i class="fa fa-instagram" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-instagram" aria-hidden="true"></i></div></a></li>
-                                    <li><a href="#" class="pinterest">
-                                            <div class="front"><i class="fa fa-linkedin" aria-hidden="true"></i></div>
-                                            <div class="back"><i class="fa fa-linkedin" aria-hidden="true"></i></div></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="clearfix"> </div>
-                </div>
-            </div>
-        </div>-->
+                </div>-->
         <!-- //team -->
 
         <!-- schedule-bottom -->
-<!--        <div class="schedule-bottom">
-            <div class="col-md-6 agileinfo_schedule_bottom_left">
-                <img src="images/mid.jpg" alt=" " class="img-responsive" />
-            </div>
-            <div class="col-md-6 agileits_schedule_bottom_right">
-                <div class="w3ls_schedule_bottom_right_grid">
-                    <h3>Save up to <span>50%</span> in this week</h3>
-                    <p>Suspendisse varius turpis efficitur erat laoreet dapibus. 
-                        Mauris sollicitudin scelerisque commodo.Nunc dapibus mauris sed metus finibus posuere.</p>
-                    <div class="col-md-4 w3l_schedule_bottom_right_grid1">
-                        <i class="fa fa-user-o" aria-hidden="true"></i>
-                        <h4>Customers</h4>
-                        <h5 class="counter">653</h5>
+        <!--        <div class="schedule-bottom">
+                    <div class="col-md-6 agileinfo_schedule_bottom_left">
+                        <img src="images/mid.jpg" alt=" " class="img-responsive" />
                     </div>
-                    <div class="col-md-4 w3l_schedule_bottom_right_grid1">
-                        <i class="fa fa-calendar-o" aria-hidden="true"></i>
-                        <h4>Events</h4>
-                        <h5 class="counter">823</h5>
-                    </div>
-                    <div class="col-md-4 w3l_schedule_bottom_right_grid1">
-                        <i class="fa fa-shield" aria-hidden="true"></i>
-                        <h4>Awards</h4>
-                        <h5 class="counter">45</h5>
+                    <div class="col-md-6 agileits_schedule_bottom_right">
+                        <div class="w3ls_schedule_bottom_right_grid">
+                            <h3>Save up to <span>50%</span> in this week</h3>
+                            <p>Suspendisse varius turpis efficitur erat laoreet dapibus. 
+                                Mauris sollicitudin scelerisque commodo.Nunc dapibus mauris sed metus finibus posuere.</p>
+                            <div class="col-md-4 w3l_schedule_bottom_right_grid1">
+                                <i class="fa fa-user-o" aria-hidden="true"></i>
+                                <h4>Customers</h4>
+                                <h5 class="counter">653</h5>
+                            </div>
+                            <div class="col-md-4 w3l_schedule_bottom_right_grid1">
+                                <i class="fa fa-calendar-o" aria-hidden="true"></i>
+                                <h4>Events</h4>
+                                <h5 class="counter">823</h5>
+                            </div>
+                            <div class="col-md-4 w3l_schedule_bottom_right_grid1">
+                                <i class="fa fa-shield" aria-hidden="true"></i>
+                                <h4>Awards</h4>
+                                <h5 class="counter">45</h5>
+                            </div>
+                            <div class="clearfix"> </div>
+                        </div>
                     </div>
                     <div class="clearfix"> </div>
-                </div>
-            </div>
-            <div class="clearfix"> </div>
-        </div>-->
+                </div>-->
         <!-- //schedule-bottom -->
         <!-- banner-bootom-w3-agileits -->
-<!--        <div class="banner-bootom-w3-agileits">
-            <div class="container">
-                <h3 class="wthree_text_info">What's <span>Trending</span></h3>
-
-                <div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
-                    <a href="women.html">
-                        <div class="bb-left-agileits-w3layouts-inner grid">
-                            <figure class="effect-roxy">
-                                <img src="images/bb1.jpg" alt=" " class="img-responsive" />
-                                <figcaption>
-                                    <h3><span>S</span>ale </h3>
-                                    <p>Upto 55%</p>
-                                </figcaption>			
-                            </figure>
+        <!--        <div class="banner-bootom-w3-agileits">
+                    <div class="container">
+                        <h3 class="wthree_text_info">What's <span>Trending</span></h3>
+        
+                        <div class="col-md-5 bb-grids bb-left-agileits-w3layouts">
+                            <a href="women.html">
+                                <div class="bb-left-agileits-w3layouts-inner grid">
+                                    <figure class="effect-roxy">
+                                        <img src="images/bb1.jpg" alt=" " class="img-responsive" />
+                                        <figcaption>
+                                            <h3><span>S</span>ale </h3>
+                                            <p>Upto 55%</p>
+                                        </figcaption>			
+                                    </figure>
+                                </div>
+                            </a>
                         </div>
-                    </a>
-                </div>
-                <div class="col-md-7 bb-grids bb-middle-agileits-w3layouts">
-                    <div class="bb-middle-agileits-w3layouts grid">
-                        <figure class="effect-roxy">
-                            <img src="images/bottom3.jpg" alt=" " class="img-responsive" />
-                            <figcaption>
-                                <h3><span>S</span>ale </h3>
-                                <p>Upto 55%</p>
-                            </figcaption>			
-                        </figure>
+                        <div class="col-md-7 bb-grids bb-middle-agileits-w3layouts">
+                            <div class="bb-middle-agileits-w3layouts grid">
+                                <figure class="effect-roxy">
+                                    <img src="images/bottom3.jpg" alt=" " class="img-responsive" />
+                                    <figcaption>
+                                        <h3><span>S</span>ale </h3>
+                                        <p>Upto 55%</p>
+                                    </figcaption>			
+                                </figure>
+                            </div>
+                            <div class="bb-middle-agileits-w3layouts forth grid">
+                                <figure class="effect-roxy">
+                                    <img src="images/bottom4.jpg" alt=" " class="img-responsive">
+                                    <figcaption>
+                                        <h3><span>S</span>ale </h3>
+                                        <p>Upto 65%</p>
+                                    </figcaption>		
+                                </figure>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
                     </div>
-                    <div class="bb-middle-agileits-w3layouts forth grid">
-                        <figure class="effect-roxy">
-                            <img src="images/bottom4.jpg" alt=" " class="img-responsive">
-                            <figcaption>
-                                <h3><span>S</span>ale </h3>
-                                <p>Upto 65%</p>
-                            </figcaption>		
-                        </figure>
+                </div>-->
+        <!--/grids-->
+        <!--        <div class="agile_last_double_sectionw3ls">
+                    <div class="col-md-6 multi-gd-img multi-gd-text ">
+                        <a href="gilaa.jsp"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
+        
+                    </div>
+                    <div class="col-md-6 multi-gd-img multi-gd-text ">
+                        <a href="gilaa.jsp"><img src="images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
                     </div>
                     <div class="clearfix"></div>
-                </div>
-            </div>
-        </div>-->
-        <!--/grids-->
-<!--        <div class="agile_last_double_sectionw3ls">
-            <div class="col-md-6 multi-gd-img multi-gd-text ">
-                <a href="gilaa.jsp"><img src="images/bot_1.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
-
-            </div>
-            <div class="col-md-6 multi-gd-img multi-gd-text ">
-                <a href="gilaa.jsp"><img src="images/bot_2.jpg" alt=" "><h4>Flat <span>50%</span> offer</h4></a>
-            </div>
-            <div class="clearfix"></div>
-        </div>							-->
+                </div>							-->
         <!--/grids-->
         <!-- /we-offer -->
-<!--        <div class="sale-w3ls">
-            <div class="container">
-                <h6>We Offer Flat <span>40%</span> Discount</h6>
-
-                <a class="hvr-outline-out button2" href="single.jsp">Shop Now </a>
-            </div>
-        </div>-->
+        <!--        <div class="sale-w3ls">
+                    <div class="container">
+                        <h6>We Offer Flat <span>40%</span> Discount</h6>
+        
+                        <a class="hvr-outline-out button2" href="single.jsp">Shop Now </a>
+                    </div>
+                </div>-->
         <!-- //we-offer -->
         <!--/grids-->
         <div class="coupons">
@@ -623,11 +623,10 @@
                             <h4>Các trang <span></span> </h4>
                             <ul>
                                 li><a href="home">Trang Chủ</a></li>
-                                <li><a href="romand.jsp">Romand</a></li>
-                                <li><a href="gilaa.jsp">Gilaa</a></li>
-                                <li><a href="about.jsp">Mangosteen</a></li>
-<!--                                <li><a href="typography.html">Short Codes</a></li>-->
-                                <li><a href="contact.jsp">Liên Hệ</a></li>
+                                <li><a href="shop-now">Sản phẩm</a></li>
+                                <li><a href="about">Mangosteen</a></li>
+                                <!--                                <li><a href="typography.html">Short Codes</a></li>-->
+                                <li><a href="contact">Liên Hệ</a></li>
                             </ul>
                         </div>
 
@@ -675,11 +674,11 @@
                 </div>
                 <div class="clearfix"></div>
                 <div class="agile_newsletter_footer">
-                    
+
 
                     <div class="clearfix"></div>
                 </div>
-<!--                <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>-->
+                <!--                <p class="copy-right">&copy 2017 Elite shoppy. All rights reserved | Design by <a href="http://w3layouts.com/">W3layouts</a></p>-->
             </div>
         </div>
         <!-- //footer -->

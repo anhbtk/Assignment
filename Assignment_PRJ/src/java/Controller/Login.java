@@ -37,22 +37,6 @@ public class Login extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String username = request.getParameter("username");
-            String password = request.getParameter("password");
-            AccountDAO acc = new AccountDAO();
-            Account a = acc.login(username, password);
-            if(a==null){
-                request.setAttribute("u", username);
-                request.setAttribute("p", password);
-                request.setAttribute("wrong","Tên đăng nhập hoặc mật khẩu của bạn không đúng");
-                request.getRequestDispatcher("login.jsp").forward(request, response);
-            }else{
-                HttpSession session = request.getSession();
-                session.setAttribute("ac", a);
-                response.sendRedirect("home");
-            }
-            
-            
 
         }
     }
@@ -69,7 +53,8 @@ public class Login extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        request.getRequestDispatcher("login.jsp").forward(request, response);
     }
 
     /**
@@ -83,7 +68,26 @@ public class Login extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-         processRequest(request, response);
+        // processRequest(request, response);
+        String username = request.getParameter("username");
+        String password = request.getParameter("password");
+        AccountDAO acc = new AccountDAO();
+        Account a = acc.login(username, password);
+        if (a == null) {
+            request.setAttribute("u", username);
+            request.setAttribute("p", password);
+            request.setAttribute("wrong", "Tên đăng nhập hoặc mật khẩu của bạn không đúng");
+            request.getRequestDispatcher("login.jsp").forward(request, response);
+        } else {
+            HttpSession session = request.getSession();
+            session.setAttribute("ac", a);
+            session.setMaxInactiveInterval(60*60*24*30);
+            String url = (String) session.getAttribute("url");
+            if (url == null) {
+                url = "home";
+            }
+            response.sendRedirect(url);
+        }
 
     }
 

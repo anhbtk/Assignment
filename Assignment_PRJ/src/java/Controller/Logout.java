@@ -35,6 +35,7 @@ public class Logout extends HttpServlet {
             /* TODO output your page here. You may use following sample code. */
             HttpSession se = request.getSession();
             se.removeAttribute("ac");
+            se.removeAttribute("cart");
             response.sendRedirect("home");
         }
     }

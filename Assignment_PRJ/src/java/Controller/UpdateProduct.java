@@ -37,7 +37,7 @@ public class UpdateProduct extends HttpServlet {
         response.setCharacterEncoding("UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            
+
         }
     }
 
@@ -53,13 +53,13 @@ public class UpdateProduct extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-       // processRequest(request, response);
-       int id = Integer.parseInt(request.getParameter("id"));
-       Product p = new ProductDAO().getProductById(id);
-       List<Category> listC = new ProductDAO().getAllCategory();
-       request.setAttribute("listC", listC);
-       request.setAttribute("product", p);
-       request.getRequestDispatcher("updateProduct.jsp").forward(request, response);
+        // processRequest(request, response);
+        int id = Integer.parseInt(request.getParameter("id"));
+        Product p = new ProductDAO().getProductById(id);
+        List<Category> listC = new ProductDAO().getAllCategory();
+        request.setAttribute("listC", listC);
+        request.setAttribute("product", p);
+        request.getRequestDispatcher("updateProduct.jsp").forward(request, response);
     }
 
     /**
@@ -74,6 +74,9 @@ public class UpdateProduct extends HttpServlet {
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         //processRequest(request, response);
+        request.setCharacterEncoding("UTF-8");
+        response.setCharacterEncoding("UTF-8");
+
         int id = Integer.parseInt(request.getParameter("id"));
         String name = request.getParameter("name");
         int category_id = Integer.parseInt(request.getParameter("category_id"));
@@ -84,8 +87,8 @@ public class UpdateProduct extends HttpServlet {
         String imagine2 = request.getParameter("imagine2");
         String imagine3 = request.getParameter("imagine3");
         String created_date = request.getParameter("created_date");
-        
-        Product p = new Product(id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date,"");
+
+        Product p = new Product(id, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date, "");
         new ProductDAO().update(p);
         response.sendRedirect("list-products");
     }

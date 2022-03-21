@@ -34,42 +34,9 @@ public class SignUp extends HttpServlet {
         response.setContentType("text/html;charset=UTF-8");
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
-            String user = request.getParameter("user");
-            String pass = request.getParameter("pass");
-            String rePass = request.getParameter("repass");
-            String displayName = request.getParameter("displayname");
-            String email = request.getParameter("email");
-            String phoneNumber = request.getParameter("phonenumber");
 
-            if (!pass.equals(rePass)) {
-                
-                request.setAttribute("user", user);
-                request.setAttribute("pass", pass);
-                request.setAttribute("repass", rePass);
-                request.setAttribute("displayname", displayName);
-                request.setAttribute("email", email);
-                request.setAttribute("phonenumber", phoneNumber);
-                request.setAttribute("kq", "Đăng kí tài khoản thất bại");
-                request.getRequestDispatcher("login_signUp.jsp").forward(request, response);
-            } else {
-                AccountDAO dao = new AccountDAO();
-                Account a = dao.checkUser(user);
-                if (a == null) {
-                    AccountDAO.signUp(user, pass, displayName, email, phoneNumber);
-                    response.sendRedirect("login.jsp");
-                } else {
-                    request.setAttribute("user", user);
-                    request.setAttribute("pass", pass);
-                    request.setAttribute("repass", rePass);
-                    request.setAttribute("displayname", displayName);
-                    request.setAttribute("email", email);
-                    request.setAttribute("phonenumber", phoneNumber);
-                    request.setAttribute("kq", "Đăng kí tài khoản thất bại");
-                    request.getRequestDispatcher("login_signUp.jsp").forward(request, response);
-                }
-
-            }
         }
+
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
@@ -84,7 +51,8 @@ public class SignUp extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        request.getRequestDispatcher("login_signUp.jsp").forward(request, response);
     }
 
     /**
@@ -98,7 +66,42 @@ public class SignUp extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        processRequest(request, response);
+        //processRequest(request, response);
+        String user = request.getParameter("user");
+        String pass = request.getParameter("pass");
+        String rePass = request.getParameter("repass");
+        String displayName = request.getParameter("displayname");
+        String email = request.getParameter("email");
+        String phoneNumber = request.getParameter("phonenumber");
+
+        if (!pass.equals(rePass)) {
+
+            request.setAttribute("user", user);
+            request.setAttribute("pass", pass);
+            request.setAttribute("repass", rePass);
+            request.setAttribute("displayname", displayName);
+            request.setAttribute("email", email);
+            request.setAttribute("phonenumber", phoneNumber);
+            request.setAttribute("kq", "Đăng kí tài khoản thất bại");
+            request.getRequestDispatcher("login_signUp.jsp").forward(request, response);
+        } else {
+            AccountDAO dao = new AccountDAO();
+            Account a = dao.checkUser(user);
+            if (a == null) {
+                AccountDAO.signUp(user, pass, displayName, email, phoneNumber);
+                response.sendRedirect("login.jsp");
+            } else {
+                request.setAttribute("user", user);
+                request.setAttribute("pass", pass);
+                request.setAttribute("repass", rePass);
+                request.setAttribute("displayname", displayName);
+                request.setAttribute("email", email);
+                request.setAttribute("phonenumber", phoneNumber);
+                request.setAttribute("kq", "Đăng kí tài khoản thất bại");
+                request.getRequestDispatcher("login_signUp.jsp").forward(request, response);
+            }
+        }
+
     }
 
     /**

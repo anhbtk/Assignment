@@ -84,6 +84,14 @@
         <servlet-name>Manager</servlet-name>
         <servlet-class>Controller.Manager</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>About</servlet-name>
+        <servlet-class>Controller.About</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>Contact</servlet-name>
+        <servlet-class>Controller.Contact</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListProduct</servlet-name>
         <url-pattern>/list-products</url-pattern>
@@ -167,6 +175,14 @@
     <servlet-mapping>
         <servlet-name>Manager</servlet-name>
         <url-pattern>/manager</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>About</servlet-name>
+        <url-pattern>/about</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Contact</servlet-name>
+        <url-pattern>/contact</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

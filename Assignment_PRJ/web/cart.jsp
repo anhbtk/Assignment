@@ -3,6 +3,8 @@
 <%@page import="java.util.Map"%>
 <%@page import="model.Cart"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
+
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <!DOCTYPE html>
@@ -34,8 +36,8 @@
             <div class="container">
                 <ul>
                     <c:if test="${sessionScope.ac == null}">
-                        <li > <a href="login.jsp" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
-                        <li > <a href="login_signUp.jsp" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
+                        <li > <a href="login" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
+                        <li > <a href="signup" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
                         </c:if>
                     <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
                     <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
@@ -105,7 +107,7 @@
                             <div class="collapse navbar-collapse menu--shylock" id="bs-example-navbar-collapse-1">
                                 <ul class="nav navbar-nav menu__list">
                                     <li class="active menu__item menu__item--current"><a class="menu__link" href="home">Trang chủ <span class="sr-only">(current)</span></a></li>
-                                    <li class=" menu__item"><a class="menu__link" href="about.jsp">Mangosteen</a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="about">Mangosteen</a></li>
                                     <li class="dropdown menu__item">
                                         <a href="#" class="dropdown-toggle menu__link" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Romand<span class="caret"></span></a>
                                         <ul class="dropdown-menu multi-column columns-3">
@@ -157,7 +159,7 @@
                                                                                 <li><a href="typography.html">Typography</a></li>
                                                                             </ul>
                                                                         </li>-->
-                                    <li class=" menu__item"><a class="menu__link" href="contact.jsp">Liên hệ</a></li>
+                                    <li class=" menu__item"><a class="menu__link" href="contact">Liên hệ</a></li>
                                 </ul>
                             </div>
                         </div>
@@ -331,23 +333,27 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <c:set var="count" value="0"/>
                                 <c:forEach items="${cart}" var="c">
+                                    <c:set var="count" value="${count+c.value.product.price*c.value.quantity_cart}"/>
                                 <form action="update-quantity">
                                     <tr>
                                     <input type="hidden" name="productId" value="${c.value.product.id}"/>
                                     <th scope="row"></th>
                                     <td><a href="detail?productID=${c.value.product.id}"><img src="${c.value.product.imagine}"style="height: 100px; width: 100px"></a></td>
                                     <td>${c.value.product.name}</td>
-                                    <td>${c.value.product.price}.000Đ</td>
+                                    <td><fmt:formatNumber maxFractionDigits="3" value="${c.value.product.price*1000}" type="number"> </fmt:formatNumber></td>
                                     <td><input onchange="this.form.submit()" type="number" name="quantity" value="${c.value.quantity_cart}"/></td>
-                                    <td>${c.value.product.price*c.value.quantity_cart}.000Đ</td>
+                                    <td><fmt:formatNumber maxFractionDigits="3" value="${c.value.product.price*c.value.quantity_cart*1000}" type="number"> </fmt:formatNumber></td>
                                     <td><button><a href ="delete-cart?productId=${c.value.product.id}">Delete<a/></button></td>
                                     </tr>
                                 </form>
                             </c:forEach>
                             </tbody>
                         </table>
-                        <!--                        <h3>Tổng Thanh Toán</h3>-->
+                                
+                                <h3 style="text-align: center">Tổng Thanh Toán: <fmt:formatNumber maxFractionDigits="3" value="${count*1000}" type="number"> </fmt:formatNumber></h3><br/><br/><br/>
+                                <c:set var="count" value="${count}" scope="session"/>
                         <div style="text-align: center"><a  href="check" class="btn btn-success w-25">Check out</a></div>
                     </c:otherwise>
                 </c:choose>
@@ -430,11 +436,10 @@
                             <h4>Các trang <span></span> </h4>
                             <ul>
                                 <li><a href="home">Trang chủ</a></li>
-                                <li><a href="category.jsp">Romand</a></li>
-                                <li><a href="category.jsp">Gilaa</a></li>
-                                <li><a href="about.jsp">Mangosteen</a></li>
+                                <li><a href="shop-now">Sản phẩm</a></li>
+                                <li><a href="about">Mangosteen</a></li>
                                 <!--                                <li><a href="typography.html">Short Codes</a></li>-->
-                                <li><a href="contact.jsp">Liên hệ</a></li>
+                                <li><a href="contact">Liên hệ</a></li>
                             </ul>
                         </div>
 
