@@ -34,7 +34,7 @@ public class ProductDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12));
+                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(13), rs.getBoolean(11));
                 list.add(p);
             }
         } catch (Exception ex) {
@@ -53,7 +53,7 @@ public class ProductDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12));
+                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(13), rs.getBoolean(11));
                 list.add(p);
             }
         } catch (Exception ex) {
@@ -72,7 +72,7 @@ public class ProductDAO {
             PreparedStatement ps = conn.prepareStatement(sql);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12));
+                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(13), rs.getBoolean(11));
                 list.add(p);
             }
         } catch (Exception ex) {
@@ -93,9 +93,10 @@ public class ProductDAO {
                     + "           ,[imagine]\n"
                     + "           ,[imagine2]\n"
                     + "           ,[imagine3]\n"
-                    + "           ,[created_date])\n"
+                    + "           ,[created_date]\n"
+                    + "           ,[status])\n"
                     + "     VALUES\n"
-                    + "           (?,?,?,?,?,?,?,?,?)";
+                    + "           (?,?,?,?,?,?,?,?,?,?)";
             Connection conn = new BaseDAO().getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
 
@@ -108,6 +109,7 @@ public class ProductDAO {
             ps.setString(7, p.getImagine2());
             ps.setString(8, p.getImagine3());
             ps.setString(9, p.getCreated_date());
+            ps.setBoolean(10, p.isStatus());
 
             ps.executeUpdate();
 
@@ -118,7 +120,7 @@ public class ProductDAO {
     }
 
     public int delete(int id) {
-        int k=0;
+        int k = 0;
         try {
             String sql = "DELETE FROM [Web_banson].[dbo].[Product]\n"
                     + "      WHERE id = ?";
@@ -144,7 +146,7 @@ public class ProductDAO {
             ps.setInt(1, id);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12), rs.getString(13));
+                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(13), rs.getString(14));
                 return p;
             }
         } catch (Exception ex) {
@@ -166,6 +168,7 @@ public class ProductDAO {
                     + "      ,[imagine2] = ?\n"
                     + "      ,[imagine3] = ?\n"
                     + "      ,[created_date] = ?\n"
+                    + "      ,[status] = ?\n"
                     + " WHERE id = ?";
             Connection conn = new BaseDAO().getConnection();
             PreparedStatement ps = conn.prepareStatement(sql);
@@ -179,7 +182,8 @@ public class ProductDAO {
             ps.setString(7, p.getImagine2());
             ps.setString(8, p.getImagine3());
             ps.setString(9, p.getCreated_date());
-            ps.setInt(10, p.getId());
+            ps.setBoolean(10, p.isStatus());
+            ps.setInt(11, p.getId());
 
             ps.executeUpdate();
 
@@ -216,7 +220,7 @@ public class ProductDAO {
             ps.setInt(1, categoryId);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12));
+                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(13), rs.getBoolean(11));
                 list.add(p);
             }
         } catch (Exception ex) {
@@ -234,7 +238,7 @@ public class ProductDAO {
             ps.setString(1, "%" + keyword + "%");
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12));
+                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(13), rs.getBoolean(11));
                 list.add(p);
             }
         } catch (Exception ex) {
@@ -270,7 +274,7 @@ public class ProductDAO {
             ps.setInt(1, (pageIndex - 1) * 6);
             ResultSet rs = ps.executeQuery();
             while (rs.next()) {
-                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(12));
+                Product p = new Product(rs.getInt(1), rs.getString(2), rs.getInt(3), rs.getInt(4), rs.getInt(5), rs.getString(6), rs.getString(7), rs.getString(8), rs.getString(9), rs.getString(10), rs.getString(13), rs.getBoolean(11));
                 lp.add(p);
             }
         } catch (SQLException e) {

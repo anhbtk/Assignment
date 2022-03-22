@@ -81,9 +81,15 @@ public class CreateProduct extends HttpServlet {
         String imagine = request.getParameter("imagine");
         String imagine2 = request.getParameter("imagine2");
         String imagine3 = request.getParameter("imagine3");
-        String created_date = request.getParameter("created_date");
-
-        Product p = new Product(0, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date,"");
+        String created_date = request.getParameter("created-date");
+        String status = request.getParameter("status");
+        boolean b = true;
+        if(status.equals("1")){
+            b = true;
+        }else{
+            b = false;
+        }
+        Product p = new Product(0, name, category_id, quantity, price, description, imagine, imagine2, imagine3, created_date,"",b);
         ProductDAO.create(p);
         response.sendRedirect("list-products");
 

@@ -14,10 +14,12 @@ public class Product {
     String created_date;
     String category_name;
     String category_description;
-
+    boolean status;
+             
     public Product() {
     }
 
+    
     public Product(int id, String name, int category_id, int quantity, int price, String description, String imagine, String imagine2, String imagine3, String created_date, String category_name, String category_description) {
         this.id = id;
         this.name = name;
@@ -34,8 +36,7 @@ public class Product {
     }
 
     
-    
-    public Product(int id, String name, int category_id, int quantity, int price, String description, String imagine, String imagine2, String imagine3, String created_date, String category_name) {
+    public Product(int id, String name, int category_id, int quantity, int price, String description, String imagine, String imagine2, String imagine3, String created_date, String category_name, boolean status) {
         this.id = id;
         this.name = name;
         this.category_id = category_id;
@@ -47,6 +48,7 @@ public class Product {
         this.imagine3 = imagine3;
         this.created_date = created_date;
         this.category_name = category_name;
+        this.status = status;
     }
 
     public int getId() {
@@ -144,6 +146,15 @@ public class Product {
     public void setCategory_description(String category_description) {
         this.category_description = category_description;
     }
+
+    public boolean isStatus() {
+        return status;
+    }
+
+    public void setStatus(boolean status) {
+        this.status = status;
+    }
+    
 
     @Override
     public String toString() {

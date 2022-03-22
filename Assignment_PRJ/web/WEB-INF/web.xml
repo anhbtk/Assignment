@@ -92,6 +92,10 @@
         <servlet-name>Contact</servlet-name>
         <servlet-class>Controller.Contact</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>Status</servlet-name>
+        <servlet-class>Controller.Status</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ListProduct</servlet-name>
         <url-pattern>/list-products</url-pattern>
@@ -183,6 +187,10 @@
     <servlet-mapping>
         <servlet-name>Contact</servlet-name>
         <url-pattern>/contact</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Status</servlet-name>
+        <url-pattern>/status</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>

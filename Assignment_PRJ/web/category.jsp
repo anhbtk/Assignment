@@ -1,5 +1,4 @@
 
-
 <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
@@ -30,16 +29,16 @@
         <div class="header" id="home">
             <div class="container">
                 <ul>
+                    <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
+                    <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
+                    <c:if test="${sessionScope.ac != null}">
+                        <li > <a href="logout" ><i class="fa fa-lock-alt" aria-hidden="true"></i> Đăng xuất </a></li>
+                        <li > <i class="fa fa-lock-alt" aria-hidden="true"></i> Xin chào ${sessionScope.ac.displayname} </li>
+                    </c:if>
                     <c:if test="${sessionScope.ac == null}">
                         <li > <a href="login" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
                         <li > <a href="signup" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
                     </c:if>
-                    <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
-                    <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
-                        <c:if test="${sessionScope.ac != null}">
-                        <li > <a href="logout" ><i class="fa fa-lock-alt" aria-hidden="true"></i> Đăng xuất </a></li>
-                        <li > <i class="fa fa-lock-alt" aria-hidden="true"></i> Xin chào ${sessionScope.ac.displayname} </li>
-                        </c:if>
                 </ul>
             </div>
         </div>
@@ -368,7 +367,7 @@
                         <div class="sorting">
                             <h6>Showing</h6>
                             <select id="country2" onchange="change_country(this.value)" class="frm-field required sect">
-                                <option value="null">7</option>
+                                <option value="null">6</option>
                                 <option value="null">14</option> 
                                 <option value="null">28</option>					
                                 <option value="null">35</option>								
@@ -725,7 +724,6 @@
                                                 paypal.minicart.render({
                                                     action: '#'
                                                 });
-
                                                 if (~window.location.search.indexOf('reset=true')) {
                                                     paypal.minicart.reset();
                                                 }
@@ -745,9 +743,7 @@
                     }
                 });
                 $("#amount").val("$" + $("#slider-range").slider("values", 0) + " - $" + $("#slider-range").slider("values", 1));
-
             });//]]>  
-
         </script>
         <script type="text/javascript" src="js/jquery-ui.js"></script>
         <!---->
@@ -773,9 +769,7 @@
                  easingType: 'linear' 
                  };
                  */
-
                 $().UItoTop({easingType: 'easeOutQuart'});
-
             });
         </script>
         <!-- //here ends scrolling icon -->
@@ -784,4 +778,3 @@
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </body>
 </html>
-

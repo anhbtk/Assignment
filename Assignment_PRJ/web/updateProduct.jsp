@@ -57,6 +57,17 @@
                     <td><input type="date" name="created_date" value="${product.created_date}" /></td>
                 </tr>
                 <tr>
+                    <td>Status:</td>
+                    <c:if test="${product.status == true}">
+                    <td><input type="radio" name="status" value="0" />Disable
+                        <input type="radio" name="status" checked value="1" />Enable</td>
+                    </c:if>
+                    <c:if test="${product.status == false}">
+                    <td><input type="radio" name="status" checked value="0" />Disable
+                    <input type="radio" name="status" value="1" />Enable</td>
+                    </c:if>
+                </tr>
+                <tr>
                     <td></td>
                     <td><input type="submit" value="save"/></td>
                 </tr>

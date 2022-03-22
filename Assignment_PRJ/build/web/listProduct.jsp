@@ -33,16 +33,16 @@
         <div class="header" id="home">
             <div class="container">
                 <ul>
+                    <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
+                    <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
+                    <c:if test="${sessionScope.ac != null}">
+                        <li > <a href="logout" ><i class="fa fa-lock-alt" aria-hidden="true"></i> Đăng xuất </a></li>
+                        <li > <i class="fa fa-lock-alt" aria-hidden="true"></i> Xin chào ${sessionScope.ac.displayname} </li>
+                    </c:if>
                     <c:if test="${sessionScope.ac == null}">
                         <li > <a href="login" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
                         <li > <a href="signup" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
                     </c:if>
-                    <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
-                    <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
-                        <c:if test="${sessionScope.ac != null}">
-                        <li > <a href="logout" ><i class="fa fa-lock-alt" aria-hidden="true"></i> Đăng xuất </a></li>
-                        <li > <i class="fa fa-lock-alt" aria-hidden="true"></i> Xin chào ${sessionScope.ac.displayname} </li>
-                        </c:if>
                 </ul>
             </div>
         </div>
@@ -315,23 +315,25 @@
 
                 <h3>List Product</h3><br/>
                 <button><a href ="create-product">Create New<a/></button><br/><br/>
-                <table border="1" style="text-align: center">
+                <table border="2" style="text-align: center;width: 1150px " >
                     <thead>
                         <tr>
-                            <th>ID</th>
-                            <th>Name</th>
-                            <th>Category</th>
-                            <th>Quantity</th>
-                            <th>Price</th>
-                            <th>Description</th>
+                            <th style="text-align: center">ID</th>
+                            <th style="text-align: center">Name</th>
+                            <th style="text-align: center">Category</th>
+                            <th style="text-align: center">Quantity</th>
+                            <th style="text-align: center">Price</th>
+<!--                         <th>Description</th>
                             <th>Imagine</th>
                             <th>Imagine2</th>
-                            <th>Imagine3</th>
-                            <th>Created_date</th>
-                            <th>Action</th>
+                            <th>Imagine3</th>-->
+                            <th style="text-align: center">Created_date</th>
+                            <th style="text-align: center">Status</th>
+                            <th style="text-align: center">Action</th>
                         </tr>
-                    </thead>
-                    <tbody>
+                   
+                   </thead>
+                   <tbody>
                         <c:forEach items="${lp}" var="product">
                             <tr>
                                 <td>${product.id}</td>
@@ -339,15 +341,16 @@
                                 <td>${product.category_name}</td>
                                 <td>${product.quantity}</td>
                                 <td>${product.price}</td>
-                                <td>${product.description}</td>
+<!--                                <td>${product.description}</td>
                                 <td><img src="${product.imagine}" style="height: 100px; width: 100px"></td>
                                 <td><img src="${product.imagine2}" style="height: 100px; width: 100px"></td>
-                                <td><img src="${product.imagine3}" style="height: 100px; width: 100px"></td>
+                                <td><img src="${product.imagine3}" style="height: 100px; width: 100px"></td>-->
                                 <td>${product.created_date}</td>
-                                <td><button><a href ="update-product?id=${product.id}">Update<a/></button><br/><br/><button><a href ="delete-product?id=${product.id}">Delete<a/></button> </tr></td>           
+                                <td>${product.status}</td>
+                                <td><button><a href ="update-product?id=${product.id}">Update<a/></button>      <button><a href ="delete-product?id=${product.id}">Delete<a/></button> </tr></td>           
                             </tr>      
                         </c:forEach>
-                    </tbody>
+                   </tbody>
                 </table>
                 <div class="clearfix"> </div>
                 <nav aria-label="Page navigation example" style="text-align: right" >
@@ -579,7 +582,6 @@
                                                 paypal.minicart.render({
                                                     action: '#'
                                                 });
-
                                                 if (~window.location.search.indexOf('reset=true')) {
                                                     paypal.minicart.reset();
                                                 }
@@ -648,9 +650,7 @@
                  easingType: 'linear' 
                  };
                  */
-
                 $().UItoTop({easingType: 'easeOutQuart'});
-
             });
         </script>
         <!-- //here ends scrolling icon -->
@@ -659,7 +659,3 @@
         <script type="text/javascript" src="js/bootstrap.js"></script>
     </body>
 </html>
-
-
-
-
