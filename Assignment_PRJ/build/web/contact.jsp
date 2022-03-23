@@ -153,6 +153,11 @@
                                                                             </ul>
                                                                         </li>-->
                                     <li class=" menu__item"><a class="menu__link" href="contact">Liên hệ</a></li>
+                                    <c:if test="${sessionScope.ac.isAdmin == 1}">
+                                        <li class="menu__item ">
+                                            <a class="menu__link" href="manager">Quản lý </a>
+                                        </li>
+                                    </c:if>
                                 </ul>
                             </div>
                         </div>

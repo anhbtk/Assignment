@@ -31,14 +31,14 @@
                 <ul>
                     <li ><i class="fa fa-phone" aria-hidden="true"></i> 01234567898</li>
                     <li ><i class="fa fa-envelope-o" aria-hidden="true"></i> kimkim01@gmail.com</li>
-                    <c:if test="${sessionScope.ac != null}">
+                        <c:if test="${sessionScope.ac != null}">
                         <li > <a href="logout" ><i class="fa fa-lock-alt" aria-hidden="true"></i> Đăng xuất </a></li>
                         <li > <i class="fa fa-lock-alt" aria-hidden="true"></i> Xin chào ${sessionScope.ac.displayname} </li>
-                    </c:if>
-                    <c:if test="${sessionScope.ac == null}">
+                        </c:if>
+                        <c:if test="${sessionScope.ac == null}">
                         <li > <a href="login" ><i class="fa fa-unlock-alt" aria-hidden="true"></i> Đăng Nhập </a></li>
                         <li > <a href="signup" ><i class="fa fa-pencil-square-o" aria-hidden="true"></i> Đăng kí </a></li>
-                    </c:if>
+                        </c:if>
                 </ul>
             </div>
         </div>
@@ -155,6 +155,11 @@
                                                                             </ul>
                                                                         </li>-->
                                     <li class=" menu__item"><a class="menu__link" href="contact">Liên hệ</a></li>
+                                    <c:if test="${sessionScope.ac.isAdmin == 1}">
+                                        <li class="menu__item ">
+                                            <a class="menu__link" href="manager">Quản lý </a>
+                                        </li>
+                                    </c:if>
                                 </ul>
                             </div>
                         </div>
@@ -409,34 +414,36 @@
                                             <div class="clearfix"></div>
                                         </div>-->
                     <c:forEach items="${lp}" var="product">
-                        <div class="col-md-4 product-men">
-                            <div class="men-pro-item simpleCart_shelfItem">
-                                <div class="men-thumb-item">
-                                    <img src="${product.imagine}" alt="" class="pro-image-front">
-                                    <img src="${product.imagine}" alt="" class="pro-image-back">
-                                    <div class="men-cart-pro">
-                                        <div class="inner-men-cart-pro">
-                                            <a href="detail?productID=${product.id}" class="link-product-add-cart">Chi tiết</a>
+                        <c:if test="${product.status == true}" >
+                            <div class="col-md-4 product-men">
+                                <div class="men-pro-item simpleCart_shelfItem">
+                                    <div class="men-thumb-item">
+                                        <img src="${product.imagine}" alt="" class="pro-image-front">
+                                        <img src="${product.imagine}" alt="" class="pro-image-back">
+                                        <div class="men-cart-pro">
+                                            <div class="inner-men-cart-pro">
+                                                <a href="detail?productID=${product.id}" class="link-product-add-cart">Chi tiết</a>
+                                            </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="item-info-product ">
-                                    <h4><a href="single.jsp">${product.name}</a></h4>
-                                    <div class="info-product-price">
-                                        <span class="item_price"> <fmt:formatNumber maxFractionDigits="3" value="${product.price*1000}" type="number"> </fmt:formatNumber></span>
-                                        <!--                                        <del>$390.71</del>-->
-                                    </div>
-                                    <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
-                                        <form action="add-to-card?productID=${product.id}" method="post">
-                                            <fieldset>
-                                                <input type="submit" name="submit" value="+ Giỏ Hàng" class="button">
-                                            </fieldset>
-                                        </form>
-                                    </div>
+                                    <div class="item-info-product ">
+                                        <h4><a href="single.jsp">${product.name}</a></h4>
+                                        <div class="info-product-price">
+                                            <span class="item_price"> <fmt:formatNumber maxFractionDigits="3" value="${product.price*1000}" type="number"> </fmt:formatNumber></span>
+                                                <!--                                        <del>$390.71</del>-->
+                                            </div>
+                                            <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out button2">
+                                                <form action="add-to-card?productID=${product.id}" method="post">
+                                                <fieldset>
+                                                    <input type="submit" name="submit" value="+ Giỏ Hàng" class="button">
+                                                </fieldset>
+                                            </form>
+                                        </div>
 
+                                    </div>
                                 </div>
                             </div>
-                        </div>
+                        </c:if>
                     </c:forEach>
 
                     <div class="clearfix"></div>
