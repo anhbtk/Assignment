@@ -41,15 +41,15 @@
                     <td><input type="text" name="description" value="${product.description}" /></td>
                 </tr>
                 <tr>
-                    <td>Imagine:</td>
+                    <td>Image:</td>
                     <td><input type="text" name="imagine" value="${product.imagine}" /></td>
                 </tr>
                 <tr>
-                    <td>Imagine2:</td>
+                    <td>Image2:</td>
                     <td><input type="text" name="imagine2" value="${product.imagine2}" /></td>
                 </tr>
                 <tr>
-                    <td>Imagine3:</td>
+                    <td>Image3:</td>
                     <td><input type="text" name="imagine3" value="${product.imagine3}" /></td>
                 </tr>
                 <tr>
